@@ -1,0 +1,49 @@
+.nav-button {
+  margin: .45rem;
+
+  a {
+    text-decoration: none;
+
+    @include flex-position(row, center, center);
+
+    color: $color-light-grey;
+    padding: .55rem;
+    border-radius: 3px;
+
+    span {
+      display: none;
+      padding: 0;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    i {
+      display: block;
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: none;
+      }
+
+      @include large {
+        display: none;
+      }
+    }
+  }
+
+  a.current {
+    text-decoration: none;
+
+    @include flex-position(row, center, center);
+
+    background-image: $primary-gradient;
+    color: #fff;
+    padding: .55rem;
+    border-radius: $border-radius-default;
+  }
+}

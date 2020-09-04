@@ -1,18 +1,37 @@
 import React from 'react'
-import Link from 'next/link'
+
+import NavButton from './_children/NavButton'
 
 const NavBar = () => {
   return (
-    <nav>
-      <Link href="/ponencias">
-        <a>Ponencias</a>
-      </Link>
-      <Link href="/devto-posts">
-        <a>Dev.to posts</a>
-      </Link>
-      <Link href="/sobre-mi">
-        <a>sobre mí</a>
-      </Link>
+    <nav className="navbar">
+      <NavButton text="Inicio" url="/" iconClass="fas fa-home" />
+
+      <NavButton
+        text="Proyectos"
+        url="/proyectos"
+        iconClass="fas fa-briefcase"
+      />
+
+      <NavButton
+        text="Ponencias"
+        url="/ponencias"
+        iconClass="fas fa-bullhorn"
+      />
+
+      <NavButton
+        text="Dev.to"
+        url="/devto-posts"
+        iconClass="fab fa-dev fa-lg"
+      />
+
+      <NavButton
+        text="Sobre mí"
+        url="/sobre-mi"
+        iconClass="fas fa-question-circle"
+      />
+
+      <NavButton text="Contacto" url="/contacto" iconClass="fas fa-at" />
     </nav>
   )
 }

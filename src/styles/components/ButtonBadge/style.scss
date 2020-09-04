@@ -1,12 +1,12 @@
-.container_button-badge-gradient {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.button-badge-gradient {
+  @include flex-position(row, center, center);
+
   width: 100%;
-  background-image: $linear-gradient-primary;
+  background-image: $primary-gradient;
   color: #fff;
   padding: 8px 5px;
+  border-radius: $border-radius-default;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
 
   a {
     text-decoration: none;

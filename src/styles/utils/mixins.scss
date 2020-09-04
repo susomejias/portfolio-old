@@ -1,5 +1,4 @@
 // Responsive mixins
-// Bootstrap breakpoints
 
 @mixin small {
   @media only screen and (min-width: 600px) {
@@ -23,4 +22,13 @@
   @media only screen and (min-width: 1200px) {
     @content;
   }
+}
+
+// positions
+
+@mixin flex-position ($direction, $justifyContent, $alingItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alingItems;
 }

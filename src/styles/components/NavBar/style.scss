@@ -1,6 +1,5 @@
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.navbar {
+  @include flex-position(row, center, center);
+
+  padding: 1rem .2rem;
 }
