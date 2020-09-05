@@ -4,6 +4,7 @@ body {
 
 .wrapper {
   padding: 0 1rem 1rem;
+  overflow-y: hidden;
 
   @include flex-position(column, center, center);
 
@@ -36,4 +37,16 @@ body {
   @include large {
     display: none;
   }
+}
+
+.scroll-top-button {
+  background-image: $primary-gradient;
+  padding: .7rem;
+  margin: 1rem 0;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: $border-radius-default;
+  width: 40px;
+  height: 40px;
+  text-align: center;
 }
