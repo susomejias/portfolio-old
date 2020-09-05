@@ -2,4 +2,6 @@
   @include flex-position(row, center, center);
 
   padding: 1rem .2rem;
+  width: 100%;
+  position: fixed;
 }

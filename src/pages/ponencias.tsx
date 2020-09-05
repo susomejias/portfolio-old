@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
+import usePaginationArray from '../hooks/usePaginateArray'
+import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import talks from '../assets/data/talks'
 import Card from '../components/Card/Card'
 
 export default function Talks() {
   const talksData = talks
+
+  const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
+    talksData,
+    2
+  )
+
+  const refTriggerElement = useRef(null)
+  useInfiniteScroll(refTriggerElement, next)
+
   return (
     <div className="wrapper">
       <h1 className="page-title">Ponencias</h1>
-      {talksData.map((talk: Talk, index) => {
+      {dataDisplayed.map((talk: Talk, index) => {
         return (
           <Card
             key={index}
@@ -21,6 +32,22 @@ export default function Talks() {
           />
         )
       })}
+      {currentPage < maxPage ? (
+        <p
+          className="infinite-scroll-show-more"
+          onClick={next}
+          ref={refTriggerElement}
+        >
+          Pulsa aquí para mostrar más
+        </p>
+      ) : null}
+
+      <i
+        onClick={() => {
+          window.scrollTo(0, 0)
+        }}
+        className="scroll-top-button fas fa-angle-up"
+      ></i>
     </div>
   )
 }
