@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 0 1rem 1rem;
+
+  @include flex-position(column, center, center);
+
+  @include tablet {
+    padding: 0 9rem;
+  }
+
+  @include desktop {
+    padding: 0 7rem;
+  }
+
+  @include large {
+    padding: 0 5rem;
+  }
+}
+
+.page-title {
+  margin: 0;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+
+  @include text-gradient($primary-gradient);
+
+  @include desktop {
+    display: none;
+  }
+
+  @include large {
+    display: none;
+  }
+}

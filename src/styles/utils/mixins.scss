@@ -32,3 +32,11 @@
   justify-content: $justifyContent;
   align-items: $alingItems;
 }
+
+// text colors
+@mixin text-gradient ($color) {
+  background: $color;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

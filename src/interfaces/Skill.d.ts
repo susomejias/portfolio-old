@@ -1,0 +1,3 @@
+interface Skill {
+  name: string
+}
