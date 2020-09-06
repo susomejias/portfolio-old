@@ -48,11 +48,15 @@ const Card = ({
             {authors.map((author, index) => {
               return (
                 <div className="card-author" key={index}>
-                  <img
-                    className="card-author-image"
-                    src={`${author.image}.png`}
-                    alt={author.name}
-                  ></img>
+                  <picture>
+                    <source srcSet={`${author.image}.webp`} type="image/webp" />
+                    <source srcSet={`${author.image}.jpg`} type="image/jpeg" />
+                    <source srcSet={`${author.image}.png`} type="image/png" />
+                    <img
+                      className="card-author-image"
+                      src={`${author.image}.png`}
+                    />
+                  </picture>
                   <span className="card-author-name">{author.name}</span>
                 </div>
               )
@@ -89,11 +93,15 @@ const Card = ({
             {authors.map((author, index) => {
               return (
                 <div className="card-author" key={index}>
-                  <img
-                    className="card-author-image"
-                    src={`${author.image}.png`}
-                    alt={author.name}
-                  ></img>
+                  <picture>
+                    <source srcSet={`${author.image}.webp`} type="image/webp" />
+                    <source srcSet={`${author.image}.jpg`} type="image/jpeg" />
+                    <source srcSet={`${author.image}.png`} type="image/png" />
+                    <img
+                      className="card-author-image"
+                      src={`${author.image}.png`}
+                    />
+                  </picture>
                   <span className="card-author-name">{author.name}</span>
                 </div>
               )

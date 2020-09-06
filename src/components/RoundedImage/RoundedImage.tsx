@@ -21,10 +21,12 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
   }
 
   return (
-    <img
-      className={`rounded-image ${getSizeClass()}`}
-      src={`${image}.png`}
-    ></img>
+    <picture>
+      <source srcSet={`${image}.webp`} type="image/webp" />
+      <source srcSet={`${image}.jpg`} type="image/jpeg" />
+      <source srcSet={`${image}.png`} type="image/png" />
+      <img className={`rounded-image ${getSizeClass()}`} src={`${image}.png`} />
+    </picture>
   )
 }
 

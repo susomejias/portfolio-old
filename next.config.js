@@ -18,3 +18,25 @@ module.exports = withPWA({
     dest: 'public'
   }
 })
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        use: [
+          {
+            loader: `img-optimize-loader`,
+            options: {
+              compress: {
+                // This will transform your png/jpg into webp.
+                webp: true,
+                disableOnDevelopment: false
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
