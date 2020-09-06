@@ -36,4 +36,4 @@ const App = (props: AppProps) => {
   )
 }
 
-export default React.memo(App)
+export default App

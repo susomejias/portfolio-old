@@ -1,5 +1,6 @@
 const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
+const withPWA = require('next-pwa')
 
 module.exports = withTypescript({
   webpack(config, options) {
@@ -8,6 +9,11 @@ module.exports = withTypescript({
 })
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, 'styles')]
   }
 }
+module.exports = withPWA({
+  pwa: {
+    dest: 'public'
+  }
+})

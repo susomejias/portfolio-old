@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const usePaginationArray = (data, itemsPerPage) => {
+const usePaginationArray = (data = [], itemsPerPage) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [dataDisplayed, setDataDisplayed] = useState([])
   const maxPage = Math.ceil(data.length / itemsPerPage)

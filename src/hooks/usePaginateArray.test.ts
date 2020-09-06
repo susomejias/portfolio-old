@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import { act } from '@testing-library/react'
 
 import { testHook } from '../utils/testHook'
-import usePaginateArray from '../hooks/usePaginateArray'
+import usePaginateArray from './usePaginateArray'
 
 configure({ adapter: new Adapter() })
 

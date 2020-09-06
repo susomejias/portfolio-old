@@ -1,12 +1,14 @@
-import useSWR from 'swr'
+import ApiClient from './ApiClient'
 
-export const getMePosts = () => {
-  const url =
-    'https://dev.to/api/articles?username=susomejias&state=all&per_page=1000'
-  const fetcher = (...args) => fetch(...args).then((res) => res.json())
-  const { data, error } = useSWR(url, fetcher)
+class DevtoService {
+  public static async getDevtoPosts() {
+    const url =
+      'https://dev.to/api/articles?username=susomejias&state=all&per_page=1000'
 
-  if (!data) return error
+    const posts = await ApiClient.get(url)
 
-  return data
+    return posts
+  }
 }
+
+export default DevtoService

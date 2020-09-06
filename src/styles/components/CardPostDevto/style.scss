@@ -1,0 +1,104 @@
+.card-devto-post {
+  @include flex-position(column, flex-start, center);
+
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  border-radius: $border-radius-default;
+  text-decoration: none;
+  margin: 1.2rem 0;
+  max-width: 400px;
+
+  @include desktop {
+    @include flex-position(row, center, center);
+
+    max-width: 850px;
+  }
+
+  @include large {
+    @include flex-position(row, center, center);
+
+    max-width: 1000px;
+  }
+
+  .card-container-image {
+    min-height: 300px;
+    width: 100%;
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
+
+    @include desktop {
+      border-top-right-radius: 0;
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+      width: 55%;
+    }
+
+    @include large {
+      border-top-right-radius: 0;
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+      width: 55%;
+    }
+  }
+
+  .card-container-content {
+    @include flex-position(column, center, flex-start);
+
+    padding: 1rem;
+    width: 100%;
+
+    .private-code-message {
+      @include flex-position(row, flex-start, center);
+
+      color: $color-light-grey;
+      padding: .7rem 0;
+
+      i {
+        margin-right: .6rem;
+      }
+    }
+
+    .card-title {
+      font-size: 1.45rem;
+
+      @include text-gradient($primary-gradient);
+    }
+
+    .card-description {
+      margin: .4rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      color: $color-dark-grey;
+    }
+
+    .card-reactions {
+      @include flex-position(row, flex-start, center);
+
+      padding: .75rem 0;
+      width: 100%;
+
+      .card-reaction {
+        @include flex-position(row, flex-start, center);
+        @include text-gradient($primary-gradient);
+
+        margin-right: .75rem;
+
+        i {
+          margin-right: .5rem;
+        }
+      }
+    }
+
+    .card-tags {
+      padding: .5rem 0;
+
+      span {
+        @include text-gradient($primary-gradient);
+
+        font-weight: 800;
+        margin-right: .8rem;
+      }
+    }
+  }
+}
