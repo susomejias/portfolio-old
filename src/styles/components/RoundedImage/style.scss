@@ -2,11 +2,11 @@
   object-fit: cover;
   width: 40px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
-  border: 3px solid $color-border-accent;
+  border: 5px solid $color-border-accent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   border-radius: 50%;
-  margin: 1.5rem 0;
+  margin: 1.7rem 0;
 }
 
 .rounded-image.small {
@@ -18,5 +18,5 @@
 }
 
 .rounded-image.large {
-  width: 150px;
+  width: 180px;
 }

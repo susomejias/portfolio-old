@@ -6,7 +6,7 @@ import Tag from '../components/Tag/Tag'
 import skills from '../assets/data/skills'
 import usePaginationArray from '../hooks/usePaginateArray'
 
-export default function Home() {
+const Home = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     skills,
     8
@@ -52,3 +52,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default React.memo(Home)

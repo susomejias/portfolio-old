@@ -5,7 +5,7 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import projects from '../assets/data/projects'
 import Card from '../components/Card/Card'
 
-export default function Projects() {
+const Projects = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     projects,
     2
@@ -50,3 +50,5 @@ export default function Projects() {
     </div>
   )
 }
+
+export default React.memo(Projects)

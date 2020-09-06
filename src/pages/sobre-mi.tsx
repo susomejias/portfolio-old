@@ -5,7 +5,7 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import aboutMe from '../assets/data/aboutMe'
 import Card from '../components/Card/Card'
 
-export default function AboutMe() {
+const AboutMe = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     aboutMe,
     2
@@ -49,3 +49,5 @@ export default function AboutMe() {
     </div>
   )
 }
+
+export default React.memo(AboutMe)

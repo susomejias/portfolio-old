@@ -5,7 +5,7 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import talks from '../assets/data/talks'
 import Card from '../components/Card/Card'
 
-export default function Talks() {
+const Talks = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     talks,
     2
@@ -49,3 +49,5 @@ export default function Talks() {
     </div>
   )
 }
+
+export default React.memo(Talks)
