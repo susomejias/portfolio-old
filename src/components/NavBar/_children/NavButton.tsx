@@ -27,4 +27,4 @@ const NavButton = ({ text, url, iconClass }: NavButtonProps) => {
   )
 }
 
-export default NavButton
+export default React.memo(NavButton)

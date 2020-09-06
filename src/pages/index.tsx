@@ -2,13 +2,20 @@ import React from 'react'
 
 import RoundedImage from '../components/RoundedImage/RoundedImage'
 import ButtonBadge from '../components/ButtonBadge/ButtonBadge'
+import Tag from '../components/Tag/Tag'
+import skills from '../assets/data/skills'
+import usePaginationArray from '../hooks/usePaginateArray'
 
 export default function Home() {
+  const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
+    skills,
+    8
+  )
   return (
     <div className="wrapper home-page">
       <RoundedImage image="/img/avatar" size="medium" />
 
-      <h1>Suso Mejías</h1>
+      <h1 className="tracking-in-expand">Suso Mejías</h1>
 
       <div className="container-button-badge">
         <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
@@ -22,6 +29,26 @@ export default function Home() {
         </i>
         <i className="author">- Linus Torvalds -</i>
       </h4>
+
+      <div className="skills-container">
+        {dataDisplayed.map((skill: Skill, index: number) => {
+          return <Tag key={index} text={skill.name} />
+        })}
+      </div>
+
+      {currentPage < maxPage ? (
+        <p
+          className="more-skills fade-in"
+          onClick={() => {
+            next()
+            setTimeout(() => {
+              window.scrollTo(0, document.body.scrollHeight)
+            }, 400)
+          }}
+        >
+          Pulsa aquí para mostrar más habilidades
+        </p>
+      ) : null}
     </div>
   )
 }

@@ -6,10 +6,8 @@ import projects from '../assets/data/projects'
 import Card from '../components/Card/Card'
 
 export default function Projects() {
-  const projectsData = projects
-
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
-    projectsData,
+    projects,
     2
   )
 
@@ -18,7 +16,7 @@ export default function Projects() {
 
   return (
     <div className="wrapper">
-      <h1 className="page-title">Proyectos</h1>
+      <h1 className="page-title tracking-in-expand">Proyectos</h1>
       {dataDisplayed.map((project: Project, index) => {
         return (
           <Card

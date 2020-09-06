@@ -28,4 +28,4 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
   )
 }
 
-export default RoundedImage
+export default React.memo(RoundedImage)

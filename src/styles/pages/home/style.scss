@@ -2,25 +2,63 @@
 
   h1 {
     font-size: 1.6rem;
-    color: $color-dark-grey;
+    //color: $color-dark-grey;
     margin-top: 0;
+
+    @include text-gradient($primary-gradient);
+
+    font-weight: 900;
   }
 
   .quote {
     font-size: 1.1rem;
-    font-weight: 400;
     line-height: 1.4rem;
     max-width: 300px;
     text-align: center;
-    color: $color-dark-grey;
+    color: $color-accent;
+    margin-bottom: 0;
+    font-weight: 600;
 
     @include flex-position(column, center, center);
 
+    i:not(.author):before {
+      content: open-quote;
+      font-weight: 900;
+    }
+
+    i:not(.author):after {
+      content: close-quote;
+      font-weight: 900;
+    }
+
     .author {
       padding: 1rem 0;
-      font-weight: 500;
+      font-weight: 700;
 
       @include text-gradient($primary-gradient);
     }
+  }
+
+  .skills-container {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    @include desktop {
+      max-width: 70%;
+    }
+
+    @include large {
+      width: 70%;
+    }
+  }
+
+  .more-skills {
+    @include text-gradient($primary-gradient);
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
   }
 }

@@ -6,10 +6,8 @@ import talks from '../assets/data/talks'
 import Card from '../components/Card/Card'
 
 export default function Talks() {
-  const talksData = talks
-
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
-    talksData,
+    talks,
     2
   )
 
@@ -18,7 +16,7 @@ export default function Talks() {
 
   return (
     <div className="wrapper">
-      <h1 className="page-title">Ponencias</h1>
+      <h1 className="page-title tracking-in-expand">Ponencias</h1>
       {dataDisplayed.map((talk: Talk, index) => {
         return (
           <Card

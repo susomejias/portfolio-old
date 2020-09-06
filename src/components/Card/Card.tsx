@@ -19,7 +19,12 @@ const Card = ({
 }: CardProps) => {
   const renderCardIfIsLink = () => {
     return (
-      <a className="card" href={url} target="_blank" rel="noreferrer">
+      <a
+        className="card scale-in-center"
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+      >
         <div
           className="card-container-image"
           style={{
@@ -60,7 +65,7 @@ const Card = ({
 
   const renderCardIfNotIsLink = () => {
     return (
-      <div className="card">
+      <div className="card scale-in-center">
         <div
           className="card-container-image"
           style={{
@@ -102,4 +107,4 @@ const Card = ({
   return url && url !== '#' ? renderCardIfIsLink() : renderCardIfNotIsLink()
 }
 
-export default Card
+export default React.memo(Card)

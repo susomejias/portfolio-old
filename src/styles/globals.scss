@@ -17,6 +17,7 @@ body {
 
 // utils
 @import "./utils/mixins.scss";
+@import "./utils/animations.scss";
 
 // layouts
 @import "./layouts/default/style.scss";
@@ -27,6 +28,7 @@ body {
 @import "./components/NavBar/NavButton/style.scss";
 @import "./components/Card/style.scss";
 @import "./components/RoundedImage/style.scss";
+@import "./components/Tag/style.scss";
 
 // pages
 @import "./pages/home/style.scss";

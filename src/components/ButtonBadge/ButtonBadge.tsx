@@ -25,10 +25,10 @@ const ButtonBadgeGradient = ({
   }
 
   return (
-    <div className="button-badge-gradient">
+    <div className="button-badge-gradient slide-in-fwd-center">
       {url && url !== '#' ? renderLink() : <p>{text}</p>}
     </div>
   )
 }
 
-export default ButtonBadgeGradient
+export default React.memo(ButtonBadgeGradient)
