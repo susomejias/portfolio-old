@@ -1,7 +1,8 @@
+/* eslint-disable */
 const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
 const withPWA = require('next-pwa')
-
+/* eslint-enable */
 module.exports = withTypescript({
   webpack(config, options) {
     return config
