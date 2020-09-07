@@ -21,7 +21,7 @@ const CardPostDevto = ({
 }: CardPostDevtoProps) => {
   return (
     <a
-      className="card-devto-post scale-in-center"
+      className="card-devto-post text-focus-in"
       href={url}
       target="_blank"
       rel="noreferrer"

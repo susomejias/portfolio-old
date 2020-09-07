@@ -25,7 +25,7 @@ const ButtonBadgeGradient = ({
   }
 
   return (
-    <div className="button-badge-gradient slide-in-fwd-center">
+    <div className="button-badge-gradient wobble-hor-bottom">
       {url && url !== '#' ? renderLink() : <p>{text}</p>}
     </div>
   )

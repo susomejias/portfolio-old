@@ -1,17 +1,17 @@
 import React, { useRef } from 'react'
+import 'isomorphic-fetch'
+import { GetServerSideProps } from 'next'
 
 import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import DevtoService from '../services/DevtoService'
 import CardPostDevto from '../components/CardPostDevto/CardPostDevto'
-import useSWR from '../hooks/useSWR'
 
-const DevtoPosts = () => {
-  const { data: posts } = useSWR<DevtoPost[]>(
-    'posts',
-    DevtoService.getDevtoPosts
-  )
+interface DevtoPostsProps {
+  posts: DevtoPost[]
+}
 
+const DevtoPosts = ({ posts }: DevtoPostsProps) => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     posts,
     2
@@ -55,6 +55,11 @@ const DevtoPosts = () => {
       ></i>
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const posts = await DevtoService.getDevtoPosts()
+  return { props: { posts } }
 }
 
 export default React.memo(DevtoPosts)

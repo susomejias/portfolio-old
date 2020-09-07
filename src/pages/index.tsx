@@ -21,7 +21,7 @@ const Home = () => {
         <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
       </div>
 
-      <h4 className="quote">
+      <h4 className="quote text-focus-in">
         <i>
           La mayoría de los buenos programadores programan, no porque esperan
           que se les pague o por adulación por parte del público, sino porque es
@@ -38,7 +38,7 @@ const Home = () => {
 
       {currentPage < maxPage ? (
         <p
-          className="more-skills fade-in"
+          className="more-skills text-focus-in"
           onClick={() => {
             next()
             setTimeout(() => {

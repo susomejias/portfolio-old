@@ -21,7 +21,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
   }
 
   return (
-    <picture>
+    <picture className="text-focus-in">
       <source srcSet={`${image}.webp`} type="image/webp" />
       <source srcSet={`${image}.jpg`} type="image/jpeg" />
       <source srcSet={`${image}.png`} type="image/png" />

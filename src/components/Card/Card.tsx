@@ -20,7 +20,7 @@ const Card = ({
   const renderCardIfIsLink = () => {
     return (
       <a
-        className="card scale-in-center"
+        className="card text-focus-in"
         href={url}
         target="_blank"
         rel="noreferrer"
@@ -69,7 +69,7 @@ const Card = ({
 
   const renderCardIfNotIsLink = () => {
     return (
-      <div className="card scale-in-center">
+      <div className="card text-focus-in">
         <div
           className="card-container-image"
           style={{
