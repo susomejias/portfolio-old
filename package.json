@@ -5,11 +5,44 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "eslint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss'",
+    "test": "jest --coverage",
+    "lint": "npm run eslint && npm run stylelint"
   },
   "dependencies": {
+    "@testing-library/react": "^11.0.2",
+    "@types/jest": "^26.0.10",
+    "@types/next": "^9.0.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-jest": "^26.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "img-optimize-loader": "^1.0.7",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^26.4.2",
     "next": "9.5.2",
+    "next-pwa": "^3.1.3",
+    "prettier": "^2.1.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-top-loading-bar": "^2.0.1",
+    "sass": "^1.26.10",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-scss": "^3.18.0",
+    "swr": "^0.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.48",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "typescript": "^4.0.2"
   }
 }

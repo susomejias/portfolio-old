@@ -1,0 +1,20 @@
+export default [
+  { name: 'React' },
+  { name: 'Django' },
+  { name: 'Jest' },
+  { name: 'Redux' },
+  { name: 'Testing' },
+  { name: 'Angular' },
+  { name: 'JavaScript' },
+  { name: 'TypeScript' },
+  { name: 'Python' },
+  { name: 'HTML5' },
+  { name: 'CSS3' },
+  { name: 'PHP' },
+  { name: 'Laravel' },
+  { name: 'Markdown' },
+  { name: 'JSON' },
+  { name: 'SASS' },
+  { name: 'C#' },
+  { name: 'SQL' }
+]

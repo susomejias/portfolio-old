@@ -1,0 +1,23 @@
+.contact-page {
+
+  h2 {
+    @include text-gradient($primary-gradient);
+
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+
+  .container_social_networks {
+    padding: 1.3rem .75rem;
+
+    a {
+      text-decoration: none;
+      color: $color-dark-grey;
+      margin: 1rem;
+
+      i {
+        width: 1.1rem;
+      }
+    }
+  }
+}

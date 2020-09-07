@@ -1,0 +1,42 @@
+// Responsive mixins
+
+@mixin small {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// positions
+
+@mixin flex-position ($direction, $justifyContent, $alingItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alingItems;
+}
+
+// text colors
+@mixin text-gradient ($color) {
+  background: $color;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
