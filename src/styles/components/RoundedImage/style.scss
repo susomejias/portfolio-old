@@ -1,4 +1,5 @@
 .container-image {
+  margin: 1rem .3rem;
 
   .rounded-image {
     object-fit: cover;
@@ -8,7 +9,6 @@
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     border-radius: 50%;
-    margin: 1.2rem .3rem;
 
     img {
       object-fit: cover;
@@ -19,13 +19,16 @@
 
   &.small {
     width: 46px;
+    height: 46px;
   }
 
   &.medium {
     width: 140px;
+    height: 140px;
   }
 
   &.large {
     width: 180px;
+    height: 180px;
   }
 }

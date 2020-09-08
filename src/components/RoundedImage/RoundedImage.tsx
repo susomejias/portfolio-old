@@ -26,6 +26,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
       <Image
         src={`${image}.png`}
         width="100%"
+        height="100%"
         lazyLoad
         wrapperClassName="rounded-image"
         transitionTime="2.5s"
