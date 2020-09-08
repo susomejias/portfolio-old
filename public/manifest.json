@@ -55,7 +55,9 @@
       "sizes": "512x512",
       "type": "image\/png",
       "density": "4.0",
-      "purpose": "any maskable"
-      }
+      "purpose": "any maskable",
+      "density": "4.0"
+    },
+
   ]
 }
