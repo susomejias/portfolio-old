@@ -21,29 +21,26 @@ const CardPostDevto = ({
   tags
 }: CardPostDevtoProps) => {
   return (
-    <a
-      className="card-devto-post text-focus-in"
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-    >
-      <BackgroundImage
-        src={image}
-        width="400px"
-        height="350px"
-        lazyLoad
-        useChild
-        transitionTime="1.5s"
-      >
-        <div
-          style={{
-            width: '400px',
-            height: '350px',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        ></div>
-      </BackgroundImage>
+    <a className="card-devto-post" href={url} target="_blank" rel="noreferrer">
+      <div className="card-container-image">
+        <BackgroundImage
+          src={image}
+          width="100%"
+          height="350px"
+          lazyLoad
+          useChild
+          transitionTime="1.5s"
+        >
+          <div
+            style={{
+              width: '100%',
+              height: '350px',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat'
+            }}
+          ></div>
+        </BackgroundImage>
+      </div>
 
       <div className="card-container-content">
         <h3 className="card-title">{title}</h3>
