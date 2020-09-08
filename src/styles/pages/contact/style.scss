@@ -16,7 +16,9 @@
       margin: 1rem;
 
       i {
-        width: 1.1rem;
+        @include text-gradient($primary-gradient);
+
+        width: 2.1rem;
       }
     }
   }

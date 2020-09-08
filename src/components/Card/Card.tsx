@@ -1,5 +1,7 @@
 import React from 'react'
+import { BackgroundImage } from 'react-image-and-background-image-fade'
 
+import RoundedImage from '../RoundedImage/RoundedImage'
 interface CardProps {
   image: string
   title: string
@@ -17,23 +19,26 @@ const Card = ({
   url,
   authors
 }: CardProps) => {
-  const renderCardIfIsLink = () => {
+  const renderContentCard = () => {
     return (
-      <a
-        className="card text-focus-in"
-        href={url}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div
-          className="card-container-image"
-          style={{
-            backgroundImage: `url("${image}.png")`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        ></div>
+      <>
+        <BackgroundImage
+          src={`${image}.png`}
+          width="400px"
+          height="350px"
+          lazyLoad
+          useChild
+          transitionTime="1.5s"
+        >
+          <div
+            style={{
+              width: '400px',
+              height: '350px',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat'
+            }}
+          ></div>
+        </BackgroundImage>
 
         <div className="card-container-content">
           {showPrivateCodeMessagge ? (
@@ -48,68 +53,29 @@ const Card = ({
             {authors.map((author, index) => {
               return (
                 <div className="card-author" key={index}>
-                  <picture>
-                    <source srcSet={`${author.image}.webp`} type="image/webp" />
-                    <source srcSet={`${author.image}.jpg`} type="image/jpeg" />
-                    <source srcSet={`${author.image}.png`} type="image/png" />
-                    <img
-                      className="card-author-image"
-                      src={`${author.image}.png`}
-                    />
-                  </picture>
-                  <span className="card-author-name">{author.name}</span>
+                  <RoundedImage image={author.image} size="small" />
+                  {authors.length < 4 ? (
+                    <span className="card-author-name">{author.name}</span>
+                  ) : null}
                 </div>
               )
             })}
           </div>
         </div>
+      </>
+    )
+  }
+
+  const renderCardIfIsLink = () => {
+    return (
+      <a className="card" href={url} target="_blank" rel="noreferrer">
+        {renderContentCard()}
       </a>
     )
   }
 
   const renderCardIfNotIsLink = () => {
-    return (
-      <div className="card text-focus-in">
-        <div
-          className="card-container-image"
-          style={{
-            backgroundImage: `url("${image}.png")`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        ></div>
-
-        <div className="card-container-content">
-          {showPrivateCodeMessagge ? (
-            <span className="private-code-message">
-              <i className="fas fa-lock"></i>
-              Código privado
-            </span>
-          ) : null}
-          <h3 className="card-title">{title}</h3>
-          <h4 className="card-description">{description}</h4>
-          <div className="card-authors">
-            {authors.map((author, index) => {
-              return (
-                <div className="card-author" key={index}>
-                  <picture>
-                    <source srcSet={`${author.image}.webp`} type="image/webp" />
-                    <source srcSet={`${author.image}.jpg`} type="image/jpeg" />
-                    <source srcSet={`${author.image}.png`} type="image/png" />
-                    <img
-                      className="card-author-image"
-                      src={`${author.image}.png`}
-                    />
-                  </picture>
-                  <span className="card-author-name">{author.name}</span>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-    )
+    return <div className="card">{renderContentCard()}</div>
   }
 
   return url && url !== '#' ? renderCardIfIsLink() : renderCardIfNotIsLink()
