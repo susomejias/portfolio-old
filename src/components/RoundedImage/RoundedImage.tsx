@@ -7,29 +7,30 @@ interface RoundedImageProps {
 }
 
 const RoundedImage = ({ image, size }: RoundedImageProps) => {
-  const getSize = () => {
-    if (!size) return '46px'
+  const getSizeClass = () => {
+    if (!size) return 'small'
     switch (size.toLowerCase()) {
       case 'small':
-        return '46px'
+        return 'small'
       case 'medium':
-        return '140px'
+        return 'medium'
       case 'large':
-        return '180px'
+        return 'large'
       default:
-        return '46px'
+        return 'small'
     }
   }
 
   return (
-    <Image
-      src={`${image}.png`}
-      width={getSize()}
-      height="100%"
-      lazyLoad
-      wrapperClassName="rounded-image"
-      transitionTime="2.5s"
-    />
+    <div className={`container-image ${getSizeClass()}`}>
+      <Image
+        src={`${image}.png`}
+        width="100%"
+        lazyLoad
+        wrapperClassName="rounded-image"
+        transitionTime="2.5s"
+      />
+    </div>
   )
 }
 
