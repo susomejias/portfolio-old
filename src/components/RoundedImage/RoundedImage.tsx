@@ -1,4 +1,5 @@
 import React from 'react'
+import { Image } from 'react-image-and-background-image-fade'
 
 interface RoundedImageProps {
   image: string
@@ -6,27 +7,29 @@ interface RoundedImageProps {
 }
 
 const RoundedImage = ({ image, size }: RoundedImageProps) => {
-  const getSizeClass = () => {
-    if (!size) return 'small'
+  const getSize = () => {
+    if (!size) return '46px'
     switch (size.toLowerCase()) {
       case 'small':
-        return 'small'
+        return '46px'
       case 'medium':
-        return 'medium'
+        return '140px'
       case 'large':
-        return 'large'
+        return '180px'
       default:
-        return 'small'
+        return '46px'
     }
   }
 
   return (
-    <picture className="text-focus-in">
-      <source srcSet={`${image}.webp`} type="image/webp" />
-      <source srcSet={`${image}.jpg`} type="image/jpeg" />
-      <source srcSet={`${image}.png`} type="image/png" />
-      <img className={`rounded-image ${getSizeClass()}`} src={`${image}.png`} />
-    </picture>
+    <Image
+      src={`${image}.png`}
+      width={getSize()}
+      height={getSize()}
+      lazyLoad
+      wrapperClassName="rounded-image"
+      transitionTime="2.5s"
+    />
   )
 }
 

@@ -9,7 +9,7 @@ import usePaginationArray from '../hooks/usePaginateArray'
 const Home = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     skills,
-    8
+    6
   )
   return (
     <div className="wrapper home-page">
@@ -21,7 +21,7 @@ const Home = () => {
         <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
       </div>
 
-      <h4 className="quote text-focus-in">
+      <h4 className="quote">
         <i>
           La mayoría de los buenos programadores programan, no porque esperan
           que se les pague o por adulación por parte del público, sino porque es
