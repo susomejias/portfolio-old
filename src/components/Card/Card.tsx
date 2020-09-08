@@ -22,23 +22,25 @@ const Card = ({
   const renderContentCard = () => {
     return (
       <>
-        <BackgroundImage
-          src={`${image}.png`}
-          width="400px"
-          height="350px"
-          lazyLoad
-          useChild
-          transitionTime="1.5s"
-        >
-          <div
-            style={{
-              width: '400px',
-              height: '350px',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat'
-            }}
-          ></div>
-        </BackgroundImage>
+        <div className="card-container-image">
+          <BackgroundImage
+            src={`${image}.png`}
+            width="100%"
+            height="350px"
+            lazyLoad
+            useChild
+            transitionTime="1.5s"
+          >
+            <div
+              style={{
+                width: '100%',
+                height: '350px',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }}
+            ></div>
+          </BackgroundImage>
+        </div>
 
         <div className="card-container-content">
           {showPrivateCodeMessagge ? (
