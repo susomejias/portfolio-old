@@ -15,9 +15,9 @@
     line-height: 1.4rem;
     max-width: 300px;
     text-align: center;
-    color: $color-accent;
+    color: $color-dark-grey;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 500;
 
     @include flex-position(column, center, center);
 

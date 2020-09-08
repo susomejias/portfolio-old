@@ -21,14 +21,14 @@ const Home = () => {
         <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
       </div>
 
-      <h4 className="quote">
+      <p className="quote">
         <i>
           La mayoría de los buenos programadores programan, no porque esperan
           que se les pague o por adulación por parte del público, sino porque es
           divertido programar.
         </i>
         <i className="author">- Linus Torvalds -</i>
-      </h4>
+      </p>
 
       <div className="skills-container">
         {dataDisplayed.map((skill: Skill, index: number) => {

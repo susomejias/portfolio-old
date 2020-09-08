@@ -30,6 +30,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
         lazyLoad
         wrapperClassName="rounded-image"
         transitionTime="2.5s"
+        alt="imagen de avatar"
       />
     </div>
   )

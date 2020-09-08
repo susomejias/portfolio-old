@@ -18,7 +18,7 @@ const NavButton = ({ text, url, iconClass }: NavButtonProps) => {
   return (
     <div className="nav-button">
       <Link href={url}>
-        <a className={`${markCurrentRouteButton()}`}>
+        <a className={`${markCurrentRouteButton()}`} aria-label={text}>
           <span>{text}</span>
           <i className={iconClass}></i>
         </a>

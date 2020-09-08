@@ -3,7 +3,12 @@ import Head from 'next/head'
 
 const DefaultMetaTags = () => (
   <Head>
+    <html lang="es" />
     <title>Susomejias | Web developer</title>
+    <meta
+      name="description"
+      content="Portfolio de Susomejías, Desarrollador Web Full-Stack"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
