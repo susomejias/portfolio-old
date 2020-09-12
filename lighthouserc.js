@@ -11,7 +11,7 @@ module.exports = {
         'http://localhost:3000/devto-posts',
         'http://localhost:3000/contacto'
       ],
-      numberOfRuns: 3
+      numberOfRuns: 2
     },
     assert: {
       assertions: {

@@ -1,10 +1,9 @@
 import React from 'react'
-
 import Links from './_children/Links'
 //import Scripts from './_children/Scripts'
 import DefaultMetaTags from './_children/DefaultMetaTags'
 
-const Head = () => (
+const HeadComponent = () => (
   <>
     <DefaultMetaTags />
     <Links />
@@ -12,4 +11,4 @@ const Head = () => (
   </>
 )
 
-export default Head
+export default HeadComponent

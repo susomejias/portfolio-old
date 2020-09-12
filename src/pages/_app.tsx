@@ -3,7 +3,7 @@ import { AppProps } from 'next/app'
 import LoadingBar from 'react-top-loading-bar'
 import { useRouter } from 'next/router'
 
-import Head from '../components/Head/Head'
+import HeadComponent from '../components/Head/Head'
 import Layout from '../layouts/Layout'
 
 import '../styles/globals.scss'
@@ -22,16 +22,18 @@ const App = (props: AppProps) => {
 
   return (
     <>
+      <HeadComponent />
       <LoadingBar
         color="#B9B4F5"
         height={4}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-      <Head />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <body>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </body>
     </>
   )
 }
