@@ -5,6 +5,7 @@ import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import DevtoService from '../services/DevtoService'
 import CardPostDevto from '../components/CardPostDevto/CardPostDevto'
+import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
 
 interface DevtoPostsProps {
   posts: DevtoPost[]
@@ -46,12 +47,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps) => {
         </p>
       ) : null}
 
-      <i
-        onClick={() => {
-          window.scrollTo(0, 0)
-        }}
-        className="scroll-top-button fas fa-angle-up"
-      ></i>
+      <ButtonScrollToTop />
     </div>
   )
 }

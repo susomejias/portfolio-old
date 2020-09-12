@@ -13,20 +13,32 @@ describe('<ButtonBadge>', () => {
     url: 'https://google.es',
     isTargetBlank: true
   }
-  const wrapperWithProps = mount(<ButtonBadge {...componentProps} />)
-  it('should render', () => {
-    expect(wrapperWithProps).toBeDefined()
+  const wrapperWithPropsLinkButton = mount(<ButtonBadge {...componentProps} />)
+  it('wrapperWithPropsLinkButton: should render', () => {
+    expect(wrapperWithPropsLinkButton).toBeDefined()
   })
-  it('should render with text Link test', () => {
-    expect(wrapperWithProps.find('a').text()).toEqual('Link test')
+  it('wrapperWithPropsLinkButton: should render with text Link test', () => {
+    expect(wrapperWithPropsLinkButton.find('a').text()).toEqual('Link test')
   })
-  it('should render with url https://google.es/', () => {
-    expect(wrapperWithProps.find('a').prop('href')).toEqual(
+  it('wrapperWithPropsLinkButton: should render with url https://google.es/', () => {
+    expect(wrapperWithPropsLinkButton.find('a').prop('href')).toEqual(
       'https://google.es/'
     )
   })
-  it('should render with target _blank', () => {
-    expect(wrapperWithProps.find('a').prop('target')).toEqual('_blank')
+  it('wrapperWithPropsLinkButton: should render with target _blank', () => {
+    expect(wrapperWithPropsLinkButton.find('a').prop('target')).toEqual(
+      '_blank'
+    )
+  })
+
+  it('wrapperWithPropsLinkButton: should render with target _blank', () => {
+    expect(wrapperWithPropsLinkButton.find('a').prop('target')).toEqual(
+      '_blank'
+    )
+  })
+
+  it('wrapperWithPropsLinkButton: simulate click', () => {
+    wrapperWithPropsLinkButton.find('a').simulate('click')
   })
 
   const componentPropsNotLinkbutton = {
@@ -38,13 +50,13 @@ describe('<ButtonBadge>', () => {
   const wrapperWithPropsNotLinkbutton = mount(
     <ButtonBadge {...componentPropsNotLinkbutton} />
   )
-  it('should render', () => {
+  it('wrapperWithPropsNotLinkbutton: should render', () => {
     expect(wrapperWithPropsNotLinkbutton).toBeDefined()
   })
-  it('should render with text', () => {
+  it('wrapperWithPropsNotLinkbutton: should render with text', () => {
     expect(wrapperWithPropsNotLinkbutton.find('p').text()).toEqual('Link test')
   })
-  it('should not render with a element', () => {
+  it('wrapperWithPropsNotLinkbutton: should not render with a element', () => {
     expect(wrapperWithPropsNotLinkbutton.find('a').length).toEqual(0)
   })
 })

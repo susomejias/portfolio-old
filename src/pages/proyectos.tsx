@@ -4,6 +4,7 @@ import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import projects from '../assets/data/projects'
 import Card from '../components/Card/Card'
+import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
 
 const Projects = () => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
@@ -41,12 +42,7 @@ const Projects = () => {
         </p>
       ) : null}
 
-      <i
-        onClick={() => {
-          window.scrollTo(0, 0)
-        }}
-        className="scroll-top-button fas fa-angle-up"
-      ></i>
+      <ButtonScrollToTop />
     </div>
   )
 }
