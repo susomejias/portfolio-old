@@ -1,5 +1,3 @@
-import ApiClient from './ApiClient'
-
 class DevtoService {
   public static async getDevtoPosts() {
     const res = await fetch(
