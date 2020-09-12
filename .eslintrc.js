@@ -7,6 +7,7 @@ module.exports = {
       jsx: true // Allows for the parsing of JSX
     }
   },
+  ignorePatterns: ['public/*.js'],
   settings: {
     react: {
       version: 'detect' // Tells eslint-plugin-react to automatically detect the version of React to use
