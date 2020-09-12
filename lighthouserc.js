@@ -14,10 +14,11 @@ module.exports = {
       numberOfRuns: 3
     },
     assert: {
-      preset: 'lighthouse:recommended',
       assertions: {
-        'offscreen-images': 'off',
-        'uses-webp-images': 'off'
+        'categories:performance': ['warning', { minScore: 0.75 }],
+        'categories:seo': ['warning', { minScore: 0.75 }],
+        'categories:best-practices': ['warning', { minScore: 0.75 }],
+        'categories:accessibility': ['warning', { minScore: 0.75 }]
       }
     },
     upload: {
