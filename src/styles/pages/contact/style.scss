@@ -16,8 +16,7 @@
       margin: 1rem;
 
       i {
-        @include text-gradient($primary-gradient);
-
+        color: $color-dark-grey;
         width: 2.1rem;
       }
     }

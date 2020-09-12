@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import 'isomorphic-fetch'
-import { GetServerSideProps } from 'next'
 
 import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
@@ -57,9 +56,9 @@ const DevtoPosts = ({ posts }: DevtoPostsProps) => {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getStaticProps = async (context) => {
   const posts = await DevtoService.getDevtoPosts()
-  return { props: { posts } }
+  return { props: { posts }, revalidate: 7200 /* In 3 hours */ }
 }
 
 export default React.memo(DevtoPosts)

@@ -25,12 +25,6 @@ const NavBar = () => {
         iconClass="fab fa-dev fa-lg"
       />
 
-      <NavButton
-        text="Sobre mí"
-        url="/sobre-mi"
-        iconClass="fas fa-question-circle"
-      />
-
       <NavButton text="Contacto" url="/contacto" iconClass="fas fa-at" />
     </nav>
   )

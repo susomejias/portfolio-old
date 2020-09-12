@@ -16,6 +16,6 @@ describe('<NavBar>', () => {
     expect(wrapper).toBeDefined()
   })
   it('should render all NavButtons', () => {
-    expect(wrapper.find('.nav-button').length).toEqual(6)
+    expect(wrapper.find('.nav-button').length).toEqual(5)
   })
 })
