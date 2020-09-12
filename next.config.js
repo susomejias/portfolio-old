@@ -13,15 +13,6 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')]
   }
 }
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    register: true,
-    scope: '/',
-    disable: false,
-    register: true
-  }
-})
 
 module.exports = {
   module: {
@@ -44,3 +35,10 @@ module.exports = {
     ]
   }
 }
+
+// always at the end
+module.exports = withPWA({
+  pwa: {
+    dest: 'public'
+  }
+})
