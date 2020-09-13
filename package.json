@@ -8,8 +8,9 @@
     "start": "next start",
     "eslint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss'",
-    "test": "jest --coverage",
-    "lint": "npm run eslint && npm run stylelint"
+    "test": "jest --config='./jestconfig.json' --coverage",
+    "lint": "npm run eslint && npm run stylelint",
+    "make-badges": "istanbul-badges-readme"
   },
   "dependencies": {
     "@lhci/cli": "^0.5.0",
@@ -26,6 +27,7 @@
     "eslint-plugin-react": "^7.20.6",
     "img-optimize-loader": "^1.0.7",
     "isomorphic-fetch": "^2.2.1",
+    "istanbul-badges-readme": "^1.0.5",
     "jest": "^26.4.2",
     "next": "9.5.2",
     "next-pwa": "^3.1.3",
