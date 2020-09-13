@@ -1,0 +1,117 @@
+.card {
+  @include flex-position(column, flex-start, center);
+
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  border-radius: $border-radius-default;
+  text-decoration: none;
+  margin: 1.2rem 0;
+  max-width: 350px;
+
+  @include tablet {
+    max-width: 500px;
+  }
+
+  @include desktop {
+    @include flex-position(row, center, center);
+
+    max-width: 850px;
+  }
+
+  @include large {
+    @include flex-position(row, center, center);
+
+    max-width: 1000px;
+  }
+
+  .card-container-image {
+    min-height: 300px;
+    width: 100%;
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
+
+    @include desktop {
+      border-top-right-radius: 0;
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+      width: 35%;
+    }
+
+    @include large {
+      border-top-right-radius: 0;
+      border-top-left-radius: $border-radius-default;
+      border-bottom-left-radius: $border-radius-default;
+      width: 55%;
+    }
+  }
+
+  .card-container-content {
+    @include flex-position(column, center, flex-start);
+
+    padding: 1rem;
+    width: 100%;
+
+    .private-code-message {
+      @include flex-position(row, flex-start, center);
+
+      color: var(--color-text);
+      padding: .7rem 0;
+
+      i {
+        margin-right: .6rem;
+      }
+    }
+
+    .card-title {
+      font-size: 1.45rem;
+
+      @include text-gradient($primary-gradient);
+    }
+
+    .card-description {
+      margin: .4rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+
+    .card-authors {
+      @include flex-position(row, flex-start, center);
+
+      width: 100%;
+      padding: .85rem 0;
+
+      .card-author {
+        @include flex-position(row, center, center);
+
+        .card-author-image {
+          object-fit: cover;
+          width: 40px;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+          border: 3px solid $color-border-accent;
+          background-clip: padding-box, border-box;
+          background-origin: padding-box, border-box;
+          border-radius: 50%;
+          margin-right: .5rem;
+        }
+
+        .card-author-name {
+          @include text-gradient($primary-gradient);
+
+          display: none;
+          font-weight: 700;
+          margin: 0 .6rem;
+
+          @include desktop {
+            display: block;
+          }
+
+          @include large {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.container-image {
+  margin: 1rem .3rem;
+
+  .rounded-image {
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    border: 5px solid $color-border-accent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 50%;
+
+    img {
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  &.small {
+    width: 46px;
+    height: 46px;
+  }
+
+  &.medium {
+    width: 140px;
+    height: 140px;
+  }
+
+  &.large {
+    width: 180px;
+    height: 180px;
+  }
+}

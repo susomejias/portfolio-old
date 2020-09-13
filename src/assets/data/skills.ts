@@ -1,0 +1,21 @@
+export default [
+  { name: 'React' },
+  { name: 'NextJS' },
+  { name: 'Django' },
+  { name: 'Redux' },
+  { name: 'TypeScript' },
+  { name: 'Enzyme' },
+  { name: 'Cypress' },
+  { name: 'Angular' },
+  { name: 'JavaScript' },
+  { name: 'Python' },
+  { name: 'HTML5' },
+  { name: 'CSS3' },
+  { name: 'PHP' },
+  { name: 'Laravel' },
+  { name: 'Markdown' },
+  { name: 'JSON' },
+  { name: 'SASS' },
+  { name: 'C#' },
+  { name: 'SQL' }
+]

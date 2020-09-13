@@ -1,0 +1,11 @@
+.tag {
+  margin: .5rem;
+  padding: .5rem;
+  border: 2px solid $color-border-accent;
+  border-radius: 9999px;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
+
+  @include text-gradient($primary-gradient);
+}
