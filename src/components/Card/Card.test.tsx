@@ -72,4 +72,29 @@ describe('<Card>', () => {
         .text()
     ).toEqual('Suso Mejías')
   })
+
+  const authorsWithLengthGreaterThanFour: Author[] = [
+    { name: 'Suso Mejías', image: '/img/avatar' },
+    { name: 'Author1', image: '/img/avatar' },
+    { name: 'Author2', image: '/img/avatar' },
+    { name: 'Author3', image: '/img/avatar' },
+    { name: 'Author4', image: '/img/avatar' }
+  ]
+  const componentPropsAuthorsWithLengthGreaterThanFour = {
+    image: '/img/promises',
+    title: 'Card title',
+    description: 'Card description',
+    showPrivateCodeMessagge: true,
+    url: '#',
+    authors: authorsWithLengthGreaterThanFour
+  }
+  const wrapperWithAuthorsWithLengthGreaterThanFour = mount(
+    <Card {...componentPropsAuthorsWithLengthGreaterThanFour} />
+  )
+  it('should render', () => {
+    expect(
+      wrapperWithAuthorsWithLengthGreaterThanFour.find('.card-author-name')
+        .length
+    ).toEqual(0)
+  })
 })

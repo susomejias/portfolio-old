@@ -8,9 +8,8 @@ import usePaginateArray from './usePaginateArray'
 
 configure({ adapter: new Adapter() })
 
-let dataDisplayed, next, currentPage, maxPage
-
 describe('usePaginateArray()', () => {
+  let dataDisplayed, next, currentPage, maxPage
   const data = [
     {
       title: 'tweepyStreamerToCsv',
@@ -57,5 +56,18 @@ describe('usePaginateArray()', () => {
   it('should have 2 elements', () => {
     act(() => next())
     expect(dataDisplayed.length).toEqual(4)
+  })
+})
+
+describe('usePaginateArray() without data', () => {
+  let dataDisplayed, next, currentPage, maxPage
+  testHook(() => {
+    ;({ dataDisplayed, next, currentPage, maxPage } = usePaginateArray(
+      undefined,
+      2
+    ))
+  })
+  it('should have 0 elements', () => {
+    expect(dataDisplayed.length).toEqual(0)
   })
 })

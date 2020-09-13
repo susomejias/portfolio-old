@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavButton from './_children/NavButton'
+import ButtonToggleDarkMode from './_children/ButtonToggleDarkMode'
 
 const NavBar = () => {
   return (
@@ -26,6 +27,8 @@ const NavBar = () => {
       />
 
       <NavButton text="Contacto" url="/contacto" iconClass="fas fa-at" />
+
+      <ButtonToggleDarkMode />
     </nav>
   )
 }

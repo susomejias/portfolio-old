@@ -18,6 +18,7 @@ body {
 // utils
 @import "./utils/mixins.scss";
 @import "./utils/animations.scss";
+@import "./utils/themes.scss";
 
 // layouts
 @import "./layouts/default/style.scss";
@@ -26,6 +27,7 @@ body {
 @import "./components/ButtonBadge/style.scss";
 @import "./components/NavBar/style.scss";
 @import "./components/NavBar/NavButton/style.scss";
+@import "./components/NavBar/ButtonToggleDarkMode/style.scss";
 @import "./components/Card/style.scss";
 @import "./components/RoundedImage/style.scss";
 @import "./components/Tag/style.scss";

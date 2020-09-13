@@ -54,7 +54,7 @@
     .private-code-message {
       @include flex-position(row, flex-start, center);
 
-      color: $color-light-grey;
+      color: var(--color-text);
       padding: .7rem 0;
 
       i {
@@ -73,7 +73,7 @@
       font-size: 1.1rem;
       line-height: 1.6rem;
       font-weight: 500;
-      color: $color-dark-grey;
+      color: var(--color-text);
     }
 
     .card-authors {

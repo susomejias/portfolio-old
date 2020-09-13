@@ -1,0 +1,14 @@
+:root {
+  --color-page-background: #{$color-white};
+  --color-text: #{$color-dark-grey};
+}
+
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-text);
+}
+
+.dark {
+  --color-page-background: #000;
+  --color-text: #{$color-white};
+}

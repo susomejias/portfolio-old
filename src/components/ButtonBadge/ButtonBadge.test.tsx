@@ -31,12 +31,6 @@ describe('<ButtonBadge>', () => {
     )
   })
 
-  it('wrapperWithPropsLinkButton: should render with target _blank', () => {
-    expect(wrapperWithPropsLinkButton.find('a').prop('target')).toEqual(
-      '_blank'
-    )
-  })
-
   it('wrapperWithPropsLinkButton: simulate click', () => {
     wrapperWithPropsLinkButton.find('a').simulate('click')
   })

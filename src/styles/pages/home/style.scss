@@ -15,7 +15,7 @@
     line-height: 1.4rem;
     max-width: 300px;
     text-align: center;
-    color: $color-dark-grey;
+    color: var(--color-text);
     margin-bottom: 0;
     font-weight: 500;
 
@@ -56,6 +56,7 @@
 
   .more-skills {
     @include text-gradient($primary-gradient);
+    @include disable-text-selection();
 
     font-size: 1.1rem;
     font-weight: 600;
