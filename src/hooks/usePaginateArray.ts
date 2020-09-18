@@ -14,7 +14,7 @@ const usePaginationArray = (
 ): IUsePaginationArray => {
   const [currentPage, setCurrentPage] = useState(1)
   const [dataDisplayed, setDataDisplayed] = useState([])
-  const maxPage = Math.ceil(data.length / itemsPerPage)
+  const maxPage = Math.ceil(data.length / itemsPerPage) || 1
 
   useEffect(() => {
     const begin = (currentPage - 1) * itemsPerPage

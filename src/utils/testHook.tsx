@@ -6,6 +6,6 @@ const TestHook = ({ callback }): null => {
   return null
 }
 
-export const testHook = (callback) => {
+export const testHook = (callback): void => {
   mount(<TestHook callback={callback} />)
 }

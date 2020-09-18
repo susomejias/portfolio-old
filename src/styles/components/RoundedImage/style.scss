@@ -1,5 +1,6 @@
 .container-image {
   margin: 1rem .3rem;
+  background-color: rgba(0, 0, 0, 0);
 
   .rounded-image {
     object-fit: cover;
@@ -9,6 +10,7 @@
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     border-radius: 50%;
+    padding: 4px;
 
     img {
       object-fit: cover;

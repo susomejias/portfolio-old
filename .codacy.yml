@@ -5,12 +5,16 @@
         - 'src/interfaces/*.d.ts'
         - 'public/manifest.json'
         - 'public/*.js'
+        - 'public/*.js.map'
         - 'tsconfig.json'
         - 'src/hooks/useSWR.ts'
+        - 'README.md'
 
   exclude_paths:
     - 'src/interfaces/*.d.ts'
     - 'public/manifest.json'
     - 'public/*.js'
+    - 'public/*.js.map'
     - 'tsconfig.json'
     - 'src/hooks/useSWR.ts'
+    - 'README.md'

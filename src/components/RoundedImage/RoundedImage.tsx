@@ -22,7 +22,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
   }
 
   return (
-    <div className={`container-image ${getSizeClass()}`}>
+    <div className={`container-image text-focus-in ${getSizeClass()}`}>
       <Image
         src={`${image}.png`}
         width="100%"

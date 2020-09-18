@@ -77,4 +77,13 @@ describe('usePaginateArray() without data', () => {
   it('should have 0 elements', () => {
     expect(dataDisplayed.length).toEqual(0)
   })
+
+  it('should currentPage is equal 1', () => {
+    expect(currentPage).toEqual(1)
+  })
+
+  it('should maxPage is equal 1', () => {
+    act(() => next())
+    expect(maxPage).toEqual(1)
+  })
 })

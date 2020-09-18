@@ -31,8 +31,8 @@ const Home = (): JSX.Element => {
       </p>
 
       <div className="skills-container">
-        {dataDisplayed.map((skill: Skill, index: number) => {
-          return <Tag key={index} text={skill.name} />
+        {dataDisplayed.map((skill: string, index: number) => {
+          return <Tag key={index} text={skill} />
         })}
       </div>
 
