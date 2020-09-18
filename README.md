@@ -18,6 +18,10 @@
 | ------------------------- | ----------------------- | ------------------------ | -------------------- |
 | ![Statements](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Branches](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) |
 
+## 👐 CONTRIBUTING 👐
+
+[CONTRIBUTING](CONTRIBUTING.md)
+
 ## 📖  License 📖
 
 [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](LICENSE)
