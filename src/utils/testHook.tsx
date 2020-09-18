@@ -6,6 +6,7 @@ const TestHook = ({ callback }): null => {
   return null
 }
 
+// eslint-disable-next-line
 export const testHook = (callback): void => {
   mount(<TestHook callback={callback} />)
 }
