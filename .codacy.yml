@@ -4,11 +4,13 @@
       exclude_paths:
         - 'src/interfaces/*.d.ts'
         - 'public/manifest.json'
+        - 'public/*.js'
         - 'tsconfig.json'
         - 'src/hooks/useSWR.ts'
 
   exclude_paths:
     - 'src/interfaces/*.d.ts'
     - 'public/manifest.json'
+    - 'public/*.js'
     - 'tsconfig.json'
     - 'src/hooks/useSWR.ts'

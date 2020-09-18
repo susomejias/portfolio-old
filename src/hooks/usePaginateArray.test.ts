@@ -56,6 +56,14 @@ describe('usePaginateArray()', () => {
     act(() => next())
     expect(dataDisplayed.length).toEqual(4)
   })
+
+  it('should currentPage is equal 2', () => {
+    expect(currentPage).toEqual(2)
+  })
+
+  it('should maxPage is equal 2', () => {
+    expect(maxPage).toEqual(2)
+  })
 })
 
 describe('usePaginateArray() without data', () => {

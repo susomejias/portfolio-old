@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-const TestHook = ({ callback }) => {
+const TestHook = ({ callback }): null => {
   callback()
   return null
 }

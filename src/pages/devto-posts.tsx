@@ -52,7 +52,10 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (): Promise<{
+  props: { posts: DevtoPost[] }
+  revalidate: number
+}> => {
   const posts = await DevtoService.getDevtoPosts()
   return { props: { posts }, revalidate: 7200 /* In 3 hours */ }
 }

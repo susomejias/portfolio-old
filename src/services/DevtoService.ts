@@ -1,5 +1,5 @@
 class DevtoService {
-  public static async getDevtoPosts() {
+  public static async getDevtoPosts(): Promise<any> {
     const res = await fetch(
       'https://dev.to/api/articles?username=susomejias&state=all&per_page=1000'
     )
