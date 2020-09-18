@@ -1,0 +1,12 @@
+---
+  engines:
+    metric:
+      exclude_paths:
+        - 'src/interfaces/*.d.ts'
+        - 'public/manifest.json'
+        - 'tsconfig.json'
+
+  exclude_paths:
+    - 'src/interfaces/*.d.ts'
+    - 'public/manifest.json'
+    - 'tsconfig.json'
