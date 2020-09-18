@@ -6,7 +6,7 @@ import talks from '../assets/data/talks'
 import Card from '../components/Card/Card'
 import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
 
-const Talks = () => {
+const Talks = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     talks,
     2

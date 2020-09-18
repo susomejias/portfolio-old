@@ -6,7 +6,7 @@ import Tag from '../components/Tag/Tag'
 import skills from '../assets/data/skills'
 import usePaginationArray from '../hooks/usePaginateArray'
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     skills,
     6

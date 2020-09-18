@@ -6,7 +6,7 @@ import projects from '../assets/data/projects'
 import Card from '../components/Card/Card'
 import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
 
-const Projects = () => {
+const Projects = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     projects,
     2

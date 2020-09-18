@@ -11,7 +11,7 @@ interface DevtoPostsProps {
   posts: DevtoPost[]
 }
 
-const DevtoPosts = ({ posts }: DevtoPostsProps) => {
+const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     posts,
     2

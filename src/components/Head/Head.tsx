@@ -3,7 +3,7 @@ import Links from './_children/Links'
 //import Scripts from './_children/Scripts'
 import DefaultMetaTags from './_children/DefaultMetaTags'
 
-const HeadComponent = () => (
+const HeadComponent = (): JSX.Element => (
   <>
     <DefaultMetaTags />
     <Links />

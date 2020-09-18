@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-const Links = () => (
+const Links = (): JSX.Element => (
   <Head>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />

@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout'
 
 import '../styles/globals.scss'
 
-const App = (props: AppProps) => {
+const App = (props: AppProps): JSX.Element => {
   const { Component, pageProps } = props
   const router = useRouter()
   const [progress, setProgress] = useState(0)

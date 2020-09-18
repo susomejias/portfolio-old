@@ -4,7 +4,7 @@ import socialNetworks from '../assets/data/socialNetworks'
 import RoundedImage from '../components/RoundedImage/RoundedImage'
 import ButtonBadge from '../components/ButtonBadge/ButtonBadge'
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   return (
     <div className="wrapper contact-page">
       <h1 className="page-title tracking-in-expand">Contacto</h1>
