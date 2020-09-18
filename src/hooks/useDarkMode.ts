@@ -1,6 +1,12 @@
 import { useState } from 'react'
 
-const useDarkMode = () => {
+interface IUseDarkMode {
+  isDarkMode: boolean
+  setDarkMode: () => void
+  setLightMode: () => void
+}
+
+const useDarkMode = (): IUseDarkMode => {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   const setDarkMode = () => {

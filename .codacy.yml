@@ -5,8 +5,10 @@
         - 'src/interfaces/*.d.ts'
         - 'public/manifest.json'
         - 'tsconfig.json'
+        - 'src/hooks/useSWR.ts'
 
   exclude_paths:
     - 'src/interfaces/*.d.ts'
     - 'public/manifest.json'
     - 'tsconfig.json'
+    - 'src/hooks/useSWR.ts'

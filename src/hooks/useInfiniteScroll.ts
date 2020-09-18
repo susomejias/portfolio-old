@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 
-const useInfiniteScroll = (refTriggerElement, handleMoreData) => {
+const useInfiniteScroll = (
+  refTriggerElement: React.RefObject<HTMLInputElement>,
+  handleMoreData: () => void
+): void => {
   const handleObserver = (entities) => {
     const target = entities[0]
     if (target.isIntersecting) {

@@ -1,6 +1,17 @@
 import { useState, useEffect } from 'react'
 
-const usePaginationArray = (data = [], itemsPerPage) => {
+interface IUsePaginationArray {
+  // eslint-disable-next-line
+  dataDisplayed: any[]
+  next: () => void
+  currentPage: number
+  maxPage: number
+}
+
+const usePaginationArray = (
+  data = [],
+  itemsPerPage: number
+): IUsePaginationArray => {
   const [currentPage, setCurrentPage] = useState(1)
   const [dataDisplayed, setDataDisplayed] = useState([])
   const maxPage = Math.ceil(data.length / itemsPerPage)
