@@ -9,6 +9,7 @@
         - 'tsconfig.json'
         - 'src/hooks/useSWR.ts'
         - '.github/**/*.md'
+        - '.github/*.md'
         - '*.md'
 
   exclude_paths:
@@ -19,4 +20,5 @@
     - 'tsconfig.json'
     - 'src/hooks/useSWR.ts'
     - '.github/**/*.md'
+    - '.github/*.md'
     - '*.md'
