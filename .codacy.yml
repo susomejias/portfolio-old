@@ -8,6 +8,7 @@
         - 'public/*.js.map'
         - 'tsconfig.json'
         - 'src/hooks/useSWR.ts'
+        - '.github/**/*.md'
         - '*.md'
 
   exclude_paths:
@@ -17,4 +18,5 @@
     - 'public/*.js.map'
     - 'tsconfig.json'
     - 'src/hooks/useSWR.ts'
+    - '.github/**/*.md'
     - '*.md'
