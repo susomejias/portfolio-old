@@ -13,18 +13,32 @@ const App = (props: AppProps): JSX.Element => {
   const router = useRouter()
   const [progress, setProgress] = useState(0)
 
+  const handleRouteChangeStart = () => {
+    setProgress(progress + 20)
+  }
+
+  const handleRouteChangeComplete = () => {
+    setProgress(100)
+  }
+
   useEffect(() => {
-    setProgress(progress + 50)
-    setTimeout(() => {
-      setProgress(100)
-    }, 500)
-  }, [router])
+    router.events.on('routeChangeStart', handleRouteChangeStart)
+    router.events.on('routeChangeComplete', handleRouteChangeComplete)
+    router.events.on('routeChangeError', handleRouteChangeComplete)
+
+    // If the component is unmounted, unsubscribe
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart)
+      router.events.off('routeChangeComplete', handleRouteChangeComplete)
+      router.events.off('routeChangeError', handleRouteChangeComplete)
+    }
+  }, [])
 
   return (
     <>
       <HeadComponent />
       <LoadingBar
-        color="#B9B4F5"
+        color="#b1bcf4"
         height={4}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
