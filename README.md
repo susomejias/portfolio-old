@@ -1,6 +1,6 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5d2f4a33a77049a089041c56e308f7a1)](https://www.codacy.com/manual/susomejias/portfolio-nextjs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=susomejias/portfolio-nextjs&amp;utm_campaign=Badge_Grade)
 
-## ⚡ Portfolio ⚡
+# 🤓 Portfolio 🤓
 
 ![logo](logo.png)
 
