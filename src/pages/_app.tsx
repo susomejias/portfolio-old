@@ -38,7 +38,7 @@ const App = (props: AppProps): JSX.Element => {
     <>
       <HeadComponent />
       <LoadingBar
-        color="#b1bcf4"
+        color="#ff7eb3"
         height={4}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
