@@ -18,6 +18,10 @@
 | ------------------------- | ----------------------- | ------------------------ | -------------------- |
 | ![Statements](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Branches](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) |
 
+## 🏄 Commits format 🏄
+
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
 ## 👐 CONTRIBUTING 👐
 
 [CONTRIBUTING](CONTRIBUTING.md)
