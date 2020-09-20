@@ -8,4 +8,11 @@
   width: 40px;
   height: 40px;
   text-align: center;
+  transition: transform 1s;
+
+  @include box-shadow-default();
+}
+
+.scroll-top-button:hover {
+  @include scale-card-hover();
 }

@@ -1,8 +1,13 @@
 .button-toggle-dark-mode {
   margin: .45rem;
+  transition: transform 1s;
 
   i {
     padding: .55rem;
     color: $color-light-grey;
   }
+}
+
+.button-toggle-dark-mode:hover {
+  transform: scale(1.1);
 }

@@ -2,11 +2,14 @@
   @include flex-position(column, flex-start, center);
 
   width: 100%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
   border-radius: $border-radius-default;
   text-decoration: none;
   margin: 1.2rem 0;
   max-width: 350px;
+  transition: transform 1s;
+  border: 3px solid $color-border-accent;
+
+  @include box-shadow-default();
 
   @include tablet {
     max-width: 500px;
@@ -15,33 +18,43 @@
   @include desktop {
     @include flex-position(row, center, center);
 
+    min-width: 600px;
     max-width: 850px;
   }
 
   @include large {
     @include flex-position(row, center, center);
 
-    max-width: 1000px;
+    width: 1000px;
   }
 
   .card-container-image {
     min-height: 300px;
     width: 100%;
-    border-top-left-radius: $border-radius-default;
-    border-top-right-radius: $border-radius-default;
 
     @include desktop {
-      border-top-right-radius: 0;
-      border-top-left-radius: $border-radius-default;
-      border-bottom-left-radius: $border-radius-default;
       width: 35%;
     }
 
     @include large {
-      border-top-right-radius: 0;
-      border-top-left-radius: $border-radius-default;
-      border-bottom-left-radius: $border-radius-default;
       width: 55%;
+    }
+
+    div div {
+      border-top-left-radius: $border-radius-default;
+      border-top-right-radius: $border-radius-default;
+
+      @include desktop {
+        border-top-right-radius: 0;
+        border-top-left-radius: $border-radius-default;
+        border-bottom-left-radius: $border-radius-default;
+      }
+
+      @include large {
+        border-top-right-radius: 0;
+        border-top-left-radius: $border-radius-default;
+        border-bottom-left-radius: $border-radius-default;
+      }
     }
   }
 
@@ -114,4 +127,9 @@
       }
     }
   }
+}
+
+.card:hover {
+  @include box-shadow-hover-default();
+  @include scale-card-hover();
 }

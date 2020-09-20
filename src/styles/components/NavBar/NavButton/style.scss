@@ -3,6 +3,7 @@
 
   a {
     text-decoration: none;
+    transition: transform 1s;
 
     @include flex-position(row, center, center);
 
@@ -49,5 +50,11 @@
     border-radius: $border-radius-default;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
     font-weight: 600;
+  }
+
+  a:not(.current):hover {
+    transform: scale(1.15);
+
+    @include text-gradient($color-accent);
   }
 }
