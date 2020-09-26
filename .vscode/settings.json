@@ -1,5 +1,6 @@
 {
   "conventionalCommits.scopes": [
-    "add husky and commitlint"
+    "add husky and commitlint",
+    "portfolio"
   ]
 }
