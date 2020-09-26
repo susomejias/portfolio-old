@@ -1,5 +1,14 @@
 export default [
   {
+    title: 'Portfolio-NextJS',
+    description:
+      'Portfolio construido con NextJS y TypeScript, además se están usando tecnologías como CI, SSR, PWA, SCSS, Husky, Jest, Enzyme, Codacy, Lazy-load, Conventional Commit y Lighthouse.',
+    image: '/img/logo-portfolio',
+    url: 'https://github.com/susomejias/portfolio-nextjs',
+    authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
+  },
+
+  {
     title: 'SusomejiasBot',
     description:
       'Bot de Telegram. Actualmente puede realizar las siguientes funciones: Compartir posts de mi canal de Telegram a mi cuenta de Twitter. Mostrar información climatológica de una ciudad. Convertir un color hexadecimal a RGB y RGBA. Crear y programar con un límite de tiempo un streamer de twitter para buscar tweets por coincidencias, los añade a un CSV que se le envía al usuario al terminar la búsqueda. etc',
@@ -38,16 +47,6 @@ export default [
       'Juego Buscaminas realizado con jQuery, este proyecto consta de dos capas de abstracción, capa de negocio y capa de presentación. El juego permite elegir entre distintos niveles de dificultad, tiene registro de record, animaciones fluidas, sonidos al interactuar etc.',
     image: '/img/buscaminasjQuery',
     url: 'https://github.com/susomejias/Buscaminas-JesusMejiasLeiva',
-    authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
-  },
-
-  {
-    title: 'Plugin validación de formulario Jquery y AJAX',
-    description:
-      'Plugin de jQuery para realizar una validación de formularios mediante AJAX, el plugin se puede modificar para añadir un objeto con las expresiones regulares a comprobar.',
-    image: '/img/pluginValidacionFormulariojQuery',
-    url:
-      'https://susomejias-io.herokuapp.com/ejercicios/tema7/pluginJqueryFormulario/',
     authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
   },
 
