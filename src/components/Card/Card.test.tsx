@@ -12,7 +12,7 @@ describe('<Card>', () => {
     image: '/img/promises',
     title: 'Card title',
     description: 'Card description',
-    showPrivateCodeMessagge: true,
+    showPrivateCodeMessage: true,
     url: '#',
     authors: authors
   }
@@ -42,7 +42,7 @@ describe('<Card>', () => {
     image: '/img/promises',
     title: 'Card title',
     description: 'Card description',
-    showPrivateCodeMessagge: false,
+    showPrivateCodeMessage: false,
     url: 'https://www.google.es',
     authors: authors
   }
@@ -84,7 +84,7 @@ describe('<Card>', () => {
     image: '/img/promises',
     title: 'Card title',
     description: 'Card description',
-    showPrivateCodeMessagge: true,
+    showPrivateCodeMessage: true,
     url: '#',
     authors: authorsWithLengthGreaterThanFour
   }

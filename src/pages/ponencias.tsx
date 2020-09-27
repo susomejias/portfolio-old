@@ -25,7 +25,7 @@ const Talks = (): JSX.Element => {
             image={talk.image}
             title={talk.title}
             description={talk.description}
-            showPrivateCodeMessagge={talk.url === '#'}
+            showPrivateCodeMessage={talk.url === '#'}
             url={talk.url}
             authors={talk.speakers}
           />

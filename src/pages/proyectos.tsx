@@ -25,7 +25,7 @@ const Projects = (): JSX.Element => {
             image={project.image}
             title={project.title}
             description={project.description}
-            showPrivateCodeMessagge={project.url === '#'}
+            showPrivateCodeMessage={project.url === '#'}
             url={project.url}
             authors={project.authors}
           />

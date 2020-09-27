@@ -6,7 +6,7 @@ interface CardProps {
   image: string
   title: string
   description: string
-  showPrivateCodeMessagge: boolean
+  showPrivateCodeMessage: boolean
   url: string
   authors: Author[]
 }
@@ -15,7 +15,7 @@ const Card = ({
   image,
   title,
   description,
-  showPrivateCodeMessagge,
+  showPrivateCodeMessage,
   url,
   authors
 }: CardProps) => {
@@ -43,7 +43,7 @@ const Card = ({
         </div>
 
         <div className="card-container-content">
-          {showPrivateCodeMessagge ? (
+          {showPrivateCodeMessage ? (
             <span className="private-code-message">
               <i className="fas fa-lock"></i>
               Código privado
