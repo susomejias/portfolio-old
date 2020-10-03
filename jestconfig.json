@@ -1,3 +1,7 @@
 {
-  "coverageReporters": ["json-summary"]
+  "coverageReporters": ["json-summary"],
+  "testPathIgnorePatterns": [
+    "<rootDir>/__tests__/e2e",
+    "<rootDir>/src/lib/mirage"
+  ]
 }
