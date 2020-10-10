@@ -62,6 +62,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: yarn install
+    - run: yarn build
     - name: Run e2e tests
       uses: cypress-io/github-action@v1
       with:
@@ -93,7 +95,7 @@ jobs:
           yarn build
       - name: run Lighthouse CI
         run: |
-          yarn install -g @lhci/cli@0.4.x
+          yarn add -g @lhci/cli@0.4.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
