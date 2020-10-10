@@ -3,8 +3,7 @@ body {
 }
 
 .wrapper {
-  margin-top: 6rem;
-  padding: 0 1rem 2.5rem;
+  padding: 1.2rem 2.5rem 0;
   overflow-y: hidden;
 
   @include flex-position(column, center, center);

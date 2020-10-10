@@ -3,7 +3,8 @@
 
   padding: 1rem .2rem;
   width: 100%;
-  position: fixed;
+  position: sticky;
   background: var(--color-page-background);
-  z-index: 99999;
+  z-index: 20;
+  top: 0;
 }
