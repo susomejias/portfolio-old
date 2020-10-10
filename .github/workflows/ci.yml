@@ -22,8 +22,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: npm run lint
-    - run: npm run build
+    - run: yarn lint
+    - run: yarn build
       env:
         CI: true
 
@@ -48,7 +48,7 @@ jobs:
     - run: yarn make-badges
     - run: yarn lighthouse-badges
 
-  integration-tests:
+  e2e-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -62,7 +62,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Run integration tests
+    - name: Run e2e tests
+    - run: yarn install
       uses: cypress-io/github-action@v1
       with:
         install: false
@@ -70,6 +71,7 @@ jobs:
         headless: true
         start: yarn start
         wait-on: 'http://localhost:3000'
+    - name: Upload e2e tests videos
       uses: actions/upload-artifact@v1
       if: failure()
       with:
