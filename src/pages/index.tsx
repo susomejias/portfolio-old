@@ -9,7 +9,7 @@ import usePaginationArray from '../hooks/usePaginateArray'
 const Home = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     skills,
-    10
+    7
   )
   return (
     <div className="wrapper home-page">

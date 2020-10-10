@@ -9,6 +9,7 @@
     "eslint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss'",
     "test": "jest --config='./jestconfig.json' --coverage",
+    "cy:run": "cypress run",
     "lint": "npm run eslint && npm run stylelint",
     "make-badges": "istanbul-badges-readme",
     "lighthouse-badges": "lighthouse-badges --urls https://susomejias.es https://susomejias.es/proyectos https://susomejias.es/ponencias https://susomejias.es/devto-posts https://susomejias.es/contacto"

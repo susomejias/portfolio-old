@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     strategy:
       matrix:
@@ -28,6 +29,7 @@ jobs:
 
   unit-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     strategy:
       matrix:
@@ -40,28 +42,60 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: npm run test
+    - run: yarn test
       env:
         CI: true
-    - run: npm run make-badges
-    - run: npm run lighthouse-badges
+    - run: yarn make-badges
+    - run: yarn lighthouse-badges
+
+  integration-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Run integration tests
+      uses: cypress-io/github-action@v1
+      with:
+        install: false
+        browser: chrome
+        headless: true
+        start: yarn start
+        wait-on: 'http://localhost:3000'
+  - uses: actions/upload-artifact@v1
+    if: failure()
+    with:
+      name: cypress-videos
+      path: __tests__/e2e/videos
+      env:
+        CI: true
 
   lhci:
     name: Lighthouse
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install, build
+      - name: yarn install, build
         run: |
           yarn install
-          npm run build
+          yarn build
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.4.x
+          yarn install -g @lhci/cli@0.4.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
