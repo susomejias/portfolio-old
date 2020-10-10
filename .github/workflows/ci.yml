@@ -70,13 +70,13 @@ jobs:
         headless: true
         start: yarn start
         wait-on: 'http://localhost:3000'
-  - uses: actions/upload-artifact@v1
-    if: failure()
-    with:
-      name: cypress-videos
-      path: __tests__/e2e/videos
-      env:
-        CI: true
+    - uses: actions/upload-artifact@v1
+      if: failure()
+      with:
+        name: cypress-videos
+        path: __tests__/e2e/videos
+        env:
+          CI: true
 
   lhci:
     name: Lighthouse
