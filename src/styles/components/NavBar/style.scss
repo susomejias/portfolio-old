@@ -1,3 +1,4 @@
+
 .navbar {
   @include flex-position(row, center, center);
 
@@ -7,4 +8,6 @@
   background: var(--color-page-background);
   z-index: 20;
   top: 0;
+  left: 0;
+  right: 0;
 }
