@@ -41,8 +41,7 @@
     }
 
     div div {
-      border-top-left-radius: $border-radius-default;
-      border-top-right-radius: $border-radius-default;
+      border-radius: 0;
 
       @include desktop {
         border-top-right-radius: 0;
