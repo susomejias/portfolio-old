@@ -4,11 +4,17 @@
 }
 
 body {
-  background-color: var(--color-page-background);
-  color: var(--color-text);
+  @include set-background-dynamic();
+  @include set-text-color-dynamic();
+  @include default-transition-for-bg-and-color();
+}
+
+.light {
+  --color-page-background: #{$color-white};
+  --color-text: #{$color-dark-grey};
 }
 
 .dark {
-  --color-page-background: #000;
+  --color-page-background: #{$color-black};
   --color-text: #{$color-white};
 }

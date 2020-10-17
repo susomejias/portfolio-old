@@ -1,11 +1,12 @@
 
 .navbar {
   @include flex-position(row, center, center);
+  @include set-background-dynamic();
+  @include default-transition-for-bg-and-color();
 
   padding: 1rem .2rem;
   width: 100%;
   position: sticky;
-  background: var(--color-page-background);
   z-index: 20;
   top: 0;
   left: 0;

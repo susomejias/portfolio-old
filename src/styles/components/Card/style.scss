@@ -65,8 +65,9 @@
 
     .private-code-message {
       @include flex-position(row, flex-start, center);
+      @include set-text-color-dynamic();
+      @include default-transition-for-bg-and-color();
 
-      color: var(--color-text);
       padding: .7rem 0;
 
       i {
@@ -81,11 +82,13 @@
     }
 
     .card-description {
+      @include set-text-color-dynamic();
+      @include default-transition-for-bg-and-color();
+
       margin: .4rem 0;
       font-size: 1.1rem;
       line-height: 1.6rem;
       font-weight: 500;
-      color: var(--color-text);
     }
 
     .card-authors {

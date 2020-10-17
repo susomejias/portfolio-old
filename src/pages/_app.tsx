@@ -35,7 +35,7 @@ const App = (props: AppProps): JSX.Element => {
   }, [])
 
   return (
-    <>
+    <div className="content">
       <HeadComponent />
       <LoadingBar
         color="#ff7eb3"
@@ -43,12 +43,10 @@ const App = (props: AppProps): JSX.Element => {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-      <body>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </body>
-    </>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
   )
 }
 

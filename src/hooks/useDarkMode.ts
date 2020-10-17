@@ -11,12 +11,14 @@ const useDarkMode = (): IUseDarkMode => {
 
   const setDarkMode = () => {
     setIsDarkMode(true)
+    document.body.classList.remove('light')
     document.body.classList.add('dark')
   }
 
   const setLightMode = () => {
     setIsDarkMode(false)
     document.body.classList.remove('dark')
+    document.body.classList.add('light')
   }
 
   return { isDarkMode, setDarkMode, setLightMode }

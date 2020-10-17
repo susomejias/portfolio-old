@@ -1,8 +1,14 @@
 .container-image {
+  @include set-background-dynamic();
+  @include default-transition-for-bg-and-color();
+
   margin: 1rem .3rem;
-  background-color: var(--color-page-background);
+  border-radius: 50%;
 
   .rounded-image {
+    @include set-background-dynamic();
+    @include default-transition-for-bg-and-color();
+
     object-fit: cover;
     display: block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
@@ -11,13 +17,14 @@
     background-origin: padding-box, border-box;
     border-radius: 50%;
     padding: 4px;
-    background-color: var(--color-page-background);
 
     img {
+      @include set-background-dynamic();
+      @include default-transition-for-bg-and-color();
+
       object-fit: cover;
       display: block;
       border-radius: 50%;
-      background-color: var(--color-page-background);
     }
   }
 

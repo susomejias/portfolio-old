@@ -1,6 +1,7 @@
 .button-toggle-dark-mode {
   margin: .45rem;
   transition: transform 1s;
+  min-width: 40px;
 
   i {
     padding: .55rem;

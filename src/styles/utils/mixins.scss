@@ -61,3 +61,15 @@
 @mixin scale-card-hover() {
   transform: scale(1.03);
 }
+
+@mixin set-background-dynamic() {
+  background-color: var(--color-page-background);
+}
+
+@mixin set-text-color-dynamic() {
+  color: var(--color-text);
+}
+
+@mixin default-transition-for-bg-and-color {
+  transition: background-color 500ms linear, color 500ms linear;
+}

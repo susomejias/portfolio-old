@@ -16,7 +16,9 @@
       margin: 1rem;
 
       i {
-        color: var(--color-text);
+        @include set-text-color-dynamic();
+        @include default-transition-for-bg-and-color();
+
         width: 2.1rem;
       }
     }
