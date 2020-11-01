@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import Tag from './Tag'
-
-configure({ adapter: new Adapter() })
 
 describe('<Tag>', () => {
   const componentProps = {

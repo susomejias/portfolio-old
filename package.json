@@ -8,13 +8,14 @@
     "start": "next start",
     "eslint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss'",
-    "test": "jest --config='./jestconfig.json' --coverage",
+    "test": "jest --config='./jest.config.js' --coverage",
     "cy:run": "cypress run",
     "lint": "npm run eslint && npm run stylelint",
     "make-badges": "istanbul-badges-readme",
     "lighthouse-badges": "lighthouse-badges --urls https://susomejias.es https://susomejias.es/proyectos https://susomejias.es/ponencias https://susomejias.es/devto-posts https://susomejias.es/contacto"
   },
   "dependencies": {
+    "@jest/types": "^26.6.1",
     "@lhci/cli": "^0.5.0",
     "@testing-library/react": "^11.0.2",
     "@types/jest": "^26.0.10",
@@ -36,6 +37,7 @@
     "isomorphic-fetch": "^2.2.1",
     "istanbul-badges-readme": "^1.0.5",
     "jest": "^26.4.2",
+    "jest-config": "^26.6.1",
     "lighthouse-badges": "^1.0.34",
     "next": "^10.0.0",
     "next-pwa": "^3.1.3",
@@ -48,7 +50,8 @@
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-scss": "^3.18.0",
-    "swr": "^0.3.2"
+    "swr": "^0.3.2",
+    "ts-jest": "^26.4.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

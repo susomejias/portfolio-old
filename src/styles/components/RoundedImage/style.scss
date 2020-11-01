@@ -4,6 +4,10 @@
 
   margin: 1rem .3rem;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .rounded-image {
     @include set-background-dynamic();
@@ -18,28 +22,7 @@
     border-radius: 50%;
     padding: 4px;
 
-    img {
-      @include set-background-dynamic();
-      @include default-transition-for-bg-and-color();
-
-      object-fit: cover;
-      display: block;
-      border-radius: 50%;
-    }
-  }
-
-  &.small {
-    width: 46px;
-    height: 46px;
-  }
-
-  &.medium {
-    width: 140px;
-    height: 140px;
-  }
-
-  &.large {
-    width: 180px;
-    height: 180px;
+    @include set-background-dynamic();
+    @include default-transition-for-bg-and-color();
   }
 }

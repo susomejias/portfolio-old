@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import ButtonBadge from './ButtonBadge'
-
-configure({ adapter: new Adapter() })
 
 describe('<ButtonBadge>', () => {
   const componentProps = {

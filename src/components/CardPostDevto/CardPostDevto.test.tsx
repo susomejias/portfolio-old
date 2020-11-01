@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import CardPostDevto from './CardPostDevto'
-
-configure({ adapter: new Adapter() })
 
 describe('<CardPostDevto>', () => {
   const componentProps = {

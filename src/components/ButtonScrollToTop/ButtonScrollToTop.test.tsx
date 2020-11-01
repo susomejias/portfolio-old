@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import ButtonScrollToTop from './ButtonScrollToTop'
-
-configure({ adapter: new Adapter() })
 
 describe('<ButtonScrollToTop>', () => {
   const wrapper = mount(<ButtonScrollToTop />)

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'react-image-and-background-image-fade'
+import Image from 'next/image'
 
 interface RoundedImageProps {
   image: string
@@ -7,30 +7,31 @@ interface RoundedImageProps {
 }
 
 const RoundedImage = ({ image, size }: RoundedImageProps) => {
-  const getSizeClass = () => {
-    if (!size) return 'small'
+  const SMALL_SIZE = { width: 46, height: 46, className: 'small' }
+  const MEDIUM_SIZE = { width: 140, height: 140, className: 'medium' }
+  const LARGE_SIZE = { width: 180, height: 180, className: 'large' }
+  const getSize = () => {
+    if (!size) return SMALL_SIZE
     switch (size.toLowerCase()) {
       case 'small':
-        return 'small'
+        return SMALL_SIZE
       case 'medium':
-        return 'medium'
+        return MEDIUM_SIZE
       case 'large':
-        return 'large'
+        return LARGE_SIZE
       default:
-        return 'small'
+        return SMALL_SIZE
     }
   }
 
   return (
-    <div className={`container-image text-focus-in ${getSizeClass()}`}>
+    <div className="container-image text-focus-in">
       <Image
+        className={`rounded-image ${getSize().className}`}
         src={`${image}.png`}
-        width="100%"
-        height="100%"
-        lazyLoad
-        wrapperClassName="rounded-image"
-        transitionTime="2.5s"
-        alt="imagen de avatar"
+        width={`${getSize().width}px`}
+        height={`${getSize().height}px`}
+        alt="Avatar image"
       />
     </div>
   )

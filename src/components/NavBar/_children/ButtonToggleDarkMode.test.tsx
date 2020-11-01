@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import ButtonToggleDarkMode from './ButtonToggleDarkMode'
-
-configure({ adapter: new Adapter() })
 
 describe('<ButtonToggleDarkMode>', () => {
   const wrapper = mount(<ButtonToggleDarkMode />)
@@ -18,9 +15,7 @@ describe('<ButtonToggleDarkMode>', () => {
   })
 
   it('should show the icon with the classes fas fa-tint-slash and change to dark-theme', () => {
-    console.log(wrapper.debug())
     wrapper.find('.button-toggle-dark-mode').simulate('click')
-    console.log(wrapper.debug())
     expect(wrapper.find('.fas.fa-tint-slash').length).toEqual(1)
   })
 

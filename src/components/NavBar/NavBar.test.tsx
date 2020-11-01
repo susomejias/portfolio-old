@@ -1,11 +1,8 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 import * as nextRouter from 'next/router'
 
 import NavBar from './NavBar'
-
-configure({ adapter: new Adapter() })
 
 describe('<NavBar>', () => {
   nextRouter.useRouter = jest.fn()

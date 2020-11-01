@@ -84,6 +84,6 @@ export default [
       'SusoMiTools-Linux, es un script en python con un único fin, facilitar la vida a cualquier usuario de un sistema linux basado en Ubuntu/Mint, ofreciendole una variedad de aplicaciones y herramientas que le harán disfrutar de su sistema linux al máximo.',
     image: '/img/sumitools',
     url: 'https://github.com/susomejias/SuMiTools-Linux',
-    authors: [{ name: 'Suso Mejías', image: 'img/avatar' }]
+    authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
   }
 ]

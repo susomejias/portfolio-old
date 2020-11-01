@@ -1,10 +1,7 @@
 import React from 'react'
-import { mount, configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 import RoundedImage from './RoundedImage'
-
-configure({ adapter: new Adapter() })
 
 describe('<RoundedImage>', () => {
   const componentProps = {
@@ -16,8 +13,9 @@ describe('<RoundedImage>', () => {
     expect(wrapperWithPropsSmallSize).toBeDefined()
   })
 
+  console.log(wrapperWithPropsSmallSize.debug())
   it('should render with small size', () => {
-    expect(wrapperWithPropsSmallSize.find('.small').length).toEqual(1)
+    expect(wrapperWithPropsSmallSize.find('img.small').length).toEqual(1)
   })
 
   const componentPropsMediumSize = {
@@ -32,7 +30,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with medium size', () => {
-    expect(wrapperWithPropsMediumSize.find('.medium').length).toEqual(1)
+    expect(wrapperWithPropsMediumSize.find('img.medium').length).toEqual(1)
   })
 
   const componentPropsLargeSize = {
@@ -47,7 +45,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with large size', () => {
-    expect(wrapperWithPropsLargeSize.find('.large').length).toEqual(1)
+    expect(wrapperWithPropsLargeSize.find('img.large').length).toEqual(1)
   })
 
   const componentPropsDefaultSize = {
@@ -62,7 +60,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(wrapperWithPropsDefaultSize.find('.small').length).toEqual(1)
+    expect(wrapperWithPropsDefaultSize.find('img.small').length).toEqual(1)
   })
 
   const componentPropsNotExistSize = {
@@ -77,6 +75,6 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(wrapperWithPropsNotExistSize.find('.small').length).toEqual(1)
+    expect(wrapperWithPropsNotExistSize.find('img.small').length).toEqual(1)
   })
 })

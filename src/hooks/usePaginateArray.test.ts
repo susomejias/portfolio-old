@@ -1,11 +1,7 @@
-import { configure } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 import { act } from '@testing-library/react'
 
 import { testHook } from '../utils/testHook'
 import usePaginateArray from './usePaginateArray'
-
-configure({ adapter: new Adapter() })
 
 describe('usePaginateArray()', () => {
   let dataDisplayed, next, currentPage, maxPage
