@@ -13,7 +13,6 @@ describe('<RoundedImage>', () => {
     expect(wrapperWithPropsSmallSize).toBeDefined()
   })
 
-  console.log(wrapperWithPropsSmallSize.debug())
   it('should render with small size', () => {
     expect(wrapperWithPropsSmallSize.find('img.small').length).toEqual(1)
   })
