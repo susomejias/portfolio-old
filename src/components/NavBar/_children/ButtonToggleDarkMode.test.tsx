@@ -18,7 +18,9 @@ describe('<ButtonToggleDarkMode>', () => {
   })
 
   it('should show the icon with the classes fas fa-tint-slash and change to dark-theme', () => {
+    console.log(wrapper.debug())
     wrapper.find('.button-toggle-dark-mode').simulate('click')
+    console.log(wrapper.debug())
     expect(wrapper.find('.fas.fa-tint-slash').length).toEqual(1)
   })
 

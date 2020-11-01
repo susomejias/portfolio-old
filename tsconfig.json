@@ -18,15 +18,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "types": [
-      "cypress"
+      "jest",
     ],
   },
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["dist", "node_modules", "webpack"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "next.config.js"
+    "**/*.tsx",
+    "next.config.js"
   ]
 }

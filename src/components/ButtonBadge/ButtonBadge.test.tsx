@@ -14,6 +14,7 @@ describe('<ButtonBadge>', () => {
     isTargetBlank: true
   }
   const wrapperWithPropsLinkButton = mount(<ButtonBadge {...componentProps} />)
+
   it('wrapperWithPropsLinkButton: should render', () => {
     expect(wrapperWithPropsLinkButton).toBeDefined()
   })
@@ -21,8 +22,8 @@ describe('<ButtonBadge>', () => {
     expect(wrapperWithPropsLinkButton.find('a').text()).toEqual('Link test')
   })
   it('wrapperWithPropsLinkButton: should render with url https://google.es/', () => {
-    expect(wrapperWithPropsLinkButton.find('a').prop('href')).toEqual(
-      'https://google.es/'
+    expect(wrapperWithPropsLinkButton.find('Link').at(0).props().href).toEqual(
+      'https://google.es'
     )
   })
   it('wrapperWithPropsLinkButton: should render with target _blank', () => {
