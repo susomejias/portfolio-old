@@ -9,13 +9,11 @@ module.exports = withTypescript({
     return config
   }
 })
+
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
-  }
-}
-
-module.exports = {
+  },
   module: {
     rules: [
       {
@@ -33,6 +31,15 @@ module.exports = {
           }
         ]
       }
+    ]
+  },
+  images: {
+    domains: [
+      'localhost',
+      'susomejias.es',
+      'dev-to-uploads.s3.amazonaws.com',
+      'res.cloudinary.com',
+      'assets.vercel.com'
     ]
   }
 }

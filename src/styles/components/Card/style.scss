@@ -29,8 +29,18 @@
   }
 
   .card-container-image {
-    min-height: 300px;
+    min-height: 200px;
     width: 100%;
+    padding: 1rem;
+
+    div:first-child {
+      /* stylelint-disable-next-line declaration-no-important */
+      width: 100% !important;
+      /* stylelint-disable-next-line declaration-no-important */
+      height: 100% !important;
+    }
+
+    @include flex-position(column, center, center);
 
     @include desktop {
       width: 35%;
@@ -40,20 +50,8 @@
       width: 55%;
     }
 
-    div div {
-      border-radius: 0;
-
-      @include desktop {
-        border-top-right-radius: 0;
-        border-top-left-radius: $border-radius-default;
-        border-bottom-left-radius: $border-radius-default;
-      }
-
-      @include large {
-        border-top-right-radius: 0;
-        border-top-left-radius: $border-radius-default;
-        border-bottom-left-radius: $border-radius-default;
-      }
+    img {
+      border-radius: 50%;
     }
   }
 
