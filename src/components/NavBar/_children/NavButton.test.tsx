@@ -22,7 +22,7 @@ describe('<NavButton>', () => {
     expect(wrapperCurrentRoute).toBeDefined()
   })
 
-  it('should be the highlighted button because its url is equal to the current url', () => {
+  it('should be the highlighted button because its url is toEqual to the current url', () => {
     expect(wrapperCurrentRoute.find('.current').length).toEqual(1)
     expect(wrapperCurrentRoute.find('.fas.fa-home').length).toEqual(1)
     expect(wrapperCurrentRoute.find('.current span').text()).toEqual(
@@ -46,7 +46,7 @@ describe('<NavButton>', () => {
     expect(wrapperNotCurrentRoute).toBeDefined()
   })
 
-  it('should not be the highlighted button because its url is not equal to the current url', () => {
+  it('should not be the highlighted button because its url is not toEqual to the current url', () => {
     expect(wrapperNotCurrentRoute.find('.current').length).toEqual(0)
     expect(wrapperNotCurrentRoute.find('.fas.fa-briefcase').length).toEqual(1)
     expect(wrapperNotCurrentRoute.find('span').text()).toEqual('navButtonText')
