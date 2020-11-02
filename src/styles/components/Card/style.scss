@@ -31,7 +31,15 @@
   .card-container-image {
     min-height: 200px;
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
+
+    @include desktop () {
+      padding: 1rem;
+    }
+
+    @include large () {
+      padding: 1rem;
+    }
 
     div:first-child {
       /* stylelint-disable-next-line declaration-no-important */
