@@ -22,9 +22,8 @@ const CardPostDevto = ({
 }: CardPostDevtoProps) => {
   return (
     <a className="card-devto-post" href={url} target="_blank" rel="noreferrer">
-      <div className="card-container-image">
+      <div className="card-container-image text-focus-in">
         <Image
-          className="text-focus-in"
           src={`${image}`}
           width="500px"
           height="250px"
