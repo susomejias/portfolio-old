@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackgroundImage } from 'react-image-and-background-image-fade'
+import Image from 'next/image'
 
 interface CardPostDevtoProps {
   image: string
@@ -22,24 +22,14 @@ const CardPostDevto = ({
 }: CardPostDevtoProps) => {
   return (
     <a className="card-devto-post" href={url} target="_blank" rel="noreferrer">
-      <div className="card-container-image">
-        <BackgroundImage
-          src={image}
-          width="100%"
-          height="350px"
-          lazyLoad
-          useChild
-          transitionTime="1.5s"
-        >
-          <div
-            style={{
-              width: '100%',
-              height: '350px',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat'
-            }}
-          ></div>
-        </BackgroundImage>
+      <div className="card-container-image text-focus-in">
+        <Image
+          src={`${image}`}
+          width="500px"
+          height="250px"
+          quality={60}
+          alt={title}
+        />
       </div>
 
       <div className="card-container-content">

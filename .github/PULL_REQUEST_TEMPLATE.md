@@ -1,4 +1,13 @@
 
+## Description
+
+-
+
+-
+
+-
+
+
 ## Pull request checklist
 
 Please check if your PR fulfills the following requirements:
@@ -6,10 +15,10 @@ Please check if your PR fulfills the following requirements:
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs have been reviewed and added / updated if needed (for bug fixes / features)
 - [ ] Build (`npm run build`) was run locally and any changes were pushed
-- [ ] Lint (`npm run test`) has passed locally
+- [ ] Test (`npm run test`) has passed locally
 - [ ] Lint (`npm run lint`) has passed locally
-- [ ] Lint (`npm run make-badges`) has passed locally and uploaded new changes
-- [ ] Lint (`npm run lighthouse-badges`) has passed locally and uploaded new changes
+- [ ] Script (`npm run make-badges`) has passed locally and uploaded new changes
+- [ ] Script (`npm run lighthouse-badges`) has passed locally and uploaded new changes
 
 
 

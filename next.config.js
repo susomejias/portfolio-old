@@ -6,7 +6,18 @@ const withPWA = require('next-pwa')
 /* eslint-enable */
 module.exports = withTypescript({
   webpack(config) {
+    config.node = {
+      fs: 'empty'
+    }
     return config
+  }
+})
+
+// always at the end
+module.exports = withPWA({
+  pwa: {
+    disable: process.env.NODE_ENV === 'development',
+    dest: 'public'
   }
 })
 
@@ -43,11 +54,3 @@ module.exports = {
     ]
   }
 }
-
-// always at the end
-module.exports = withPWA({
-  pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public'
-  }
-})

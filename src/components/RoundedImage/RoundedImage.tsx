@@ -31,6 +31,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
         src={`${image}.png`}
         width={`${getSize().width}px`}
         height={`${getSize().height}px`}
+        quality={60}
         alt="Avatar image"
       />
     </div>

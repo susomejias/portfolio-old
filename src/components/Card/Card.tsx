@@ -22,12 +22,13 @@ const Card = ({
   const renderContentCard = () => {
     return (
       <>
-        <div className="card-container-image">
+        <div className="card-container-image text-focus-in">
           <Image
-            className="text-focus-in"
             src={`${image}.png`}
             width="100%"
             height="100%"
+            quality={60}
+            alt={title}
           />
         </div>
 
