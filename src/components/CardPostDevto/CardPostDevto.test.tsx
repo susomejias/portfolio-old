@@ -5,7 +5,7 @@ import CardPostDevto from './CardPostDevto'
 
 describe('<CardPostDevto>', () => {
   const componentProps = {
-    image: 'img/promises.webp',
+    image: '/img/promises',
     title: 'title test',
     description: 'description',
     commentsCount: 1,
