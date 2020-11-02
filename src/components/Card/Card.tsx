@@ -28,6 +28,8 @@ const Card = ({
             src={`${image}.png`}
             width="100%"
             height="100%"
+            quality={60}
+            alt={title}
           />
         </div>
 

@@ -25,9 +25,11 @@ const CardPostDevto = ({
       <div className="card-container-image">
         <Image
           className="text-focus-in"
-          src={`${image}.png`}
-          width="100%"
-          height="100%"
+          src={`${image}`}
+          width="500px"
+          height="250px"
+          quality={60}
+          alt={title}
         />
       </div>
 
