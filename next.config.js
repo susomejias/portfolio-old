@@ -5,7 +5,7 @@ const withPWA = require('next-pwa')
 
 /* eslint-enable */
 module.exports = withTypescript({
-  webpack(config, { isServer }) {
+  webpack(config) {
     config.node = {
       fs: 'empty'
     }
