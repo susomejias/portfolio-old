@@ -2,18 +2,8 @@
 const path = require('path')
 const withTypescript = require('@zeit/next-typescript')
 const withPWA = require('next-pwa')
-
-/* eslint-enable */
-module.exports = withTypescript({
-  webpack(config) {
-    config.node = {
-      fs: 'empty'
-    }
-    return config
-  }
-})
-
-
+const withImages = require('next-images')
+const withPlugins = require('next-compose-plugins')
 
 module.exports = {
   sassOptions: {
@@ -37,22 +27,51 @@ module.exports = {
         ]
       }
     ]
-  },
-  images: {
-    domains: [
-      'localhost',
-      'susomejias.es',
-      'dev-to-uploads.s3.amazonaws.com',
-      'res.cloudinary.com',
-      'assets.vercel.com'
-    ]
   }
+  // images: {
+  //   domains: [
+  //     'localhost',
+  //     'susomejias.es',
+  //     'dev-to-uploads.s3.amazonaws.com',
+  //     'res.cloudinary.com',
+  //     'assets.vercel.com'
+  //   ]
+  // }
 }
 
-// always at the end
-module.exports = withPWA({
-  pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public'
-  }
-})
+module.exports = withPlugins([
+  [
+    withTypescript,
+    {
+      webpack(config) {
+        config.node = {
+          fs: 'empty'
+        }
+        return config
+      }
+    }
+  ],
+  [
+    withImages,
+    {
+      images: {
+        domains: [
+          'localhost',
+          'susomejias.es',
+          'dev-to-uploads.s3.amazonaws.com',
+          'res.cloudinary.com',
+          'assets.vercel.com'
+        ]
+      }
+    }
+  ],
+  [
+    withPWA,
+    {
+      pwa: {
+        disable: process.env.NODE_ENV === 'development',
+        dest: 'public'
+      }
+    }
+  ]
+])
