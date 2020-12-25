@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import RoundedImage from './RoundedImage'
+import RoundedImage from './'
 
 describe('<RoundedImage>', () => {
   const componentProps = {

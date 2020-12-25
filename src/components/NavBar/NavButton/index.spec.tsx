@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import * as nextRouter from 'next/router'
 
-import NavButton from './NavButton'
+import NavButton from './index'
 
 describe('<NavButton>', () => {
   nextRouter.useRouter = jest.fn()

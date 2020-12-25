@@ -3,8 +3,8 @@ import React, { useRef } from 'react'
 import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import projects from '../assets/data/projects'
-import Card from '../components/Card/Card'
-import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
+import Card from '../components/Card'
+import ButtonScrollToTop from '../components/ButtonScrollToTop'
 
 const Projects = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(

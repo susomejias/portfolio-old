@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import RoundedImage from '../RoundedImage/RoundedImage'
+import RoundedImage from '../RoundedImage'
 interface CardProps {
   image: string
   title: string

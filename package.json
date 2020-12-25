@@ -20,7 +20,6 @@
     "@testing-library/react": "^11.0.2",
     "@types/jest": "^26.0.10",
     "@types/next": "^9.0.0",
-    "@zeit/next-typescript": "^1.1.1",
     "babel-jest": "^26.3.0",
     "commitlint": "^11.0.0",
     "cypress-plugin-retries": "^1.5.2",

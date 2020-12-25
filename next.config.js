@@ -1,6 +1,5 @@
 /* eslint-disable */
 const path = require('path')
-const withTypescript = require('@zeit/next-typescript')
 const withPWA = require('next-pwa')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
@@ -31,17 +30,6 @@ module.exports = {
 }
 
 module.exports = withPlugins([
-  [
-    withTypescript,
-    {
-      webpack(config) {
-        config.node = {
-          fs: 'empty'
-        }
-        return config
-      }
-    }
-  ],
   [
     withImages,
     {

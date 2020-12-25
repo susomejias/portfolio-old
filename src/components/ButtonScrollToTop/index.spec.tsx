@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import ButtonScrollToTop from './ButtonScrollToTop'
+import ButtonScrollToTop from './index'
 
 describe('<ButtonScrollToTop>', () => {
   const wrapper = mount(<ButtonScrollToTop />)
