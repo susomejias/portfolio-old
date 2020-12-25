@@ -1,16 +1,16 @@
 import React from 'react'
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext
-} from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 // https://github.com/zeit/next.js/tree/canary/examples/with-styled-components
 class ExtendedDocument extends Document {
-  public static async getInitialProps(ctx) {
+  public static async getInitialProps(
+    ctx
+  ): Promise<{
+    styles: JSX.Element
+    html: string
+    head?: JSX.Element[]
+  }> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -36,7 +36,7 @@ class ExtendedDocument extends Document {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     const {
       __NEXT_DATA__: {
         query: { __lng = 'es' }
