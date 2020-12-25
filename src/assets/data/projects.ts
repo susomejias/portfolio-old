@@ -11,7 +11,7 @@ export default [
   {
     title: 'SusomejiasBot',
     description:
-      'Bot de Telegram. Actualmente puede realizar las siguientes funciones: Compartir posts de mi canal de Telegram a mi cuenta de Twitter. Mostrar información climatológica de una ciudad. Convertir un color hexadecimal a RGB y RGBA. Crear y programar con un límite de tiempo un streamer de twitter para buscar tweets por coincidencias, los añade a un CSV que se le envía al usuario al terminar la búsqueda. etc',
+      'Bot de Telegram. Actualmente puede realizar las siguientes funciones: Mostrar información climatológica de una ciudad. Convertir un color hexadecimal a RGB y RGBA. Crear y programar con un límite de tiempo un streamer de twitter.',
     image: '/img/botTelegramLogo',
     url: '#',
     authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]

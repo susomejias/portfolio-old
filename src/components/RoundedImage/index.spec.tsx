@@ -5,7 +5,7 @@ import RoundedImage from './'
 
 describe('<RoundedImage>', () => {
   const componentProps = {
-    image: '/img/promises',
+    image: '/img/promises.png',
     size: 'small'
   }
   const wrapperWithPropsSmallSize = mount(<RoundedImage {...componentProps} />)
@@ -14,11 +14,13 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with small size', () => {
-    expect(wrapperWithPropsSmallSize.find('img.small').length).toEqual(1)
+    expect(
+      wrapperWithPropsSmallSize.find('.rounded-image.small').length
+    ).toEqual(1)
   })
 
   const componentPropsMediumSize = {
-    image: '/img/promises',
+    image: '/img/promises.png',
     size: 'medium'
   }
   const wrapperWithPropsMediumSize = mount(
@@ -29,11 +31,13 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with medium size', () => {
-    expect(wrapperWithPropsMediumSize.find('img.medium').length).toEqual(1)
+    expect(
+      wrapperWithPropsMediumSize.find('.rounded-image.medium').length
+    ).toEqual(1)
   })
 
   const componentPropsLargeSize = {
-    image: '/img/promises',
+    image: '/img/promises.png',
     size: 'large'
   }
   const wrapperWithPropsLargeSize = mount(
@@ -44,11 +48,13 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with large size', () => {
-    expect(wrapperWithPropsLargeSize.find('img.large').length).toEqual(1)
+    expect(
+      wrapperWithPropsLargeSize.find('.rounded-image.large').length
+    ).toEqual(1)
   })
 
   const componentPropsDefaultSize = {
-    image: '/img/promises',
+    image: '/img/promises.png',
     size: undefined
   }
   const wrapperWithPropsDefaultSize = mount(
@@ -59,11 +65,13 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(wrapperWithPropsDefaultSize.find('img.small').length).toEqual(1)
+    expect(
+      wrapperWithPropsDefaultSize.find('.rounded-image.small').length
+    ).toEqual(1)
   })
 
   const componentPropsNotExistSize = {
-    image: '/img/promises',
+    image: '/img/promises.png',
     size: 'testSize'
   }
   const wrapperWithPropsNotExistSize = mount(
@@ -74,6 +82,8 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(wrapperWithPropsNotExistSize.find('img.small').length).toEqual(1)
+    expect(
+      wrapperWithPropsNotExistSize.find('.rounded-image.small').length
+    ).toEqual(1)
   })
 })

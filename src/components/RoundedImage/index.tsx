@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import { Image } from 'react-image-and-background-image-fade'
 
 interface RoundedImageProps {
   image: string
@@ -25,13 +25,14 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
   }
 
   return (
-    <div className="container-image text-focus-in">
+    <div className="container-image">
       <Image
         className={`rounded-image ${getSize().className}`}
         src={`${image}.png`}
         width={`${getSize().width}px`}
         height={`${getSize().height}px`}
-        quality={60}
+        lazyLoad={true}
+        transitionTime="1.5s"
         alt="Avatar image"
       />
     </div>

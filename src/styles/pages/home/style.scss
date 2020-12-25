@@ -4,7 +4,7 @@
     font-size: 1.6rem;
     margin-top: 1rem;
 
-    @include text-gradient($primary-gradient);
+    @include set-text-tag-color-dynamic();
 
     font-weight: 900;
   }
@@ -45,6 +45,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
+    transition: all 1s;
 
     @include desktop {
       max-width: 70%;

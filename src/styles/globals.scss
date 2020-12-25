@@ -5,10 +5,22 @@ body {
   scroll-behavior: smooth;
 }
 
-// stylelint-disable-next-line
+// stylelint-disable
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+}
+
+// stylelint-enable
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  outline: none;
 }
 
 // variables
@@ -16,6 +28,7 @@ body {
 @import "./variables/colors.scss";
 
 // utils
+@import "./utils/media.scss";
 @import "./utils/mixins.scss";
 @import "./utils/themes.scss";
 @import "./utils/animations.scss";

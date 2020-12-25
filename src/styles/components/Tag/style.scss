@@ -7,5 +7,5 @@
   display: inline-block;
   font-weight: 600;
 
-  @include text-gradient($primary-gradient);
+  @include set-text-tag-color-dynamic();
 }

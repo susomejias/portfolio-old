@@ -1,6 +1,7 @@
 .card-devto-post {
-  @include flex-position(column, flex-start, center);
+  @include flex-position(column, flex-start, stretch);
 
+  flex-wrap: wrap;
   transition: transform 1s;
   width: 100%;
   border-radius: $border-radius-default;
@@ -12,50 +13,44 @@
   @include box-shadow-default();
 
   @include tablet {
-    max-width: 500px;
+    min-width: 100%;
   }
 
   @include desktop {
     @include flex-position(row, center, center);
-
-    min-width: 600px;
-    max-width: 850px;
   }
 
   @include large {
     @include flex-position(row, center, center);
-
-    width: 1000px;
   }
 
   .card-container-image {
     min-height: 150px;
     width: 100%;
-    padding: 1rem 1rem 0;
+    padding: 0;
 
-    @include desktop () {
-      padding: 1rem;
-    }
-
-    @include large () {
-      padding: 1rem;
-    }
+    /* stylelint-disable declaration-no-important */
 
     div:first-child {
-      /* stylelint-disable-next-line declaration-no-important */
-      width: 100% !important;
-      /* stylelint-disable-next-line declaration-no-important */
-      height: 100% !important;
+      border-top-left-radius: $border-radius-image-container-card-default;
+      border-top-right-radius: $border-radius-image-container-card-default;
     }
 
     @include flex-position(column, center, center);
 
     @include desktop {
-      width: 35%;
-    }
+      width: 41%;
 
-    @include large {
-      width: 55%;
+      div:first-child {
+        border-top-left-radius: $border-radius-image-container-card-default !important;
+        border-bottom-left-radius: $border-radius-image-container-card-default !important;
+        border-top-right-radius: initial !important;
+        height: 350px !important;
+      }
+
+      div div {
+        height: 350px !important;
+      }
     }
 
     img {
@@ -68,6 +63,11 @@
 
     padding: 1rem;
     width: 100%;
+
+    @include tablet {
+      padding: 0 1rem 1rem;
+      width: 59%;
+    }
 
     .private-code-message {
       @include flex-position(row, flex-start, center);

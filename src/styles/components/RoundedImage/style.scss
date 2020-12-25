@@ -7,6 +7,10 @@
 
   @include flex-position(column, center, center);
 
+  div {
+    border-radius: 50%;
+  }
+
   .rounded-image {
     @include set-background-dynamic();
     @include default-transition-for-bg-and-color();

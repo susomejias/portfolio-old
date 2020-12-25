@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import { BackgroundImage } from 'react-image-and-background-image-fade'
 
 import RoundedImage from '../RoundedImage'
 interface CardProps {
@@ -22,13 +22,19 @@ const Card = ({
   const renderContentCard = () => {
     return (
       <>
-        <div className="card-container-image text-focus-in">
-          <Image
+        <div className="card-container-image">
+          <BackgroundImage
             src={`${image}.png`}
             width="100%"
-            height="100%"
-            quality={60}
-            alt={title}
+            height="314px"
+            lazyLoad
+            transitionTime="1.5s"
+            style={{
+              backgroundPosition: 'top center',
+              backgroundOrigin: 'center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat'
+            }}
           />
         </div>
 
