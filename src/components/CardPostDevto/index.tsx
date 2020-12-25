@@ -38,8 +38,8 @@ const CardPostDevto = ({
       </div>
 
       <div className="card-container-content">
-        <h3 className="card-title">{title}</h3>
-        <h4 className="card-description">{description}</h4>
+        <h2 className="card-title">{title}</h2>
+        <h3 className="card-description">{description}</h3>
         <div className="card-reactions">
           <div className="card-reaction">
             <i className="fas fa-lg fa-comment"></i>

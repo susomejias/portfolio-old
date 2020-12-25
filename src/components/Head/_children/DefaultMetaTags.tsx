@@ -11,7 +11,7 @@ const DefaultMetaTags = (): JSX.Element => (
     <meta charSet="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"
     />
     <meta name="msapplication-TileColor" content="#c8a3f4" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />

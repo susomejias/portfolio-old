@@ -45,8 +45,8 @@ const Card = ({
               Código privado
             </span>
           ) : null}
-          <h3 className="card-title">{title}</h3>
-          <h4 className="card-description">{description}</h4>
+          <h2 className="card-title">{title}</h2>
+          <h3 className="card-description">{description}</h3>
           <div className="card-authors">
             {authors.map((author, index) => {
               return (
