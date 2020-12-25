@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Card from './Card'
+import Card from './index'
 
 describe('<Card>', () => {
   const authors: Author[] = [{ name: 'Suso Mejías', image: '/img/avatar' }]

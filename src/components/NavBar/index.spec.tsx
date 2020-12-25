@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import * as nextRouter from 'next/router'
 
-import NavBar from './NavBar'
+import NavBar from '.'
 
 describe('<NavBar>', () => {
   nextRouter.useRouter = jest.fn()

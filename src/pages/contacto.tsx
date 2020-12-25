@@ -1,8 +1,8 @@
 import React from 'react'
 
 import socialNetworks from '../assets/data/socialNetworks'
-import RoundedImage from '../components/RoundedImage/RoundedImage'
-import ButtonBadge from '../components/ButtonBadge/ButtonBadge'
+import RoundedImage from '../components/RoundedImage'
+import ButtonBadge from '../components/ButtonBadge'
 
 const Contact = (): JSX.Element => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import Tag from './Tag'
+import Tag from './index'
 
 describe('<Tag>', () => {
   const componentProps = {

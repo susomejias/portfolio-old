@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavButton from './_children/NavButton'
-import ButtonToggleDarkMode from './_children/ButtonToggleDarkMode'
+import NavButton from './NavButton'
+import ButtonToggleDarkMode from './ButtonToogleDarkMode'
 import {
   CONTACT_HREF,
   HOME_HREF,

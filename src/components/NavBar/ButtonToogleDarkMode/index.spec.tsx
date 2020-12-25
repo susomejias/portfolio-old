@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import ButtonToggleDarkMode from './ButtonToggleDarkMode'
+import ButtonToggleDarkMode from './index'
 
 describe('<ButtonToggleDarkMode>', () => {
   const wrapper = mount(<ButtonToggleDarkMode />)

@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import CardPostDevto from './CardPostDevto'
+import CardPostDevto from './index'
 
 describe('<CardPostDevto>', () => {
   const componentProps = {

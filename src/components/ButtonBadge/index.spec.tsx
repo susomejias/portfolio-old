@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import ButtonBadge from './ButtonBadge'
+import ButtonBadge from './index'
 
 describe('<ButtonBadge>', () => {
   const componentProps = {

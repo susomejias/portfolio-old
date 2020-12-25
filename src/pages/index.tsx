@@ -1,8 +1,8 @@
 import React from 'react'
 
-import RoundedImage from '../components/RoundedImage/RoundedImage'
-import ButtonBadge from '../components/ButtonBadge/ButtonBadge'
-import Tag from '../components/Tag/Tag'
+import RoundedImage from '../components/RoundedImage'
+import ButtonBadge from '../components/ButtonBadge'
+import Tag from '../components/Tag'
 import skills from '../assets/data/skills'
 import usePaginationArray from '../hooks/usePaginateArray'
 

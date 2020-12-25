@@ -4,8 +4,8 @@ import 'isomorphic-fetch'
 import usePaginationArray from '../hooks/usePaginateArray'
 import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import DevtoService from '../services/DevtoService'
-import CardPostDevto from '../components/CardPostDevto/CardPostDevto'
-import ButtonScrollToTop from '../components/ButtonScrollToTop/ButtonScrollToTop'
+import CardPostDevto from '../components/CardPostDevto'
+import ButtonScrollToTop from '../components/ButtonScrollToTop'
 
 interface DevtoPostsProps {
   posts: DevtoPost[]
