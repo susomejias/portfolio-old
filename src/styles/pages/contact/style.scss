@@ -1,7 +1,7 @@
 .contact-page {
 
   h2 {
-    @include text-gradient($primary-gradient);
+    @include set-text-tag-color-dynamic();
 
     font-size: 1.6rem;
     font-weight: 900;
