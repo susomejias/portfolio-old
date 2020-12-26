@@ -88,7 +88,7 @@
     .private-code-message {
       @include flex-position(row, flex-start, center);
       @include set-text-color-dynamic();
-      @include default-transition-for-bg-and-color();
+      
 
       padding: .7rem 0;
 
@@ -105,7 +105,7 @@
 
     .card-description {
       @include set-text-color-dynamic();
-      @include default-transition-for-bg-and-color();
+      
 
       margin: .4rem 0;
       font-size: 1.1rem;

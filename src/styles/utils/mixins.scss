@@ -43,7 +43,3 @@
 @mixin set-text-tag-color-dynamic() {
   color: var(--color-tag-text);
 }
-
-@mixin default-transition-for-bg-and-color {
-  transition: background-color 500ms linear, color 500ms linear;
-}

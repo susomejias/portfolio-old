@@ -8,7 +8,6 @@
 body {
   @include set-background-dynamic();
   @include set-text-color-dynamic();
-  @include default-transition-for-bg-and-color();
 }
 
 .light {

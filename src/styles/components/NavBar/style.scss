@@ -2,7 +2,7 @@
 .navbar {
   @include flex-position(row, center, center);
   @include set-background-dynamic();
-  @include default-transition-for-bg-and-color();
+  
 
   padding: 1rem .2rem;
   width: 100%;

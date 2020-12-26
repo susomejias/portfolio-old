@@ -1,13 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import useDarkMode from '../../../hooks/useDarkMode'
+import { useGlobalState } from '../../../store/darkThemeStore'
 
 const ButtonToggleDarkMode = () => {
-  const { isDarkMode, setDarkMode, setLightMode } = useDarkMode()
+  const [isDarkMode, setIsDarkMode] = useGlobalState('isDarkMode')
 
-  const handleClick = () => {
-    isDarkMode ? setLightMode() : setDarkMode()
-  }
+  const handleClick = () => setIsDarkMode(!isDarkMode)
 
   return (
     <div className="button-toggle-dark-mode" onClick={handleClick}>
