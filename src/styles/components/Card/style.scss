@@ -33,6 +33,8 @@
     width: 100%;
     position: relative;
     background-color: var(--card-background-color);
+    border-top-left-radius: $border-radius-image-container-card-default;
+    border-top-right-radius: $border-radius-image-container-card-default;
 
     /* stylelint-disable declaration-no-important */
 
@@ -48,6 +50,9 @@
 
     @include desktop {
       width: 41%;
+      border-top-left-radius: $border-radius-image-container-card-default;
+      border-bottom-left-radius: $border-radius-image-container-card-default;
+      border-top-right-radius: initial;
 
       div:first-child {
         border-top-left-radius: $border-radius-image-container-card-default !important;
@@ -80,6 +85,8 @@
     @include flex-position(column, center, flex-start);
 
     background-color: var(--card-background-color);
+    border-bottom-left-radius: $border-radius-image-container-card-default;
+    border-bottom-right-radius: $border-radius-image-container-card-default;
     padding: 1rem 1rem 0;
     width: 100%;
 

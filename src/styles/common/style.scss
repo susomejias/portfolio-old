@@ -3,15 +3,14 @@ body {
 }
 
 .wrapper {
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   overflow-y: hidden;
   width: 100%;
-  max-width: 400px;
 
   @include flex-position(column, center, center);
 
   @include tablet {
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     max-width: 65%;
   }
 
