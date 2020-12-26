@@ -5,7 +5,7 @@ interface TagProps {
 }
 
 const Tag = ({ text }: TagProps) => {
-  return <div className="tag text-focus-in">{text}</div>
+  return <div className="tag scale-in-center">{text}</div>
 }
 
 export default React.memo(Tag)

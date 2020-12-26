@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
     <div className="wrapper home-page">
       <RoundedImage image="/img/avatar" size="medium" />
 
-      <h1 className="tracking-in-expand">Suso Mejías</h1>
+      <h1>Suso Mejías</h1>
 
       <div className="container-button-badge">
         <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
@@ -37,17 +37,20 @@ const Home = (): JSX.Element => {
       </div>
 
       {currentPage < maxPage ? (
-        <p
-          className="more-skills text-focus-in"
-          onClick={() => {
+        <a
+          aria-label="more skills"
+          className="more-skills heartbeat fas fa-angle-double-up"
+          onClick={(ev) => {
+            ev.preventDefault()
             next()
             setTimeout(() => {
-              window.scrollTo(0, document.body.scrollHeight)
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+              })
             }, 400)
           }}
-        >
-          Pulsa aquí para mostrar más habilidades
-        </p>
+        ></a>
       ) : null}
     </div>
   )

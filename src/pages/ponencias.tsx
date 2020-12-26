@@ -17,7 +17,7 @@ const Talks = (): JSX.Element => {
 
   return (
     <div className="wrapper">
-      <h1 className="page-title tracking-in-expand">Ponencias</h1>
+      <h1 className="page-title ">Ponencias</h1>
       {dataDisplayed.map((talk: Talk, index) => {
         return (
           <Card

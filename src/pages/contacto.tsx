@@ -7,7 +7,7 @@ import ButtonBadge from '../components/ButtonBadge'
 const Contact = (): JSX.Element => {
   return (
     <div className="wrapper contact-page">
-      <h1 className="page-title tracking-in-expand">Contacto</h1>
+      <h1 className="page-title ">Contacto</h1>
       <RoundedImage image="/img/logo-portfolio" size="large" />
 
       <h2>Suso Mejías</h2>

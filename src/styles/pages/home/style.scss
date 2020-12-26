@@ -11,11 +11,10 @@
 
   .quote {
     @include set-text-color-dynamic();
-    
 
     font-size: 1.1rem;
     line-height: 1.4rem;
-    max-width: 300px;
+    max-width: 350px;
     text-align: center;
     margin-bottom: 0;
     font-weight: 500;
@@ -57,12 +56,27 @@
   }
 
   .more-skills {
-    @include text-gradient($primary-gradient);
-    @include disable-text-selection();
-
+    padding: 1rem;
+    margin: .5rem 1rem 1rem;
+    font-size: 1.5rem;
+    border-radius: $border-radius-default;
+    width: 15px;
+    height: 15px;
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: 600;
+    transition: transform 1s;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-accent;
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      @include scale-card-hover();
+    }
   }
 }

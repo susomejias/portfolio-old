@@ -28,7 +28,7 @@ const Card = ({
             width="100%"
             height="314px"
             lazyLoad
-            transitionTime="0.5s"
+            disableLoader
             style={{
               backgroundPosition: 'top center',
               backgroundOrigin: 'center',

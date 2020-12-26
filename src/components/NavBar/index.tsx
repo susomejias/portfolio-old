@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 import NavButton from './NavButton'
 import ButtonToggleDarkMode from './ButtonToogleDarkMode'
@@ -11,8 +12,13 @@ import {
 } from '../../constants/hrefs'
 
 const NavBar = () => {
+  const [visible, setVisible] = useState(true)
+
+  useScrollPosition(({ prevPos, currPos }) => {
+    setVisible(prevPos.y < currPos.y || (currPos.y >= 0 && currPos.y <= 5))
+  })
   return (
-    <nav className="navbar">
+    <nav className={`navbar${!visible ? ' hidden' : ''}`}>
       <NavButton text="Inicio" url={HOME_HREF} iconClass="fas fa-home" />
 
       <NavButton

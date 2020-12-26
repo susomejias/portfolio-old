@@ -17,7 +17,7 @@ const Projects = (): JSX.Element => {
 
   return (
     <div className="wrapper">
-      <h1 className="page-title tracking-in-expand">Proyectos</h1>
+      <h1 className="page-title ">Proyectos</h1>
       {dataDisplayed.map((project: Project, index) => {
         return (
           <Card

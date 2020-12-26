@@ -8,7 +8,7 @@ interface RoundedImageProps {
 
 const RoundedImage = ({ image, size }: RoundedImageProps) => {
   const SMALL_SIZE = { width: 46, height: 46, className: 'small' }
-  const MEDIUM_SIZE = { width: 140, height: 140, className: 'medium' }
+  const MEDIUM_SIZE = { width: 130, height: 130, className: 'medium' }
   const LARGE_SIZE = { width: 180, height: 180, className: 'large' }
   const getSize = () => {
     if (!size) return SMALL_SIZE
@@ -32,7 +32,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
         width={`${getSize().width}px`}
         height={`${getSize().height}px`}
         lazyLoad={true}
-        transitionTime="0.5s"
+        disableLoader
         alt="Avatar image"
       />
     </div>

@@ -28,7 +28,7 @@ const CardPostDevto = ({
           width="100%"
           height="300px"
           lazyLoad
-          transitionTime="0.5s"
+          disableLoader
           style={{
             backgroundPosition: 'left',
             backgroundSize: 'cover',

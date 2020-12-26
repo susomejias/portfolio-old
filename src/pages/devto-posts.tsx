@@ -22,7 +22,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
 
   return (
     <div className="wrapper">
-      <h1 className="page-title tracking-in-expand">Dev.to posts</h1>
+      <h1 className="page-title ">Dev.to posts</h1>
       {dataDisplayed.map((devtoPost: DevtoPost, index: number) => {
         return (
           <CardPostDevto

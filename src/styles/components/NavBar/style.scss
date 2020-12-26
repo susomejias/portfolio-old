@@ -2,7 +2,6 @@
 .navbar {
   @include flex-position(row, center, center);
   @include set-background-dynamic();
-  
 
   padding: 1rem .2rem;
   width: 100%;
@@ -11,4 +10,10 @@
   top: 0;
   left: 0;
   right: 0;
+  transform: inherit;
+  transition: transform .8s;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 }
