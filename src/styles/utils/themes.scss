@@ -2,6 +2,7 @@
   --color-page-background: #{$color-white};
   --color-text: #{$color-dark-grey};
   --color-tag-text: #{$color-accent};
+  --card-background-color: #{$background-color-cards-light};
 }
 
 body {
@@ -16,7 +17,8 @@ body {
 }
 
 .dark {
-  --color-page-background: #{$color-black};
+  --color-page-background: #{$background-color-dark-mode};
   --color-text: #{$color-white};
-  --color-tag-text: #{$color-light-grey};
+  --color-tag-text: #{$color-white};
+  --card-background-color: #{$background-color-cards-dark};
 }

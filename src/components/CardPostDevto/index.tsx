@@ -28,7 +28,7 @@ const CardPostDevto = ({
           width="100%"
           height="300px"
           lazyLoad
-          transitionTime="1.5s"
+          transitionTime="0.5s"
           style={{
             backgroundPosition: 'left',
             backgroundSize: 'cover',

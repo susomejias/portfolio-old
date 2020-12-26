@@ -32,7 +32,7 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
         width={`${getSize().width}px`}
         height={`${getSize().height}px`}
         lazyLoad={true}
-        transitionTime="1.5s"
+        transitionTime="0.5s"
         alt="Avatar image"
       />
     </div>

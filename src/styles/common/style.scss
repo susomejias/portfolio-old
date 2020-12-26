@@ -16,17 +16,16 @@ body {
   }
 
   @include desktop {
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     max-width: 80%;
   }
 
   @include large {
-    padding: 2rem;
-    max-width: 70%;
+    padding: 2rem 3rem;
+    max-width: 60%;
   }
 
   @include extra-large {
-    padding: 2rem;
     max-width: 40%;
   }
 }

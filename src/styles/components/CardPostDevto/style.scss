@@ -8,7 +8,6 @@
   text-decoration: none;
   margin: 1.2rem 0;
   max-width: 350px;
-  border: 3px solid $color-border-accent;
 
   @include box-shadow-default();
 
@@ -18,6 +17,10 @@
 
   @include desktop {
     @include flex-position(row, center, center);
+
+    &:hover {
+      @include scale-card-hover();
+    }
   }
 
   @include large {
@@ -126,9 +129,4 @@
       }
     }
   }
-}
-
-.card-devto-post:hover {
-  @include box-shadow-hover-default();
-  @include scale-card-hover();
 }

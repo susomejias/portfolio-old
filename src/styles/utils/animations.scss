@@ -68,6 +68,8 @@
   }
 }
 
+
+
 /**
  * ----------------------------------------
  * Classes
@@ -75,11 +77,11 @@
  */
 
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .text-focus-in {
-	-webkit-animation: text-focus-in .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in .6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
