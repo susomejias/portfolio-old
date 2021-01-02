@@ -1,6 +1,6 @@
 import React from 'react'
 import { BackgroundImage } from 'react-image-and-background-image-fade'
-
+import Link from 'next/link'
 interface CardPostDevtoProps {
   image: string
   title: string
@@ -21,43 +21,45 @@ const CardPostDevto = ({
   tags
 }: CardPostDevtoProps) => {
   return (
-    <a className="card-devto-post" href={url} target="_blank" rel="noreferrer">
-      <div className="card-container-image">
-        <BackgroundImage
-          src={image}
-          width="100%"
-          height="300px"
-          lazyLoad
-          disableLoader
-          style={{
-            backgroundPosition: 'left',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
-      </div>
+    <Link href={url} passHref>
+      <a className="card-devto-post" target="_blank" rel="noreferrer">
+        <div className="card-container-image">
+          <BackgroundImage
+            src={image}
+            width="100%"
+            height="300px"
+            lazyLoad
+            disableLoader
+            style={{
+              backgroundPosition: 'left',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        </div>
 
-      <div className="card-container-content">
-        <h2 className="card-title">{title}</h2>
-        <h3 className="card-description">{description}</h3>
-        <div className="card-reactions">
-          <div className="card-reaction">
-            <i className="fas fa-lg fa-comment"></i>
-            {commentsCount}
+        <div className="card-container-content">
+          <h2 className="card-title">{title}</h2>
+          <h3 className="card-description">{description}</h3>
+          <div className="card-reactions">
+            <div className="card-reaction">
+              <i className="fas fa-lg fa-comment"></i>
+              {commentsCount}
+            </div>
+
+            <div className="card-reaction">
+              <i className="fas fa-poll fa-lg"></i>
+              {reactions}
+            </div>
           </div>
-
-          <div className="card-reaction">
-            <i className="fas fa-poll fa-lg"></i>
-            {reactions}
+          <div className="card-tags">
+            {tags.map((tag: string, index: number) => (
+              <span key={index}>{tag}</span>
+            ))}
           </div>
         </div>
-        <div className="card-tags">
-          {tags.map((tag: string, index: number) => (
-            <span key={index}>{tag}</span>
-          ))}
-        </div>
-      </div>
-    </a>
+      </a>
+    </Link>
   )
 }
 

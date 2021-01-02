@@ -1,5 +1,6 @@
 import React from 'react'
 import { BackgroundImage } from 'react-image-and-background-image-fade'
+import Link from 'next/link'
 
 import RoundedImage from '../RoundedImage'
 interface CardProps {
@@ -66,9 +67,11 @@ const Card = ({
 
   const renderCardIfIsLink = () => {
     return (
-      <a className="card" href={url} target="_blank" rel="noreferrer">
-        {renderContentCard()}
-      </a>
+      <Link href={url} passHref>
+        <a className="card" target="_blank" rel="noreferrer">
+          {renderContentCard()}
+        </a>
+      </Link>
     )
   }
 

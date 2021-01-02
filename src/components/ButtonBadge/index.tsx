@@ -14,7 +14,7 @@ const ButtonBadgeGradient = ({
 }: ButtonBadgeGradientProps) => {
   const renderLink = () => {
     return (
-      <Link href={url}>
+      <Link href={url} passHref>
         <a target={`${isTargetBlank && '_blank'}`}>{text}</a>
       </Link>
     )

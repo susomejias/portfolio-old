@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import socialNetworks from '../assets/data/socialNetworks'
 import RoundedImage from '../components/RoundedImage'
@@ -23,15 +24,11 @@ const Contact = (): JSX.Element => {
       <div className="container_social_networks">
         {socialNetworks.map((socialNetwork: SocialNetwork, index: number) => {
           return (
-            <a
-              key={index}
-              href={socialNetwork.url}
-              target="_blank"
-              rel="noreferrer"
-              title={socialNetwork.name}
-            >
-              <i className={socialNetwork.icon}></i>
-            </a>
+            <Link key={index} href={socialNetwork.url} passHref>
+              <a target="_blank" rel="noreferrer" title={socialNetwork.name}>
+                <i className={socialNetwork.icon}></i>
+              </a>
+            </Link>
           )
         })}
       </div>
