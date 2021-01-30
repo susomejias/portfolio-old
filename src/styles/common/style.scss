@@ -6,6 +6,7 @@ body {
   padding: 1rem 2rem;
   overflow-y: hidden;
   width: 100%;
+  transition: all .5s;
 
   @include flex-position(column, center, center);
 

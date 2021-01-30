@@ -1,0 +1,12 @@
+footer {
+  @include flex-position(row, center, center);
+
+  padding: 3rem 1.5rem;
+
+  @include desktop() {
+    padding: 4rem 2rem;
+  }
+
+  font-size: 1.1rem;
+  font-weight: 500;
+}

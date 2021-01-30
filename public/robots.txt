@@ -1,0 +1,3 @@
+Sitemap: https://susomejias.es/sitemap.xml
+User-agent: *
+Allow: /

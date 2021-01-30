@@ -13,8 +13,8 @@ const useInfiniteScroll = (
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '20px',
-      threshold: 1.0
+      rootMargin: '50px',
+      threshold: 0.5
     }
     const observer = new IntersectionObserver(handleObserver, options)
     if (refTriggerElement.current) {

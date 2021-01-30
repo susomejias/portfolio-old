@@ -3,11 +3,6 @@ import Head from 'next/head'
 
 const DefaultMetaTags = (): JSX.Element => (
   <Head>
-    <title>Susomejias | Web developer</title>
-    <meta
-      name="description"
-      content="Portfolio de Susomejías, Desarrollador Web Full-Stack y técnico en sistemas informáticos"
-    />
     <meta charSet="utf-8" />
     <meta
       name="viewport"

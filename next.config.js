@@ -3,29 +3,11 @@ const path = require('path')
 const withPWA = require('next-pwa')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
+const runtimeCaching = require('next-pwa/cache')
 
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpe?g|webp|git|svg|)$/i,
-        use: [
-          {
-            loader: `img-optimize-loader`,
-            options: {
-              compress: {
-                // This will transform your png/jpg into webp.
-                webp: true,
-                disableOnDevelopment: false
-              }
-            }
-          }
-        ]
-      }
-    ]
   }
 }
 
@@ -34,6 +16,23 @@ module.exports = withPlugins([
     withImages,
     {
       images: {
+        deviceSizes: [
+          16,
+          32,
+          48,
+          64,
+          96,
+          128,
+          256,
+          384,
+          480,
+          576,
+          768,
+          992,
+          1200,
+          1366,
+          1600
+        ],
         domains: [
           'localhost',
           'susomejias.es',
@@ -49,7 +48,8 @@ module.exports = withPlugins([
     {
       pwa: {
         disable: process.env.NODE_ENV === 'development',
-        dest: 'public'
+        dest: 'public',
+        runtimeCaching
       }
     }
   ]
