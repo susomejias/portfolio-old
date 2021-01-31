@@ -16,20 +16,50 @@
 
 | Statements                | Branches                | Functions                | Lines                |
 | ------------------------- | ----------------------- | ------------------------ | -------------------- |
-| ![Statements](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Branches](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) | ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) |
+| ![Statements](https://img.shields.io/badge/Coverage-98.72%25-brightgreen.svg) | ![Branches](https://img.shields.io/badge/Coverage-96.55%25-brightgreen.svg) | ![Functions](https://img.shields.io/badge/Coverage-98.65%25-brightgreen.svg) | ![Lines](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg) |
+
+---
+
+## 🚀 Run in development 🚀
+
+### Run Next.js app
+
+```bash
+yarn dev
+```
+
+### ✅ Run Jest tests ✅
+
+```bash
+yarn test
+```
+
+### ✅ Run Cypress end-to-end tests ✅
+
+```bash
+yarn cy:run
+```
+
+---
+
 
 ## 🏄 Commits format 🏄
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
+___
+
 ## 👐 CONTRIBUTING 👐
 
 [CONTRIBUTING](CONTRIBUTING.md)
+
+___
 
 ## 🚨 CODE OF CONDUCT 🚨
 
 [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
+___
 ## 📖  License 📖
 
 [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](LICENSE)
