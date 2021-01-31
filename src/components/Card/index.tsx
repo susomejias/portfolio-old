@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackgroundImage } from 'react-image-and-background-image-fade'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import RoundedImage from '../RoundedImage'
@@ -24,18 +24,12 @@ const Card = ({
     return (
       <>
         <div className="card-container-image">
-          <BackgroundImage
-            src={`${image}.png`}
-            width="100%"
-            height="314px"
-            lazyLoad
-            disableLoader
-            style={{
-              backgroundPosition: 'top center',
-              backgroundOrigin: 'center',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat'
-            }}
+          <Image
+            src={image}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top left"
+            priority={true}
           />
         </div>
 

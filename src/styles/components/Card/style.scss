@@ -5,10 +5,10 @@
   width: 100%;
   border-radius: $border-radius-default;
   text-decoration: none;
-  margin: 2rem 0;
+  margin: 1.2rem 0;
   max-width: 350px;
   transition: transform 1s;
-  background-color: var(--card-background-color);
+  overflow-x: hidden;
 
   @include box-shadow-default();
 
@@ -17,82 +17,27 @@
   }
 
   @include desktop {
-    @include flex-position(row, center, stretch);
+    display: grid;
+    grid-template-columns: repeat(1, 1.5fr) repeat(1, 2fr);
 
     &:hover {
       @include scale-card-hover();
     }
   }
 
-  @include large {
-    @include flex-position(row, center, center);
-  }
-
   .card-container-image {
-    min-height: 300px;
     width: 100%;
     position: relative;
-    background-color: var(--card-background-color);
-    border-top-left-radius: $border-radius-image-container-card-default;
-    border-top-right-radius: $border-radius-image-container-card-default;
-
-    /* stylelint-disable declaration-no-important */
-
-    div:first-child {
-      border-top-left-radius: $border-radius-image-container-card-default;
-      border-top-right-radius: $border-radius-image-container-card-default;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+    min-height: 300px;
 
     @include flex-position(column, center, center);
-
-    @include desktop {
-      width: 41%;
-      border-top-left-radius: $border-radius-image-container-card-default;
-      border-bottom-left-radius: $border-radius-image-container-card-default;
-      border-top-right-radius: initial;
-
-      div:first-child {
-        border-top-left-radius: $border-radius-image-container-card-default !important;
-        border-bottom-left-radius: $border-radius-image-container-card-default !important;
-        border-top-right-radius: initial !important;
-        height: 400px !important;
-      }
-
-      div div {
-        background-position: left center !important;
-        height: 400px !important;
-      }
-    }
-
-    @include large {
-      width: 41%;
-
-      div > div {
-        background-position: left center !important;
-        min-height: 100% !important;
-      }
-    }
-
-    img {
-      border-radius: 50%;
-    }
   }
 
   .card-container-content {
     @include flex-position(column, center, flex-start);
 
-    background-color: var(--card-background-color);
-    border-bottom-left-radius: $border-radius-image-container-card-default;
-    border-bottom-right-radius: $border-radius-image-container-card-default;
     padding: 1rem 1rem 0;
     width: 100%;
-
-    @include desktop {
-      width: 59%;
-    }
 
     .private-code-message {
       @include flex-position(row, flex-start, center);
@@ -148,10 +93,6 @@
           margin: 0 .6rem;
 
           @include desktop {
-            display: block;
-          }
-
-          @include large {
             display: block;
           }
         }

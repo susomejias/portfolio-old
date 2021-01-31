@@ -13,14 +13,11 @@
   .rounded-image {
     @include set-background-dynamic();
 
-    object-fit: cover;
-    display: block;
+    /* stylelint-disable declaration-no-important */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
-    border: 5px solid $color-border-accent;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    border-radius: 50%;
-    padding: 4px;
+    border: 5px solid $color-border-accent !important;
+    border-radius: 50% !important;
+    padding: 4px !important;
 
     @include set-background-dynamic();
   }

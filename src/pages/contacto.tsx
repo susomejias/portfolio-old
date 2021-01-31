@@ -18,7 +18,7 @@ const Contact = (): JSX.Element => {
       </Head>
       <div className="wrapper contact-page">
         <h1 className="page-title ">Contacto</h1>
-        <RoundedImage image="/img/logo-portfolio" size="large" />
+        <RoundedImage image="/img/logo-portfolio.png" size="large" />
 
         <h2>Suso Mejías</h2>
 

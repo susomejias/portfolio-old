@@ -1,8 +1,6 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
 
-// https://github.com/zeit/next.js/tree/canary/examples/with-styled-components
 class ExtendedDocument extends Document {
   public static async getInitialProps(
     ctx
@@ -11,28 +9,17 @@ class ExtendedDocument extends Document {
     html: string
     head?: JSX.Element[]
   }> {
-    const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
     try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />)
-        })
+      ctx.renderPage = () => originalRenderPage()
 
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        )
+        styles: <>{initialProps.styles}</>
       }
     } finally {
-      sheet.seal()
     }
   }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { shallow } from 'enzyme'
 
 import RoundedImage from './'
 
@@ -8,7 +8,9 @@ describe('<RoundedImage>', () => {
     image: '/img/promises.png',
     size: 'small'
   }
-  const wrapperWithPropsSmallSize = mount(<RoundedImage {...componentProps} />)
+  const wrapperWithPropsSmallSize = shallow(
+    <RoundedImage {...componentProps} />
+  )
   it('should render', () => {
     expect(wrapperWithPropsSmallSize).toBeDefined()
   })
@@ -23,7 +25,7 @@ describe('<RoundedImage>', () => {
     image: '/img/promises.png',
     size: 'medium'
   }
-  const wrapperWithPropsMediumSize = mount(
+  const wrapperWithPropsMediumSize = shallow(
     <RoundedImage {...componentPropsMediumSize} />
   )
   it('should render', () => {
@@ -40,7 +42,7 @@ describe('<RoundedImage>', () => {
     image: '/img/promises.png',
     size: 'large'
   }
-  const wrapperWithPropsLargeSize = mount(
+  const wrapperWithPropsLargeSize = shallow(
     <RoundedImage {...componentPropsLargeSize} />
   )
   it('should render', () => {
@@ -57,7 +59,7 @@ describe('<RoundedImage>', () => {
     image: '/img/promises.png',
     size: undefined
   }
-  const wrapperWithPropsDefaultSize = mount(
+  const wrapperWithPropsDefaultSize = shallow(
     <RoundedImage {...componentPropsDefaultSize} />
   )
   it('should render', () => {
@@ -74,7 +76,7 @@ describe('<RoundedImage>', () => {
     image: '/img/promises.png',
     size: 'testSize'
   }
-  const wrapperWithPropsNotExistSize = mount(
+  const wrapperWithPropsNotExistSize = shallow(
     <RoundedImage {...componentPropsNotExistSize} />
   )
   it('should render', () => {

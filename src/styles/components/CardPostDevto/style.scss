@@ -8,6 +8,7 @@
   text-decoration: none;
   margin: 1.2rem 0;
   max-width: 350px;
+  overflow-x: hidden;
 
   @include box-shadow-default();
 
@@ -16,49 +17,21 @@
   }
 
   @include desktop {
-    @include flex-position(row, center, center);
+    display: grid;
+    grid-template-columns: repeat(1, 1.5fr) repeat(1, 2fr);
 
     &:hover {
       @include scale-card-hover();
     }
   }
 
-  @include large {
-    @include flex-position(row, center, center);
-  }
-
   .card-container-image {
-    min-height: 150px;
     width: 100%;
     padding: 0;
-
-    /* stylelint-disable declaration-no-important */
-
-    div:first-child {
-      border-top-left-radius: $border-radius-image-container-card-default;
-      border-top-right-radius: $border-radius-image-container-card-default;
-    }
+    position: relative;
+    min-height: 300px;
 
     @include flex-position(column, center, center);
-
-    @include desktop {
-      width: 41%;
-
-      div:first-child {
-        border-top-left-radius: $border-radius-image-container-card-default !important;
-        border-bottom-left-radius: $border-radius-image-container-card-default !important;
-        border-top-right-radius: initial !important;
-        height: 350px !important;
-      }
-
-      div div {
-        height: 350px !important;
-      }
-    }
-
-    img {
-      border-radius: $border-radius-default;
-    }
   }
 
   .card-container-content {
@@ -69,13 +42,11 @@
 
     @include tablet {
       padding: 0 1rem 1rem;
-      width: 59%;
     }
 
     .private-code-message {
       @include flex-position(row, flex-start, center);
       @include set-text-color-dynamic();
-      
 
       padding: .7rem 0;
 
@@ -92,7 +63,6 @@
 
     .card-description {
       @include set-text-color-dynamic();
-      
 
       margin: .4rem 0;
       font-size: 1.1rem;

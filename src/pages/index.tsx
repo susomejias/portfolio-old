@@ -23,7 +23,7 @@ const Home = (): JSX.Element => {
       </Head>
 
       <div className="wrapper home-page">
-        <RoundedImage image="/img/avatar" size="medium" />
+        <RoundedImage image="/img/avatar.png" size="medium" />
 
         <h1>Suso Mejías</h1>
 
