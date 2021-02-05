@@ -61,6 +61,7 @@
     "jest-config": "^26.6.1",
     "lighthouse-badges": "^1.0.34",
     "prettier": "^2.1.1",
+    "react-placeholder": "^4.1.0",
     "sass": "^1.26.10",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",

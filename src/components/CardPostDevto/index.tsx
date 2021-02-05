@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import ReactPlaceholder from 'react-placeholder'
+
 interface CardPostDevtoProps {
   image: string
   title: string
@@ -20,15 +22,29 @@ const CardPostDevto = ({
   url,
   tags
 }: CardPostDevtoProps) => {
+  const [isLoadImage, setIsLoadImage] = useState(false)
   return (
     <Link href={url} passHref>
       <a className="card-devto-post" target="_blank" rel="noreferrer">
         <div className="card-container-image">
+          <ReactPlaceholder
+            type="rect"
+            showLoadingAnimation={true}
+            firstLaunchOnly={false}
+            ready={isLoadImage}
+            style={{
+              marginRight: '0',
+              position: 'absolute'
+            }}
+            // eslint-disable-next-line react/no-children-prop
+            children={null}
+          ></ReactPlaceholder>
           <Image
             src={image}
             layout="fill"
             objectFit="cover"
             objectPosition="top left"
+            onLoad={() => setIsLoadImage(true)}
           />
         </div>
 

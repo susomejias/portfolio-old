@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import ReactPlaceholder from 'react-placeholder'
 
 import RoundedImage from '../RoundedImage'
 interface CardProps {
@@ -20,16 +21,30 @@ const Card = ({
   url,
   authors
 }: CardProps) => {
+  const [isLoadImage, setIsLoadImage] = useState(false)
   const renderContentCard = () => {
     return (
       <>
         <div className="card-container-image">
+          <ReactPlaceholder
+            type="rect"
+            showLoadingAnimation={true}
+            firstLaunchOnly={false}
+            ready={isLoadImage}
+            style={{
+              marginRight: '0',
+              position: 'absolute'
+            }}
+            // eslint-disable-next-line react/no-children-prop
+            children={null}
+          ></ReactPlaceholder>
           <Image
             src={image}
             layout="fill"
             objectFit="cover"
             objectPosition="top left"
             priority={true}
+            onLoad={() => setIsLoadImage(true)}
           />
         </div>
 

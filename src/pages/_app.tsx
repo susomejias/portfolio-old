@@ -6,9 +6,9 @@ import { useMediaPredicate } from 'react-media-hook'
 
 import HeadComponent from '../components/Head/Head'
 import Layout from '../layouts/Layout'
-
 import { useGlobalState } from '../store/darkThemeStore'
 import '../styles/globals.scss'
+import 'react-placeholder/lib/reactPlaceholder.css'
 
 const App = (props: AppProps): JSX.Element => {
   const { Component, pageProps } = props

@@ -3,6 +3,7 @@
 
   margin: 1rem .3rem;
   border-radius: 50%;
+  position: relative;
 
   @include flex-position(column, center, center);
 

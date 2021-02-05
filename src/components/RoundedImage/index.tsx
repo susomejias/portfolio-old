@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import ReactPlaceholder from 'react-placeholder'
 
 interface RoundedImageProps {
   image: string
@@ -25,8 +26,22 @@ const RoundedImage = ({ image, size, priority = false }: RoundedImageProps) => {
     }
   }
 
+  const [isLoadImage, setIsLoadImage] = useState(false)
+
   return (
     <div className="container-image">
+      <ReactPlaceholder
+        type="round"
+        showLoadingAnimation={true}
+        firstLaunchOnly={false}
+        ready={isLoadImage}
+        style={{
+          marginRight: '0',
+          position: 'absolute'
+        }}
+        // eslint-disable-next-line react/no-children-prop
+        children={null}
+      ></ReactPlaceholder>
       <Image
         className={`rounded-image ${getSize().className}`}
         src={image}
@@ -34,6 +49,7 @@ const RoundedImage = ({ image, size, priority = false }: RoundedImageProps) => {
         width={`${getSize().width}px`}
         height={`${getSize().height}px`}
         priority={priority}
+        onLoad={() => setIsLoadImage(true)}
       />
     </div>
   )

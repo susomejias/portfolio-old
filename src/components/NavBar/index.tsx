@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
-import NavButton from './NavButton'
-import ButtonToggleDarkMode from './ButtonToogleDarkMode'
 import {
   CONTACT_HREF,
   HOME_HREF,
@@ -10,6 +8,9 @@ import {
   PRESENTATIONS_HREF,
   PROJECTS_HREF
 } from '../../constants/hrefs'
+
+import NavButton from './NavButton'
+import ButtonToggleDarkMode from './ButtonToogleDarkMode'
 
 const NavBar = () => {
   const [visible, setVisible] = useState(true)
