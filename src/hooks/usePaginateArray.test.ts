@@ -1,7 +1,6 @@
 import { act } from '@testing-library/react'
 
 import { testHook } from '../utils/testHook'
-
 import usePaginateArray from './usePaginateArray'
 
 describe('usePaginateArray()', () => {

@@ -8,7 +8,6 @@ import {
   PRESENTATIONS_HREF,
   PROJECTS_HREF
 } from '../../constants/hrefs'
-
 import NavButton from './NavButton'
 import ButtonToggleDarkMode from './ButtonToogleDarkMode'
 
