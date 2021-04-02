@@ -22,14 +22,14 @@ const Talks = (): JSX.Element => {
           content="Ponencias sobre diversos temas tecnológicos, desde talleres con raspberrys hasta frameworks webs"
         />
       </Head>
-      <div className="wrapper">
+      <div className="wrapper-scroll">
         <h1 className="page-title ">Ponencias</h1>
         <InfiniteScroll
           dataLength={dataDisplayed.length}
           next={next}
           hasMore={currentPage < maxPage}
           loader={null}
-          scrollThreshold={0.3}
+          scrollThreshold={0.7}
           style={{
             width: '100%',
             overflow: 'hidden'

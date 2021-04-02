@@ -22,14 +22,14 @@ const Projects = (): JSX.Element => {
           content="Proyectos educativos, personales y profesionales con los que me sigo formando día a día"
         />
       </Head>
-      <div className="wrapper">
+      <div className="wrapper-scroll">
         <h1 className="page-title ">Proyectos</h1>
         <InfiniteScroll
           dataLength={dataDisplayed.length}
           next={next}
           hasMore={currentPage < maxPage}
           loader={null}
-          scrollThreshold={0.3}
+          scrollThreshold={0.7}
           style={{
             width: '100%',
             overflow: 'hidden'
