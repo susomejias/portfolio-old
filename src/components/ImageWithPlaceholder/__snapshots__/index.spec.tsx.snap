@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageWithPlaceholder /> should render 1`] = `ReactWrapper {}`;
+
+exports[`<ImageWithPlaceholder /> should render 2`] = `ReactWrapper {}`;

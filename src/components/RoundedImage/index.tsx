@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Image from 'next/image'
-import ReactPlaceholder from 'react-placeholder'
+import React from 'react'
+
+import ImageWithPlaceholder from '../ImageWithPlaceholder'
 
 interface RoundedImageProps {
   image: string
@@ -8,7 +8,7 @@ interface RoundedImageProps {
   priority?: boolean
 }
 
-const RoundedImage = ({ image, size, priority = false }: RoundedImageProps) => {
+const RoundedImage = ({ image, size }: RoundedImageProps) => {
   const SMALL_SIZE = { width: 46, height: 46, className: 'small' }
   const MEDIUM_SIZE = { width: 130, height: 130, className: 'medium' }
   const LARGE_SIZE = { width: 180, height: 180, className: 'large' }
@@ -26,30 +26,20 @@ const RoundedImage = ({ image, size, priority = false }: RoundedImageProps) => {
     }
   }
 
-  const [isLoadImage, setIsLoadImage] = useState(false)
-
   return (
-    <div className="container-image">
-      <ReactPlaceholder
-        type="round"
-        showLoadingAnimation={true}
-        firstLaunchOnly={false}
-        ready={isLoadImage}
-        style={{
-          marginRight: '0',
-          position: 'absolute'
-        }}
-        // eslint-disable-next-line react/no-children-prop
-        children={null}
-      ></ReactPlaceholder>
-      <Image
-        className={`rounded-image ${getSize().className}`}
-        src={image}
-        layout="intrinsic"
-        width={`${getSize().width}px`}
-        height={`${getSize().height}px`}
-        priority={priority}
-        onLoad={() => setIsLoadImage(true)}
+    <div
+      className={`container-image ${getSize().className}`}
+      style={{
+        width: `${getSize().width}px`,
+        height: `${getSize().height}px`
+      }}
+    >
+      <ImageWithPlaceholder
+        imageClassNames="rounded-image"
+        imageUrl={image}
+        imageAriaLabel=""
+        imageTitle=""
+        placeholderType="round"
       />
     </div>
   )

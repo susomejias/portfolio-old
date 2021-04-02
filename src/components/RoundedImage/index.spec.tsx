@@ -16,9 +16,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with small size', () => {
-    expect(
-      wrapperWithPropsSmallSize.find('.rounded-image.small').length
-    ).toEqual(1)
+    expect(wrapperWithPropsSmallSize.hasClass('small')).toEqual(true)
   })
 
   const componentPropsMediumSize = {
@@ -33,9 +31,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with medium size', () => {
-    expect(
-      wrapperWithPropsMediumSize.find('.rounded-image.medium').length
-    ).toEqual(1)
+    expect(wrapperWithPropsMediumSize.hasClass('medium')).toEqual(true)
   })
 
   const componentPropsLargeSize = {
@@ -50,9 +46,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with large size', () => {
-    expect(
-      wrapperWithPropsLargeSize.find('.rounded-image.large').length
-    ).toEqual(1)
+    expect(wrapperWithPropsLargeSize.hasClass('large')).toEqual(true)
   })
 
   const componentPropsDefaultSize = {
@@ -67,9 +61,7 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(
-      wrapperWithPropsDefaultSize.find('.rounded-image.small').length
-    ).toEqual(1)
+    expect(wrapperWithPropsDefaultSize.hasClass('small')).toEqual(true)
   })
 
   const componentPropsNotExistSize = {
@@ -84,8 +76,6 @@ describe('<RoundedImage>', () => {
   })
 
   it('should render with default size', () => {
-    expect(
-      wrapperWithPropsNotExistSize.find('.rounded-image.small').length
-    ).toEqual(1)
+    expect(wrapperWithPropsNotExistSize.hasClass('small')).toEqual(true)
   })
 })
