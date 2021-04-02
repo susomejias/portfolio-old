@@ -16,8 +16,8 @@ const Contact = (): JSX.Element => {
           content="Me podrás encontrar en las diversas redes sociales indicadas aquí en mi página de contacto"
         />
       </Head>
+      <h1 className="page-title ">Contacto</h1>
       <div className="wrapper contact-page">
-        <h1 className="page-title ">Contacto</h1>
         <RoundedImage
           image="/img/logo-portfolio.png"
           size="large"

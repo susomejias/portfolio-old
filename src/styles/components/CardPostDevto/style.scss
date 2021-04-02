@@ -80,6 +80,7 @@
         @include flex-position(row, flex-start, center);
         @include text-gradient($primary-gradient);
 
+        min-height: 1.3rem;
         margin-right: .75rem;
 
         i {
@@ -92,6 +93,9 @@
       padding: .5rem 0;
 
       span {
+        display: inline-block;
+        padding-bottom: .5rem;
+
         @include text-gradient($primary-gradient);
 
         font-weight: 800;
