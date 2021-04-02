@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import 'isomorphic-fetch'
 import Head from 'next/head'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import usePaginationArray from '../hooks/usePaginateArray'
-import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import DevtoService from '../services/DevtoService'
 import CardPostDevto from '../components/CardPostDevto'
 import ButtonScrollToTop from '../components/ButtonScrollToTop'
@@ -15,11 +15,8 @@ interface DevtoPostsProps {
 const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     posts,
-    2
+    3
   )
-
-  const refTriggerElement = useRef(null)
-  useInfiniteScroll(refTriggerElement, next)
 
   return (
     <>
@@ -32,30 +29,32 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
       </Head>
       <div className="wrapper">
         <h1 className="page-title ">Dev.to posts</h1>
-        {dataDisplayed.map((devtoPost: DevtoPost, index: number) => {
-          return (
-            <CardPostDevto
-              key={index}
-              image={devtoPost.cover_image}
-              title={devtoPost.title}
-              description={devtoPost.description}
-              commentsCount={devtoPost.comments_count}
-              reactions={devtoPost.positive_reactions_count}
-              url={devtoPost.canonical_url}
-              tags={devtoPost.tag_list}
-            />
-          )
-        })}
-        {currentPage < maxPage ? (
-          <p
-            className="infinite-scroll-show-more"
-            onClick={next}
-            ref={refTriggerElement}
-          >
-            Pulsa aquí para mostrar más
-          </p>
-        ) : null}
-
+        <InfiniteScroll
+          dataLength={dataDisplayed.length}
+          next={next}
+          hasMore={currentPage < maxPage}
+          loader={null}
+          scrollThreshold={0.3}
+          style={{
+            width: '100%',
+            overflow: 'hidden'
+          }}
+        >
+          {dataDisplayed.map((devtoPost: DevtoPost, index: number) => {
+            return (
+              <CardPostDevto
+                key={index}
+                image={devtoPost.cover_image}
+                title={devtoPost.title}
+                description={devtoPost.description}
+                commentsCount={devtoPost.comments_count}
+                reactions={devtoPost.positive_reactions_count}
+                url={devtoPost.canonical_url}
+                tags={devtoPost.tag_list}
+              />
+            )
+          })}
+        </InfiniteScroll>
         <ButtonScrollToTop />
       </div>
     </>

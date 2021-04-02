@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Head from 'next/head'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 import usePaginationArray from '../hooks/usePaginateArray'
-import useInfiniteScroll from '../hooks/useInfiniteScroll'
 import projects from '../assets/data/projects'
 import Card from '../components/Card'
 import ButtonScrollToTop from '../components/ButtonScrollToTop'
@@ -10,11 +10,8 @@ import ButtonScrollToTop from '../components/ButtonScrollToTop'
 const Projects = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
     projects,
-    2
+    3
   )
-
-  const refTriggerElement = useRef(null)
-  useInfiniteScroll(refTriggerElement, next)
 
   return (
     <>
@@ -27,30 +24,31 @@ const Projects = (): JSX.Element => {
       </Head>
       <div className="wrapper">
         <h1 className="page-title ">Proyectos</h1>
-        {dataDisplayed.map((project: Project, index) => {
-          return (
-            <Card
-              key={index}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              showPrivateCodeMessage={project.url === '#'}
-              url={project.url}
-              authors={project.authors}
-            />
-          )
-        })}
-
-        {currentPage < maxPage ? (
-          <p
-            className="infinite-scroll-show-more"
-            onClick={next}
-            ref={refTriggerElement}
-          >
-            Pulsa aquí para mostrar más
-          </p>
-        ) : null}
-
+        <InfiniteScroll
+          dataLength={dataDisplayed.length}
+          next={next}
+          hasMore={currentPage < maxPage}
+          loader={null}
+          scrollThreshold={0.3}
+          style={{
+            width: '100%',
+            overflow: 'hidden'
+          }}
+        >
+          {dataDisplayed.map((project: Project, index) => {
+            return (
+              <Card
+                key={index}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                showPrivateCodeMessage={project.url === '#'}
+                url={project.url}
+                authors={project.authors}
+              />
+            )
+          })}
+        </InfiniteScroll>
         <ButtonScrollToTop />
       </div>
     </>
