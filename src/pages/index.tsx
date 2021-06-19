@@ -29,7 +29,7 @@ const Home = (): JSX.Element => {
           priority={true}
         />
 
-        <h1>Suso Mejías</h1>
+        <h1>Susomejias</h1>
 
         <div className="container-button-badge">
           <ButtonBadge
