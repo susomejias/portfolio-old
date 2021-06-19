@@ -13,7 +13,7 @@ const NavButton = ({ text, url, iconClass, dataCy }: NavButtonProps) => {
   const router = useRouter()
 
   const markCurrentRouteButton = () => {
-    return url === router.pathname ? 'current' : null
+    return url === router.pathname ? 'current' : ''
   }
 
   return (
