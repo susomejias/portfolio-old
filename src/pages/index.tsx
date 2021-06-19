@@ -23,7 +23,11 @@ const Home = (): JSX.Element => {
       </Head>
 
       <div className="wrapper home-page">
-        <RoundedImage image="/img/avatar.png" size="medium" priority={true} />
+        <RoundedImage
+          image="/img/logo-portfolio.png"
+          size="medium"
+          priority={true}
+        />
 
         <h1>Suso Mejías</h1>
 
