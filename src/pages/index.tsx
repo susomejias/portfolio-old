@@ -32,7 +32,11 @@ const Home = (): JSX.Element => {
         <h1>Suso Mejías</h1>
 
         <div className="container-button-badge">
-          <ButtonBadge text="Desarrollador Web" url="#" isTargetBlank={false} />
+          <ButtonBadge
+            text="FrontEnd Developer"
+            url="#"
+            isTargetBlank={false}
+          />
         </div>
 
         <p className="quote">

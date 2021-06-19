@@ -12,11 +12,12 @@
   .quote {
     @include set-text-color-dynamic();
 
-    font-size: 1.1rem;
+    font-size: .9rem;
     line-height: 1.4rem;
     max-width: 350px;
     text-align: center;
     margin-bottom: 0;
+    margin-top: 32px;
     font-weight: 500;
 
     @include flex-position(column, center, center);
