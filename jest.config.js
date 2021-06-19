@@ -3,8 +3,9 @@ const { defaults } = require('jest-config')
 
 module.exports = {
   ...defaults,
+  verbose: true,
   collectCoverage: true,
-  coverageReporters: ['json-summary'],
+  coverageReporters: ['json-summary', 'html'],
 
   testPathIgnorePatterns: [
     '<rootDir>/__tests__/e2e',
