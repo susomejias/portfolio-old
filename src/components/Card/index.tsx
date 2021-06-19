@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
-import ImageWithPlaceholder from '../ImageWithPlaceholder'
 import RoundedImage from '../RoundedImage'
 interface CardProps {
   image: string
@@ -24,11 +24,14 @@ const Card = ({
     return (
       <>
         <div className="card-container-image">
-          <ImageWithPlaceholder
-            imageUrl={image}
-            imageAriaLabel={title}
-            imageTitle={title}
-            placeholderType="rect"
+          <Image
+            src={image}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top left"
+            aria-label={title}
+            blurDataURL={image}
+            placeholder="blur"
           />
         </div>
 

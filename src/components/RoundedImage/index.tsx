@@ -1,7 +1,5 @@
 import React from 'react'
-
-import ImageWithPlaceholder from '../ImageWithPlaceholder'
-
+import Image from 'next/image'
 interface RoundedImageProps {
   image: string
   size: string
@@ -34,12 +32,14 @@ const RoundedImage = ({ image, size }: RoundedImageProps) => {
         height: `${getSize().height}px`
       }}
     >
-      <ImageWithPlaceholder
-        imageClassNames="rounded-image"
-        imageUrl={image}
-        imageAriaLabel=""
-        imageTitle=""
-        placeholderType="round"
+      <Image
+        className="rounded-image"
+        src={image}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="top left"
+        blurDataURL={image}
+        placeholder="blur"
       />
     </div>
   )

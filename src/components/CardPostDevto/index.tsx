@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
-import ImageWithPlaceholder from '../ImageWithPlaceholder'
+import Image from 'next/image'
 
 interface CardPostDevtoProps {
   image: string
@@ -26,11 +25,14 @@ const CardPostDevto = ({
     <Link href={url} passHref>
       <a className="card-devto-post" target="_blank" rel="noreferrer">
         <div className="card-container-image">
-          <ImageWithPlaceholder
-            imageUrl={image}
-            imageAriaLabel={title}
-            imageTitle={title}
-            placeholderType="rect"
+          <Image
+            src={image}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top left"
+            aria-label={title}
+            blurDataURL={image}
+            placeholder="blur"
           />
         </div>
 
