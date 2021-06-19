@@ -9,7 +9,14 @@ const ButtonToggleDarkMode = () => {
 
   return (
     <div className="button-toggle-dark-mode" onClick={handleClick}>
-      <i className={`fas ${isDarkMode ? 'fa-tint-slash' : 'fa-tint'}`}></i>
+      <div className={`sun sun-logo ${isDarkMode ? 'animate-hide-sun' : ''}`}>
+        <i className="fas fa-sun"></i>
+      </div>
+      <div
+        className={`moon moon-logo ${isDarkMode ? 'animate-show-moon' : ''}`}
+      >
+        <i className="fas fa-moon"></i>
+      </div>
     </div>
   )
 }

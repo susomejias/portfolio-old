@@ -9,7 +9,7 @@ import {
   PROJECTS_HREF
 } from '../../constants/hrefs'
 import NavButton from './NavButton'
-import ButtonToggleDarkMode from './ButtonToogleDarkMode'
+import ButtonToggleDarkMode from './ButtonToggleDarkMode'
 
 const NavBar = () => {
   const [visible, setVisible] = useState(true)
