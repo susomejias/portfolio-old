@@ -10,8 +10,7 @@ describe('<CardPostDevto>', () => {
     description: 'description',
     commentsCount: 1,
     reactions: 4,
-    url:
-      'https://dev.to/theneonproject/translations-for-react-using-i18n-hook-1616',
+    url: 'https://dev.to/theneonproject/translations-for-react-using-i18n-hook-1616',
     tags: ['react', 'javascript']
   }
   const wrapperWithProps = mount(<CardPostDevto {...componentProps} />)

@@ -2,9 +2,7 @@ import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class ExtendedDocument extends Document {
-  public static async getInitialProps(
-    ctx
-  ): Promise<{
+  public static async getInitialProps(ctx): Promise<{
     styles: JSX.Element
     html: string
     head?: JSX.Element[]

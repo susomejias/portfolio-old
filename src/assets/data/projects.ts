@@ -55,8 +55,7 @@ export default [
     description:
       'Buscador asíncrono realizado con la tecnología AJAX, la librería jQuery, PHP y SASS. Este proyecto está deployeado en heroku.',
     image: '/img/buscadorAjaxjQuery.png',
-    url:
-      'https://susomejias-io.herokuapp.com/ejercicios/tema7/Ajax/Comunic%C3%A1ndome-con-AJAX-sugerencias-mediante-php-(jQuery)/',
+    url: 'https://susomejias-io.herokuapp.com/ejercicios/tema7/Ajax/Comunic%C3%A1ndome-con-AJAX-sugerencias-mediante-php-(jQuery)/',
     authors: [{ name: 'Suso Mejías', image: '/img/avatar.png' }]
   },
 

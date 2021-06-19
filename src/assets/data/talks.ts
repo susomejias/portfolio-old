@@ -5,8 +5,7 @@ export default [
     description:
       'Taller donde se indicaron una serie de buenas prácticas para optimizar tu sitio web y además convertirlo en una PWA y así llevarlo a otro nivel.',
     image: '/img/sysmana2020.png',
-    url:
-      'https://github.com/susomejias/Tips-para-optimizar-tu-web-y-convertirla-en-una-PWA-Sysmana-XII-2020',
+    url: 'https://github.com/susomejias/Tips-para-optimizar-tu-web-y-convertirla-en-una-PWA-Sysmana-XII-2020',
     speakers: [{ name: 'Suso Mejías', image: '/img/avatar.png' }]
   },
 
