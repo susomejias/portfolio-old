@@ -34,6 +34,7 @@ body {
   overflow-y: hidden;
   width: 100%;
   transition: all .5s;
+  min-height: 100vh;
 
   @include flex-position(column, center, center);
 
@@ -51,6 +52,10 @@ body {
 
   @include extra-large {
     max-width: 40%;
+  }
+
+  .infinite-scroll-component__outerdiv {
+    min-height: 100vh;
   }
 }
 
