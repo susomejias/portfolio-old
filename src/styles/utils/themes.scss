@@ -3,6 +3,7 @@
   --color-text: #{$color-dark-grey};
   --color-tag-text: #{$color-accent};
   --card-background-color: #{$background-color-cards-light};
+  --color-navbar-background: #{$background-color-navbar-light-transparent};
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 .light {
   --color-page-background: #{$color-white};
   --color-text: #{$color-dark-grey};
+  --color-navbar-background: #{$background-color-navbar-light-transparent};
 }
 
 .dark {
@@ -20,4 +22,5 @@ body {
   --color-text: #{$color-white};
   --color-tag-text: #{$color-white};
   --card-background-color: #{$background-color-cards-dark};
+  --color-navbar-background: #{$background-color-navbar-dark-transparent};
 }

@@ -17,7 +17,6 @@
   "dependencies": {
     "@jest/types": "^26.6.1",
     "@lhci/cli": "^0.5.0",
-    "@n8tb1t/use-scroll-position": "^2.0.3",
     "@types/jest": "^26.0.10",
     "@types/next": "^9.0.0",
     "babel-jest": "^26.3.0",

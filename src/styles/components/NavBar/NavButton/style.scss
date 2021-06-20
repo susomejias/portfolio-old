@@ -1,10 +1,3 @@
-@keyframes strok {
-
-  100% {
-    stroke-dashoffset: 400;
-  }
-}
-
 .nav-button {
   margin: .45rem;
 
@@ -14,7 +7,7 @@
 
     @include flex-position(row, center, center);
 
-    color: $color-light-grey;
+    color: var(--color-text);
     padding: .55rem;
     border-radius: 3px;
     font-size: 1.1rem;
@@ -60,15 +53,15 @@
     border-radius: $border-radius-default;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
     font-weight: 600;
-
-    i {
-      animation: strok 1.5s reverse;
-    }
   }
 
-  a:not(.current):hover {
-    transform: scale(1.15);
+  a:not(.current) {
+    opacity: .75;
 
-    @include text-gradient($color-accent);
+    &:hover {
+      transform: scale(1.15);
+
+      @include text-gradient($color-accent);
+    }
   }
 }
