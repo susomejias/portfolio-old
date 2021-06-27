@@ -1,0 +1,12 @@
+.wrapper-error-page {
+  @include flex-position(column, center, center);
+
+  padding: 1rem 2rem;
+
+  h1 {
+    @include set-text-tag-color-dynamic();
+
+    font-size: 2rem;
+    text-align: center;
+  }
+}
