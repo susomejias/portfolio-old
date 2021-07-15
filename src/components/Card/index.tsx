@@ -10,6 +10,7 @@ interface CardProps {
   showPrivateCodeMessage: boolean
   url: string
   authors: Author[]
+  priority?: boolean
 }
 
 const Card = ({
@@ -18,9 +19,11 @@ const Card = ({
   description,
   showPrivateCodeMessage,
   url,
-  authors
+  authors,
+  priority = false
 }: CardProps) => {
   const renderContentCard = () => {
+    console.log(priority)
     return (
       <>
         <div className="card-container-image">
@@ -30,8 +33,7 @@ const Card = ({
             objectFit="cover"
             objectPosition="top left"
             aria-label={title}
-            blurDataURL={image}
-            placeholder="blur"
+            priority={priority}
           />
         </div>
 

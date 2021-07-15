@@ -10,6 +10,7 @@ interface CardPostDevtoProps {
   reactions: number
   url: string
   tags: string[]
+  priority?: boolean
 }
 
 const CardPostDevto = ({
@@ -19,7 +20,8 @@ const CardPostDevto = ({
   commentsCount,
   reactions,
   url,
-  tags
+  tags,
+  priority = false
 }: CardPostDevtoProps) => {
   return (
     <Link href={url} passHref>
@@ -31,8 +33,7 @@ const CardPostDevto = ({
             objectFit="cover"
             objectPosition="top left"
             aria-label={title}
-            blurDataURL={image}
-            placeholder="blur"
+            priority={priority}
           />
         </div>
 
