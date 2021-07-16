@@ -57,7 +57,7 @@ const Home = (): JSX.Element => {
         {currentPage < maxPage ? (
           <a
             aria-label="more skills"
-            className="more-skills heartbeat fas fa-angle-double-up"
+            className="more-skills fas fa-angle-double-up"
             onClick={(ev) => {
               ev.preventDefault()
               next()
