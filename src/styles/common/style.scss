@@ -108,3 +108,12 @@ body {
     width: 100%;
   }
 }
+
+.hidden {
+  /* stylelint-disable declaration-no-important */
+  display: none !important;
+}
+
+.show {
+  display: initial;
+}

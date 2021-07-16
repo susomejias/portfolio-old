@@ -54,22 +54,22 @@ const Home = (): JSX.Element => {
           })}
         </div>
 
-        {currentPage < maxPage ? (
-          <a
-            aria-label="more skills"
-            className="more-skills fas fa-angle-double-up"
-            onClick={(ev) => {
-              ev.preventDefault()
-              next()
-              setTimeout(() => {
-                window.scrollTo({
-                  top: document.body.scrollHeight,
-                  behavior: 'smooth'
-                })
-              }, 400)
-            }}
-          ></a>
-        ) : null}
+        <a
+          aria-label="more skills"
+          className={`${
+            currentPage < maxPage ? 'show' : 'hidden'
+          } more-skills fas fa-angle-double-up`}
+          onClick={(ev) => {
+            ev.preventDefault()
+            next()
+            setTimeout(() => {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+              })
+            }, 400)
+          }}
+        ></a>
       </div>
     </>
   )
