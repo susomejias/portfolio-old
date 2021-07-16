@@ -8,8 +8,6 @@ const custom404 = (): JSX.Element => {
       <h1>Página no encontrada...</h1>
       <Image
         src={imageUrl}
-        blurDataURL={imageUrl}
-        placeholder="blur"
         alt="Página no encontrada"
         width="200px"
         height="200px"
