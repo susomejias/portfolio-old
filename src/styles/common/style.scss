@@ -110,10 +110,11 @@ body {
 }
 
 .hidden {
-  /* stylelint-disable declaration-no-important */
-  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .show {
-  display: initial;
+  visibility: visible;
+  pointer-events: initial;
 }
