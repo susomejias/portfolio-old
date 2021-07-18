@@ -1,21 +1,15 @@
 export default [
   'React',
   'NextJS',
-  'Django',
   'Redux',
   'TypeScript',
-  'Enzyme',
-  'Cypress',
-  'Angular',
+  'Testing',
+  'NodeJS',
   'JavaScript',
   'Python',
+  'Django',
   'HTML5',
   'CSS3',
   'PHP',
-  'Laravel',
-  'Markdown',
-  'JSON',
-  'SASS',
-  'C#',
-  'SQL'
+  'SASS'
 ]
