@@ -23,7 +23,6 @@ const Card = ({
   priority = false
 }: CardProps) => {
   const renderContentCard = () => {
-    console.log(priority)
     return (
       <>
         <div className="card-container-image">
