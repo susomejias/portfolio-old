@@ -21,6 +21,7 @@ describe('<CardPostDevto>', () => {
 
     expect(cardClickable).toBeInTheDocument()
   })
+
   it('should render card elements', async () => {
     render(<CardPostDevto {...componentProps} />)
 

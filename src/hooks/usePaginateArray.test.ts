@@ -42,6 +42,7 @@ describe('usePaginateArray()', () => {
     const { result } = renderHook(() => usePaginateArray(data, 2))
     expect(result.current.dataDisplayed.length).toEqual(2)
   })
+
   it('should have 4 elements', () => {
     const { result } = renderHook(() => usePaginateArray(data, 2))
     act(() => result.current.next())
