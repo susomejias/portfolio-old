@@ -1,15 +1,14 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 
 import Footer from './index'
 
 describe('<Footer>', () => {
-  const wrapper = mount(<Footer />)
+  it('wrapperWithPropsLinkButton: should render with text', async () => {
+    render(<Footer />)
+    const footerText = await screen.getByText('Hecho a mano con ❤️')
 
-  it('wrapper: should render', () => {
-    expect(wrapper).toBeDefined()
-  })
-  it('wrapperWithPropsLinkButton: should render with text', () => {
-    expect(wrapper.find('span').text()).toEqual('Hecho a mano con ❤️')
+    expect(footerText).toBeInTheDocument()
   })
 })

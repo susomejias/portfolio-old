@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import RoundedImage from '../RoundedImage'
+
 interface CardProps {
   image: string
   title: string
@@ -39,7 +40,7 @@ const Card = ({
         <div className="card-container-content">
           {showPrivateCodeMessage ? (
             <span className="private-code-message">
-              <i className="fas fa-lock"></i>
+              <i className="fas fa-lock" />
               Código privado
             </span>
           ) : null}

@@ -1,5 +1,6 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 
 import Card from './index'
 
@@ -13,26 +14,22 @@ describe('<Card>', () => {
     url: '#',
     authors: authors
   }
-  const wrapperWithPropsPrivateCode = mount(
-    <Card {...componentPropsPrivateCode} />
-  )
-  it('should render', () => {
-    expect(wrapperWithPropsPrivateCode).toBeDefined()
-  })
-  it('should render card with div element', () => {
-    expect(wrapperWithPropsPrivateCode.find('div.card').length).toEqual(1)
-  })
-  it('should render card elements', () => {
-    expect(wrapperWithPropsPrivateCode.find('.card-title').text()).toEqual(
-      'Card title'
-    )
-    expect(
-      wrapperWithPropsPrivateCode.find('.card-description').text()
-    ).toEqual('Card description')
 
-    expect(
-      wrapperWithPropsPrivateCode.find('.card-author-name').first().text()
-    ).toEqual('Suso Mejías')
+  it('should render card with private code message', async () => {
+    render(<Card {...componentPropsPrivateCode} />)
+    const privateCodeMessage = await screen.getByText('Código privado')
+
+    expect(privateCodeMessage).toBeInTheDocument()
+  })
+  it('should render card elements with private code props', async () => {
+    render(<Card {...componentPropsPrivateCode} />)
+    const cardTitle = await screen.getByText('Card title')
+    const cardDescription = await screen.getByText('Card description')
+    const cardAuthorName = await screen.getByText('Suso Mejías')
+
+    expect(cardTitle).toBeInTheDocument()
+    expect(cardDescription).toBeInTheDocument()
+    expect(cardAuthorName).toBeInTheDocument()
   })
 
   const componentPropsNotPrivateCodeIsLink = {
@@ -43,55 +40,52 @@ describe('<Card>', () => {
     url: 'https://www.google.es',
     authors: authors
   }
-  const wrapperWithPropsNotPrivateCodeIsLink = mount(
-    <Card {...componentPropsNotPrivateCodeIsLink} />
-  )
-  it('should render', () => {
-    expect(wrapperWithPropsNotPrivateCodeIsLink).toBeDefined()
-  })
-  it('should render card with a element', () => {
-    expect(wrapperWithPropsNotPrivateCodeIsLink.find('a.card').length).toEqual(
-      1
+
+  it('should render card with not private code message', async () => {
+    render(<Card {...componentPropsNotPrivateCodeIsLink} />)
+    const privateCodeMessage = await document.querySelector(
+      '.private-code-message'
     )
-  })
-  it('should render card elements', () => {
-    expect(
-      wrapperWithPropsNotPrivateCodeIsLink.find('.card-title').text()
-    ).toEqual('Card title')
-    expect(
-      wrapperWithPropsNotPrivateCodeIsLink.find('.card-description').text()
-    ).toEqual('Card description')
 
-    expect(
-      wrapperWithPropsNotPrivateCodeIsLink
-        .find('.card-author-name')
-        .first()
-        .text()
-    ).toEqual('Suso Mejías')
+    expect(privateCodeMessage).not.toBeInTheDocument()
+  })
+  it('should render card with a element', async () => {
+    render(<Card {...componentPropsNotPrivateCodeIsLink} />)
+    const cardClickable = await document.querySelector('a.card')
+
+    expect(cardClickable).toBeInTheDocument()
+  })
+  it('should render card elements with not private code props', async () => {
+    render(<Card {...componentPropsNotPrivateCodeIsLink} />)
+    const cardTitle = await screen.getByText('Card title')
+    const cardDescription = await screen.getByText('Card description')
+    const cardAuthorName = await screen.getByText('Suso Mejías')
+
+    expect(cardTitle).toBeInTheDocument()
+    expect(cardDescription).toBeInTheDocument()
+    expect(cardAuthorName).toBeInTheDocument()
   })
 
-  const authorsWithLengthGreaterThanFour: Author[] = [
-    { name: 'Suso Mejías', image: '/img/avatar' },
-    { name: 'Author1', image: '/img/avatar' },
-    { name: 'Author2', image: '/img/avatar' },
-    { name: 'Author3', image: '/img/avatar' },
-    { name: 'Author4', image: '/img/avatar' }
-  ]
-  const componentPropsAuthorsWithLengthGreaterThanFour = {
-    image: '/img/promises',
-    title: 'Card title',
-    description: 'Card description',
-    showPrivateCodeMessage: true,
-    url: '#',
-    authors: authorsWithLengthGreaterThanFour
-  }
-  const wrapperWithAuthorsWithLengthGreaterThanFour = mount(
-    <Card {...componentPropsAuthorsWithLengthGreaterThanFour} />
-  )
-  it('should render', () => {
-    expect(
-      wrapperWithAuthorsWithLengthGreaterThanFour.find('.card-author-name')
-        .length
-    ).toEqual(0)
+  it('should not render authors names when authors length is greater that 4', async () => {
+    const authorsWithLengthGreaterThanFour: Author[] = [
+      { name: 'Suso Mejías', image: '/img/avatar' },
+      { name: 'Author1', image: '/img/avatar' },
+      { name: 'Author2', image: '/img/avatar' },
+      { name: 'Author3', image: '/img/avatar' },
+      { name: 'Author4', image: '/img/avatar' }
+    ]
+    const componentPropsAuthorsWithLengthGreaterThanFour = {
+      image: '/img/promises',
+      title: 'Card title',
+      description: 'Card description',
+      showPrivateCodeMessage: true,
+      url: '#',
+      authors: authorsWithLengthGreaterThanFour
+    }
+
+    render(<Card {...componentPropsAuthorsWithLengthGreaterThanFour} />)
+    const authorsNames = await document.querySelector('.card-author-name')
+
+    expect(authorsNames).not.toBeInTheDocument()
   })
 })

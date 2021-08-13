@@ -25,7 +25,7 @@ const NavButton = ({ text, url, iconClass, dataCy }: NavButtonProps) => {
           data-cy={dataCy}
         >
           <span>{text}</span>
-          <i className={iconClass}></i>
+          <i className={iconClass} />
         </a>
       </Link>
     </div>

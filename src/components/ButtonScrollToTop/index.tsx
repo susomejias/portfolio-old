@@ -7,7 +7,7 @@ const ButtonScrollToTop = () => {
         window.scrollTo(0, 0)
       }}
       className="scroll-top-button fas fa-angle-up"
-    ></i>
+    />
   )
 }
 

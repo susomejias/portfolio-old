@@ -1,51 +1,44 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import '@testing-library/jest-dom'
 import * as nextRouter from 'next/router'
+import { render, screen } from '@testing-library/react'
 
 import NavButton from './index'
 
 describe('<NavButton>', () => {
-  nextRouter.useRouter = jest.fn()
-  nextRouter.useRouter.mockImplementation(() => ({ pathname: '/' }))
+  it('should be the highlighted button because its url is toEqual to the current url', async () => {
+    nextRouter.useRouter = jest.fn()
+    nextRouter.useRouter.mockImplementation(() => ({
+      pathname: '/'
+    }))
+    const componentProps = {
+      text: 'navButtonText',
+      url: '/',
+      iconClass: 'fas fa-home'
+    }
+    render(<NavButton {...componentProps} />)
 
-  const componentProps = {
-    text: 'navButtonText',
-    url: '/',
-    iconClass: 'fas fa-home'
-  }
-  const wrapperCurrentRoute = mount(<NavButton {...componentProps} />)
-
-  it('should render', () => {
-    expect(wrapperCurrentRoute).toBeDefined()
+    const button = await screen.getByText('navButtonText').closest('a')
+    expect(button).toBeInTheDocument()
+    expect(button).toHaveAttribute('href', '/')
+    expect(button.classList.contains('current')).toBe(true)
   })
 
-  it('should be the highlighted button because its url is toEqual to the current url', () => {
-    expect(wrapperCurrentRoute.find('.current').length).toEqual(1)
-    expect(wrapperCurrentRoute.find('.fas.fa-home').length).toEqual(1)
-    expect(wrapperCurrentRoute.find('.current span').text()).toEqual(
-      'navButtonText'
-    )
-  })
+  it('should not be the highlighted button because its url is not toEqual to the current url', async () => {
+    nextRouter.useRouter = jest.fn()
+    nextRouter.useRouter.mockImplementation(() => ({
+      pathname: '/projects'
+    }))
 
-  nextRouter.useRouter = jest.fn()
-  nextRouter.useRouter.mockImplementation(() => ({ pathname: '/project' }))
-
-  const componentPropsNotCurrentRoute = {
-    text: 'navButtonText',
-    url: '/url-test',
-    iconClass: 'fas fa-briefcase'
-  }
-  const wrapperNotCurrentRoute = mount(
-    <NavButton {...componentPropsNotCurrentRoute} />
-  )
-
-  it('should render', () => {
-    expect(wrapperNotCurrentRoute).toBeDefined()
-  })
-
-  it('should not be the highlighted button because its url is not toEqual to the current url', () => {
-    expect(wrapperNotCurrentRoute.find('.current').length).toEqual(0)
-    expect(wrapperNotCurrentRoute.find('.fas.fa-briefcase').length).toEqual(1)
-    expect(wrapperNotCurrentRoute.find('span').text()).toEqual('navButtonText')
+    const componentPropsNotCurrentRoute = {
+      text: 'navButtonText',
+      url: '/url-test',
+      iconClass: 'fas fa-briefcase'
+    }
+    render(<NavButton {...componentPropsNotCurrentRoute} />)
+    const button = await screen.getByText('navButtonText').closest('a')
+    expect(button).toBeInTheDocument()
+    expect(button).toHaveAttribute('href', '/url-test')
+    expect(button.classList.contains('current')).toBe(false)
   })
 })

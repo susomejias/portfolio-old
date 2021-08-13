@@ -1,7 +1,3 @@
-import { configure } from 'enzyme'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
-configure({ adapter: new Adapter() })
-
 process.env = {
   ...process.env,
   __NEXT_IMAGE_OPTS: {

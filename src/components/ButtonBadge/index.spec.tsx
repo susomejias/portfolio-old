@@ -1,5 +1,6 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import '@testing-library/jest-dom'
+import { fireEvent, render, screen } from '@testing-library/react'
 
 import ButtonBadge from './index'
 
@@ -10,27 +11,31 @@ describe('<ButtonBadge>', () => {
     url: 'https://google.es',
     isTargetBlank: true
   }
-  const wrapperWithPropsLinkButton = mount(<ButtonBadge {...componentProps} />)
 
-  it('wrapperWithPropsLinkButton: should render', () => {
-    expect(wrapperWithPropsLinkButton).toBeDefined()
+  it('wrapperWithPropsLinkButton: should render with text Link test', async () => {
+    render(<ButtonBadge {...componentProps} />)
+    const button = await screen.getByText('Link test')
+
+    expect(button).toBeInTheDocument()
   })
-  it('wrapperWithPropsLinkButton: should render with text Link test', () => {
-    expect(wrapperWithPropsLinkButton.find('a').text()).toEqual('Link test')
+  it('wrapperWithPropsLinkButton: should render with url https://google.es/', async () => {
+    render(<ButtonBadge {...componentProps} />)
+    const button = await screen.getByText('Link test')
+
+    expect(button).toHaveAttribute('href', 'https://google.es')
   })
-  it('wrapperWithPropsLinkButton: should render with url https://google.es/', () => {
-    expect(wrapperWithPropsLinkButton.find('Link').at(0).props().href).toEqual(
-      'https://google.es'
-    )
-  })
-  it('wrapperWithPropsLinkButton: should render with target _blank', () => {
-    expect(wrapperWithPropsLinkButton.find('a').prop('target')).toEqual(
-      '_blank'
-    )
+  it('wrapperWithPropsLinkButton: should render with target _blank', async () => {
+    render(<ButtonBadge {...componentProps} />)
+    const button = await screen.getByText('Link test')
+
+    expect(button).toHaveAttribute('target', '_blank')
   })
 
-  it('wrapperWithPropsLinkButton: simulate click', () => {
-    wrapperWithPropsLinkButton.find('a').simulate('click')
+  it('wrapperWithPropsLinkButton: simulate click', async () => {
+    render(<ButtonBadge {...componentProps} />)
+    const button = await screen.getByText('Link test')
+
+    fireEvent.click(button)
   })
 
   const componentPropsNotLinkbutton = {
@@ -39,16 +44,17 @@ describe('<ButtonBadge>', () => {
     url: '#',
     isTargetBlank: false
   }
-  const wrapperWithPropsNotLinkbutton = mount(
-    <ButtonBadge {...componentPropsNotLinkbutton} />
-  )
-  it('wrapperWithPropsNotLinkbutton: should render', () => {
-    expect(wrapperWithPropsNotLinkbutton).toBeDefined()
+
+  it('wrapperWithPropsNotLinkbutton: should render with text', async () => {
+    render(<ButtonBadge {...componentPropsNotLinkbutton} />)
+    const button = await screen.getByText('Link test')
+
+    expect(button).toBeInTheDocument()
   })
-  it('wrapperWithPropsNotLinkbutton: should render with text', () => {
-    expect(wrapperWithPropsNotLinkbutton.find('p').text()).toEqual('Link test')
-  })
-  it('wrapperWithPropsNotLinkbutton: should not render with a element', () => {
-    expect(wrapperWithPropsNotLinkbutton.find('a').length).toEqual(0)
+  it('wrapperWithPropsNotLinkbutton: should not render with a element', async () => {
+    render(<ButtonBadge {...componentPropsNotLinkbutton} />)
+    const button = await screen.getByText('Link test')
+
+    expect(button).not.toHaveAttribute('href')
   })
 })

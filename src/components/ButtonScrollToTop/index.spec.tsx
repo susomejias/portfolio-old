@@ -1,15 +1,19 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import '@testing-library/jest-dom'
+import { fireEvent, render } from '@testing-library/react'
 
 import ButtonScrollToTop from './index'
 
 describe('<ButtonScrollToTop>', () => {
-  const wrapper = mount(<ButtonScrollToTop />)
-  it('should render', () => {
-    expect(wrapper).toBeDefined()
-  })
-  it('should render button and click', () => {
-    expect(wrapper.find('.scroll-top-button.fas.fa-angle-up').length).toEqual(1)
-    wrapper.find('.scroll-top-button.fas.fa-angle-up').simulate('click')
+  it('should render button and click', async () => {
+    window.scrollTo = jest.fn()
+
+    render(<ButtonScrollToTop />)
+    const button = await document.querySelector(
+      '.scroll-top-button.fas.fa-angle-up'
+    )
+
+    fireEvent.click(button)
+    expect(window.scrollTo).toHaveBeenCalledTimes(1)
   })
 })
