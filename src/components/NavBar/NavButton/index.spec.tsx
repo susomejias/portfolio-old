@@ -1,14 +1,15 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import * as nextRouter from 'next/router'
 import { render, screen } from '@testing-library/react'
 
 import NavButton from './index'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+
 describe('<NavButton>', () => {
   it('should be the highlighted button because its url is toEqual to the current url', async () => {
-    nextRouter.useRouter = jest.fn()
-    nextRouter.useRouter.mockImplementation(() => ({
+    useRouter.mockImplementation(() => ({
       pathname: '/'
     }))
     const componentProps = {
@@ -25,8 +26,7 @@ describe('<NavButton>', () => {
   })
 
   it('should not be the highlighted button because its url is not toEqual to the current url', async () => {
-    nextRouter.useRouter = jest.fn()
-    nextRouter.useRouter.mockImplementation(() => ({
+    useRouter.mockImplementation(() => ({
       pathname: '/projects'
     }))
 

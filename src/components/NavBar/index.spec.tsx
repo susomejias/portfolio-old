@@ -1,13 +1,14 @@
 import React from 'react'
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
-import * as nextRouter from 'next/router'
 
 import NavBar from '.'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const useRouter = jest.spyOn(require('next/router'), 'useRouter')
+
 describe('<NavBar>', () => {
-  nextRouter.useRouter = jest.fn()
-  nextRouter.useRouter.mockImplementation(() => ({ pathname: '/' }))
+  useRouter.mockImplementation(() => ({ pathname: '/' }))
 
   it('should render all NavButtons', async () => {
     render(<NavBar />)
