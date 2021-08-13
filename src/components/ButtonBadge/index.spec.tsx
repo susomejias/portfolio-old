@@ -18,12 +18,14 @@ describe('<ButtonBadge>', () => {
 
     expect(button).toBeInTheDocument()
   })
+
   it('wrapperWithPropsLinkButton: should render with url https://google.es/', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
 
     expect(button).toHaveAttribute('href', 'https://google.es')
   })
+
   it('wrapperWithPropsLinkButton: should render with target _blank', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
@@ -51,6 +53,7 @@ describe('<ButtonBadge>', () => {
 
     expect(button).toBeInTheDocument()
   })
+
   it('wrapperWithPropsNotLinkbutton: should not render with a element', async () => {
     render(<ButtonBadge {...componentPropsNotLinkbutton} />)
     const button = await screen.getByText('Link test')

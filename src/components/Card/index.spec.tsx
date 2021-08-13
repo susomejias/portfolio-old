@@ -21,6 +21,7 @@ describe('<Card>', () => {
 
     expect(privateCodeMessage).toBeInTheDocument()
   })
+
   it('should render card elements with private code props', async () => {
     render(<Card {...componentPropsPrivateCode} />)
     const cardTitle = await screen.getByText('Card title')
@@ -49,12 +50,14 @@ describe('<Card>', () => {
 
     expect(privateCodeMessage).not.toBeInTheDocument()
   })
+
   it('should render card with a element', async () => {
     render(<Card {...componentPropsNotPrivateCodeIsLink} />)
     const cardClickable = await document.querySelector('a.card')
 
     expect(cardClickable).toBeInTheDocument()
   })
+
   it('should render card elements with not private code props', async () => {
     render(<Card {...componentPropsNotPrivateCodeIsLink} />)
     const cardTitle = await screen.getByText('Card title')
