@@ -12,28 +12,28 @@ describe('<ButtonBadge>', () => {
     isTargetBlank: true
   }
 
-  it('wrapperWithPropsLinkButton: should render with text Link test', async () => {
+  it('should render with text Link test', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
 
     expect(button).toBeInTheDocument()
   })
 
-  it('wrapperWithPropsLinkButton: should render with url https://google.es/', async () => {
+  it('should render with url https://google.es/ when pass props with isLink to true', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
 
     expect(button).toHaveAttribute('href', 'https://google.es')
   })
 
-  it('wrapperWithPropsLinkButton: should render with target _blank', async () => {
+  it('should render with target _blank when pass props with isLink to true', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
 
     expect(button).toHaveAttribute('target', '_blank')
   })
 
-  it('wrapperWithPropsLinkButton: simulate click', async () => {
+  it('simulate click when pass props with isLink to true', async () => {
     render(<ButtonBadge {...componentProps} />)
     const button = await screen.getByText('Link test')
 
@@ -47,14 +47,14 @@ describe('<ButtonBadge>', () => {
     isTargetBlank: false
   }
 
-  it('wrapperWithPropsNotLinkbutton: should render with text', async () => {
+  it('should render with text when pass props with isLink to false', async () => {
     render(<ButtonBadge {...componentPropsNotLinkbutton} />)
     const button = await screen.getByText('Link test')
 
     expect(button).toBeInTheDocument()
   })
 
-  it('wrapperWithPropsNotLinkbutton: should not render with a element', async () => {
+  it('should not render with a element when pass props with isLink to false', async () => {
     render(<ButtonBadge {...componentPropsNotLinkbutton} />)
     const button = await screen.getByText('Link test')
 
