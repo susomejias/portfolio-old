@@ -6,7 +6,7 @@ module.exports = {
   verbose: true,
   collectCoverage: true,
   coverageReporters: ['json-summary', 'html'],
-
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: [
     '<rootDir>/__tests__/e2e',
     '<rootDir>/src/lib/mirage'
