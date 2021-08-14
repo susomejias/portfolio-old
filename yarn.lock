@@ -6363,7 +6363,7 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lighthouse-badges@^1.0.34:
+lighthouse-badges@^1.1.10:
   version "1.1.10"
   resolved "https://registry.yarnpkg.com/lighthouse-badges/-/lighthouse-badges-1.1.10.tgz#14007f650fce71c1e3039ca9409f82e4b3320f41"
   integrity sha512-FxVXNazmddWHWfdmuPHy29NCPVnkmzdDALmAkJ3MbP+JYYxcilKgyA5WNBbdrI14ZZEqSpDU9xbBMT6EWXQNcw==
