@@ -21,7 +21,6 @@
     "@types/next": "^9.0.0",
     "babel-jest": "^26.3.0",
     "commitlint": "^11.0.0",
-    "isomorphic-fetch": "^2.2.1",
     "next": "^11.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.6.2",
