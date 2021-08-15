@@ -42,11 +42,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
-      - run: yarn test
-        env:
-          CI: true
-      - name: TestCoverage
-        id: testCovergae
+      - name: Jest Coverage Diff
         uses: anuraag016/Jest-Coverage-Diff@master
         with:
           fullCoverageDiff: false
