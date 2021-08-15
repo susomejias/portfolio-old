@@ -24,7 +24,7 @@ const Contact = (): JSX.Element => {
           priority={true}
         />
 
-        <h2>Suso Mejías</h2>
+        <h2>Susomejias</h2>
 
         <div className="container_btn-download-cv">
           <ButtonBadge
@@ -39,7 +39,7 @@ const Contact = (): JSX.Element => {
             return (
               <Link key={index} href={socialNetwork.url} passHref>
                 <a target="_blank" rel="noreferrer" title={socialNetwork.name}>
-                  <i className={socialNetwork.icon}></i>
+                  <i className={socialNetwork.icon} />
                 </a>
               </Link>
             )
