@@ -49,7 +49,7 @@ jobs:
         uses: anuraag016/Jest-Coverage-Diff@master
         with:
           fullCoverageDiff: false
-          runCommand: "npx jest --coverage --coverageReporters="json-summary""
+          runCommand: "npx jest --config='./jest.config.js' --coverage"
           delta: 0.5
 
   e2e-tests:
