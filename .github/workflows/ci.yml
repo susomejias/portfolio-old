@@ -45,18 +45,13 @@ jobs:
       - run: yarn test
         env:
           CI: true
-      - uses: actions/upload-artifact@v2
+      - name: TestCoverage
+        id: testCovergae
+        uses: anuraag016/Jest-Coverage-Diff@master
         with:
-          name: coverage
-          path: coverage/lcov-report/
-      - name: Jest coverage report
-        uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.1
-        with:
-          coverage-file: ./coverage/coverage-summary.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          threshold: 92
-          skip-step: all
-          package-manager: yarn
+          fullCoverageDiff: false
+          runCommand: "yarn test"
+          delta: 0.5
 
   e2e-tests:
     runs-on: ubuntu-latest
