@@ -45,8 +45,13 @@ jobs:
       - run: yarn test
         env:
           CI: true
-      - run: yarn make-badges
-      - run: yarn lighthouse-badges
+      - name: Jest Coverage Diff
+        id: jestCoverageDiff
+        uses: anuraag016/Jest-Coverage-Diff@master
+        with:
+          fullCoverageDiff: false
+          runCommand: "npx jest --collectCoverageFrom='[\"src/**/*.{js,jsx,ts,tsx}\"]' --coverage --collectCoverage=true --coverageDirectory='./' --coverageReporters='json-summary' --forceExit --detectOpenHandles test/.*test.*"
+          delta: 0.5
 
   e2e-tests:
     runs-on: ubuntu-latest
