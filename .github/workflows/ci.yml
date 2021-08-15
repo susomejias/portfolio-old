@@ -48,7 +48,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: coverage/lcov-report/
+          path: coverage
       - name: TestCoverage
         id: testCovergae
         uses: anuraag016/Jest-Coverage-Diff@master
