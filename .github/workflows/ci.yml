@@ -48,13 +48,15 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: coverage/lcov-report/
+          path: coverage
       - name: Jest coverage report
         uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.1
         with:
+          coverage-file: ./coverage/coverage-summary.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           threshold: 92
           skip-step: all
+          package-manager: yarn
 
   e2e-tests:
     runs-on: ubuntu-latest
