@@ -5,7 +5,7 @@ module.exports = {
   ...defaults,
   verbose: true,
   collectCoverage: true,
-  coverageReporters: ['json-summary', 'html'],
+  coverageReporters: ['json-summary', 'html', 'lcov'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: [
     '<rootDir>/__tests__/e2e',
