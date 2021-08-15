@@ -45,16 +45,12 @@ jobs:
       - run: yarn test
         env:
           CI: true
-      - uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: coverage
       - name: TestCoverage
         id: testCovergae
         uses: anuraag016/Jest-Coverage-Diff@master
         with:
           fullCoverageDiff: false
-          runCommand: "yarn test"
+          runCommand: "npx jest --coverage --coverageReporters="json-summary""
           delta: 0.5
 
   e2e-tests:
