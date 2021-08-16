@@ -11,8 +11,8 @@ describe('<ButtonToggleDarkMode>', () => {
     const buttonHide = await document.querySelector('.animate-hide-sun')
     const buttonShow = await document.querySelector('.animate-show-moon')
 
-    expect(buttonHide).not.toBeInTheDocument()
-    expect(buttonShow).not.toBeInTheDocument()
+    expect(buttonHide).toBeInTheDocument()
+    expect(buttonShow).toBeInTheDocument()
   })
 
   it('should show the moon icon when dark mode is activated', async () => {
@@ -26,7 +26,7 @@ describe('<ButtonToggleDarkMode>', () => {
     const buttonHide = await document.querySelector('.animate-hide-sun')
     const buttonShow = await document.querySelector('.animate-show-moon')
 
-    expect(buttonHide).toBeInTheDocument()
-    expect(buttonShow).toBeInTheDocument()
+    expect(buttonHide).not.toBeInTheDocument()
+    expect(buttonShow).not.toBeInTheDocument()
   })
 })
