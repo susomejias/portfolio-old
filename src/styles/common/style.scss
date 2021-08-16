@@ -1,11 +1,12 @@
+html,
 body {
   min-height: 100vh;
+  background-color: var(--color-page-background);
 }
 
 .wrapper {
   padding: 1rem 2rem;
   width: 100%;
-  transition: all .5s;
 
   @include flex-position(column, center, center);
 
@@ -33,7 +34,6 @@ body {
   padding: 0 0 1rem;
   overflow-y: hidden;
   width: 100%;
-  transition: all .5s;
   min-height: 100vh;
 
   @include flex-position(column, center, center);

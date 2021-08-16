@@ -1,4 +1,5 @@
 .home-page {
+  min-height: 85vh;
 
   h1 {
     font-size: 1.8rem;
@@ -59,7 +60,6 @@
     width: 15px;
     height: 15px;
     text-align: center;
-    transition: transform 1s;
     cursor: pointer;
     display: flex;
     flex-direction: column;
