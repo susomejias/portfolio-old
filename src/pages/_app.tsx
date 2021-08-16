@@ -37,9 +37,8 @@ const App = (props: AppProps): JSX.Element => {
   }
 
   useEffect(() => {
-    isPrefersDarkColorScheme || isDarkMode
-      ? setIsDarkMode(true)
-      : setIsDarkMode(false)
+    isDarkMode ? setClassesForDarkMode() : setClassesForLightMode()
+    isPrefersDarkColorScheme ? setIsDarkMode(true) : setIsDarkMode(false)
 
     router.events.on('routeChangeStart', handleRouteChangeStart)
     router.events.on('routeChangeComplete', handleRouteChangeComplete)
