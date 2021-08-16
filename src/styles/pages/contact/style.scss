@@ -1,10 +1,8 @@
 .contact-page {
 
   h2 {
-    @include set-text-tag-color-dynamic();
-
     font-size: 1.6rem;
-    font-weight: 900;
+    font-weight: 600;
   }
 
   .container_social_networks {
@@ -18,6 +16,7 @@
       i {
         @include set-text-color-dynamic();
 
+        font-size: 1.8rem;
         width: 2.1rem;
       }
     }

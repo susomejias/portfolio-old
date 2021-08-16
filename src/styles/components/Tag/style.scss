@@ -6,6 +6,5 @@
   text-align: center;
   display: inline-block;
   font-weight: 600;
-
-  @include set-text-tag-color-dynamic();
+  color: var(--color-text);
 }

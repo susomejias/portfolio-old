@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { AppProps } from 'next/app'
 import LoadingBar from 'react-top-loading-bar'
 import { useRouter } from 'next/router'
@@ -61,7 +61,7 @@ const App = (props: AppProps): JSX.Element => {
     <div className="content">
       <HeadComponent />
       <LoadingBar
-        color="#ff7eb3"
+        color="#FBBD03"
         height={4}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}

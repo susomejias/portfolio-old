@@ -3,7 +3,7 @@ export default [
     title: 'Portfolio-NextJS',
     description:
       'Portfolio construido con NextJS y TypeScript, además se están usando tecnologías como CI, SSR, PWA, SCSS, Husky, Jest, Testing Library, Codacy, Lazy-load, Conventional Commit y Lighthouse.',
-    image: '/img/logo-portfolio.png',
+    image: '/img/avatar.png',
     url: 'https://github.com/susomejias/portfolio-nextjs',
     authors: [{ name: 'Suso Mejías', image: '/img/avatar.png' }]
   },

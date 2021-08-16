@@ -48,7 +48,7 @@
     @include flex-position(row, center, center);
 
     background-image: $primary-gradient;
-    color: #fff;
+    color: var(--color-button-badge-text);
     padding: .55rem;
     border-radius: $border-radius-default;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);

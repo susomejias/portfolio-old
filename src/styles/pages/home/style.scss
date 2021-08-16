@@ -3,10 +3,7 @@
   h1 {
     font-size: 1.8rem;
     margin-top: 1rem;
-
-    @include set-text-tag-color-dynamic();
-
-    font-weight: 900;
+    font-weight: 600;
   }
 
   .quote {
@@ -35,8 +32,7 @@
     .author {
       padding: 1rem 0;
       font-weight: 700;
-
-      @include text-gradient($primary-gradient);
+      color: var(--color-text);
     }
   }
 

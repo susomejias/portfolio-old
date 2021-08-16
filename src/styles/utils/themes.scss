@@ -15,6 +15,7 @@ body {
   --color-page-background: #{$color-white};
   --color-text: #{$color-dark-grey};
   --color-navbar-background: #{$background-color-navbar-light-transparent};
+  --color-button-badge-text: #{$color-dark-grey};
 }
 
 .dark {
@@ -23,4 +24,5 @@ body {
   --color-tag-text: #{$color-white};
   --card-background-color: #{$background-color-cards-dark};
   --color-navbar-background: #{$background-color-navbar-dark-transparent};
+  --color-button-badge-text: #{$background-color-dark-mode};
 }
