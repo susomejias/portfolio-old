@@ -2,7 +2,7 @@
   background-image: $primary-gradient;
   padding: 1rem;
   margin: 1rem;
-  color: #fff;
+  color: var(--color-button-badge-text);
   font-size: 1.2rem;
   border-radius: $border-radius-default;
   width: 45px;
