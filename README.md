@@ -6,11 +6,9 @@
 
 [https://susomejias.es](https://susomejias.es)
 
-
 ## 🚀 Lighthouse 🚀
 
 ![lighthouse_pwa](lighthouse_pwa.svg) ![lighthouse_performance](lighthouse_performance.svg) ![lighthouse_best-practices](lighthouse_best-practices.svg) ![lighthouse_accessibility](lighthouse_accessibility.svg) ![lighthouse_seo](lighthouse_seo.svg)
-
 
 ## 🚥 Unit-tests 🚥
 
@@ -42,7 +40,6 @@ yarn cy:run
 
 ---
 
-
 ## 🏄 Commits format 🏄
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
@@ -60,6 +57,7 @@ ___
 [CODE OF CONDUCT](CODE_OF_CONDUCT.md)
 
 ___
-## 📖  License 📖
+
+## 📖 License 📖
 
 [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](LICENSE)
