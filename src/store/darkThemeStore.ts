@@ -5,7 +5,7 @@ interface DarkThemeData {
 }
 
 const initialState: DarkThemeData = {
-  isDarkMode: false
+  isDarkMode: true
 }
 
 export const { useGlobalState } = createGlobalState(initialState)
