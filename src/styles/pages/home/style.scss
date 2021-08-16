@@ -1,6 +1,10 @@
 .home-page {
   min-height: 85vh;
 
+  @include tablet {
+    min-height: 60vh;
+  }
+
   h1 {
     font-size: 1.8rem;
     margin-top: 1rem;
@@ -40,7 +44,7 @@
   .skills-container {
     padding: 1rem;
     width: 100%;
-    min-height: 100px;
+    min-height: 160px;
     text-align: center;
 
     @include desktop {
