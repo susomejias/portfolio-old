@@ -44,11 +44,12 @@
   .skills-container {
     padding: 1rem;
     width: 100%;
-    min-height: 160px;
+    min-height: 195px;
     text-align: center;
 
     @include desktop {
       max-width: 70%;
+      min-height: 170px;
     }
 
     @include large {
