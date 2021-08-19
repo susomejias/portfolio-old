@@ -5,7 +5,7 @@ process.env = {
     imageSizes: [],
     domains: [
       'localhost',
-      'susomejias.es',
+      'susomejias.dev',
       'dev-to-uploads.s3.amazonaws.com',
       'res.cloudinary.com',
       'assets.vercel.com'

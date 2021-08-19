@@ -4,7 +4,7 @@
 
 ![logo](logo.png)
 
-[https://susomejias.es](https://susomejias.es)
+[https://susomejias.dev](https://susomejias.dev)
 
 ## 🚀 Lighthouse 🚀
 

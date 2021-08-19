@@ -16,23 +16,11 @@ module.exports = withPlugins([
     {
       images: {
         deviceSizes: [
-          16,
-          32,
-          48,
-          64,
-          96,
-          128,
-          256,
-          384,
-          480,
-          576,
-          768,
-          992,
-          1366
+          16, 32, 48, 64, 96, 128, 256, 384, 480, 576, 768, 992, 1366
         ],
         domains: [
           'localhost',
-          'susomejias.es',
+          'susomejias.dev',
           'dev-to-uploads.s3.amazonaws.com',
           'res.cloudinary.com',
           'assets.vercel.com'
