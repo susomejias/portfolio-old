@@ -71,4 +71,4 @@ const Projects = (): JSX.Element => {
   )
 }
 
-export default React.memo(Projects)
+export default Projects

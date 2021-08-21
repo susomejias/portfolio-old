@@ -19,4 +19,4 @@ const custom500 = (): JSX.Element => {
   )
 }
 
-export default React.memo(custom500)
+export default custom500

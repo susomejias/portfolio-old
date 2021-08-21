@@ -85,4 +85,4 @@ export const getStaticProps = async (): Promise<{
   return { props: { posts }, revalidate: 7200 /* In 3 hours */ }
 }
 
-export default React.memo(DevtoPosts)
+export default DevtoPosts

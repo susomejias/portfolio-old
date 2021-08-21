@@ -71,4 +71,4 @@ const Talks = (): JSX.Element => {
   )
 }
 
-export default React.memo(Talks)
+export default Talks

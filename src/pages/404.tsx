@@ -17,4 +17,4 @@ const custom404 = (): JSX.Element => {
   )
 }
 
-export default React.memo(custom404)
+export default custom404

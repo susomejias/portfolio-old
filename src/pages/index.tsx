@@ -71,4 +71,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default React.memo(Home)
+export default Home
