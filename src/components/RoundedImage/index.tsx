@@ -9,11 +9,11 @@ interface RoundedImageProps {
 }
 
 const RoundedImage = ({
-                        alt = '',
-                        image,
-                        size,
-                        priority = false
-                      }: RoundedImageProps) => {
+  alt = '',
+  image,
+  size,
+  priority = false
+}: RoundedImageProps) => {
   const SMALL_SIZE = { width: 46, height: 46, className: 'small' }
   const MEDIUM_SIZE = { width: 130, height: 130, className: 'medium' }
   const LARGE_SIZE = { width: 180, height: 180, className: 'large' }
@@ -43,12 +43,12 @@ const RoundedImage = ({
     >
       <Image
         alt={alt}
-        className='rounded-image'
+        className="rounded-image"
         src={image}
-        layout='fill'
-        objectFit='cover'
-        objectPosition="to' left"
-        ' priority={priority}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="top left"
+        priority={priority}
       />
     </div>
   )
