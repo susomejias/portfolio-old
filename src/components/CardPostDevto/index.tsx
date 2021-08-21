@@ -28,6 +28,7 @@ const CardPostDevto = ({
       <a className="card-devto-post" target="_blank" rel="noreferrer">
         <div className="card-container-image">
           <Image
+            alt=""
             src={image}
             layout="fill"
             objectFit="cover"

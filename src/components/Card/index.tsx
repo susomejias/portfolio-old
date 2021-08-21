@@ -28,6 +28,7 @@ const Card = ({
       <>
         <div className="card-container-image">
           <Image
+            alt=""
             src={image}
             layout="fill"
             objectFit="cover"
