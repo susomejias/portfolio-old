@@ -1,18 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
+
+import IconError404 from '../assets/icons/IconError404'
 
 const custom404 = (): JSX.Element => {
-  const imageUrl = '/img/404.svg'
   return (
     <div className="wrapper-error-page">
       <h1>Página no encontrada...</h1>
-      <Image
-        src={imageUrl}
-        alt="Página no encontrada"
-        width="200px"
-        height="200px"
-        layout="intrinsic"
-      />
+      <IconError404 width="200px" height="200px" />
     </div>
   )
 }
