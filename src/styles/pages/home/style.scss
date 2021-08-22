@@ -32,16 +32,16 @@
     @include set-text-color-dynamic();
 
     @include tablet {
-      max-width: 370px;
+      max-width: 400px;
     }
 
-    font-size: .9rem;
-    line-height: 1.4rem;
-    max-width: 250px;
+    font-size: .95rem;
+    line-height: 1.6rem;
+    max-width: 270px;
     text-align: center;
     margin-bottom: 0;
     margin-top: 32px;
-    font-weight: 500;
+    font-weight: 200;
 
     @include flex-position(column, center, center);
   }
@@ -51,14 +51,17 @@
   }
 
   .skills-container {
-    padding: 1.5rem 1rem 1rem;
+    padding: 1.5rem 1rem 0;
     width: 100%;
     min-height: 195px;
     text-align: center;
 
+    @include tablet {
+      min-height: 140px;
+    }
+
     @include desktop {
       max-width: 70%;
-      min-height: 170px;
     }
 
     @include large {
@@ -68,11 +71,8 @@
 
   .more-skills {
     padding: 1rem;
-    margin: .5rem 1rem 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: $border-radius-default;
-    width: 15px;
-    height: 15px;
     text-align: center;
     cursor: pointer;
     display: flex;
@@ -80,10 +80,6 @@
     justify-content: center;
     align-items: center;
     color: $color-accent;
-
-    &:before {
-      transform: rotate(180deg);
-    }
 
     &:hover {
       @include scale-card-hover();

@@ -50,8 +50,8 @@ const Home = (): JSX.Element => {
         </div>
 
         <h2 className="quote">
-          Apasionado de la tecnología en general, Open-source, Clean-Code,
-          Team-Work, siempre en constante aprendizaje
+          Apasionado de la tecnología, trabajador, perfeccionista, amante del
+          Open-Source y del trabajo en equipo.
         </h2>
 
         <div className="skills-container">
@@ -62,9 +62,7 @@ const Home = (): JSX.Element => {
 
         <a
           aria-label="more skills"
-          className={`${
-            currentPage < maxPage ? 'show' : 'hidden'
-          } more-skills fas fa-angle-double-up`}
+          className={`${currentPage < maxPage ? 'show' : 'hidden'} more-skills`}
           onClick={(ev) => {
             ev.preventDefault()
             next()
@@ -75,7 +73,9 @@ const Home = (): JSX.Element => {
               })
             }, 400)
           }}
-        />
+        >
+          Mostrar más
+        </a>
       </div>
     </>
   )
