@@ -25,6 +25,9 @@ button {
   outline: none;
 }
 
+//icons
+@import "./icons/fontawesome-free-5/css/all.min.css";
+
 // variables
 @import "./variables/common.scss";
 @import "./variables/colors.scss";
@@ -53,7 +56,6 @@ button {
 
 // pages
 @import "./pages/home/style.scss";
-@import "./pages/contact/style.scss";
 @import "./pages/error/style.scss";
 
 // common
