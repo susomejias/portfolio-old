@@ -53,11 +53,11 @@
   .skills-container {
     padding: 1.5rem 1rem 0;
     width: 100%;
-    min-height: 195px;
+    min-height: 250px;
     text-align: center;
 
     @include tablet {
-      min-height: 140px;
+      min-height: 190px;
     }
 
     @include desktop {
