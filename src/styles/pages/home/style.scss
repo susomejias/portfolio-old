@@ -68,21 +68,4 @@
       width: 70%;
     }
   }
-
-  .more-skills {
-    padding: 1rem;
-    font-size: 1.5rem;
-    border-radius: $border-radius-default;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-text);
-
-    &:hover {
-      @include scale-card-hover();
-    }
-  }
 }
