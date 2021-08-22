@@ -1,5 +1,4 @@
 import {
-  CONTACT_HREF,
   POSTS_HREF,
   PRESENTATIONS_HREF,
   PROJECTS_HREF
@@ -37,16 +36,6 @@ describe('User want navigate between pages', () => {
 
     it('Location should be posts', () => {
       cy.location('pathname').should('eq', POSTS_HREF)
-    })
-  })
-
-  describe('User want see contact', () => {
-    it('Should click on contact link', () => {
-      cy.get('[data-cy=contact-link]').click()
-    })
-
-    it('Location should be contact', () => {
-      cy.location('pathname').should('eq', CONTACT_HREF)
     })
   })
 })

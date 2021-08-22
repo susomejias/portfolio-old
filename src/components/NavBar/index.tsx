@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  CONTACT_HREF,
   HOME_HREF,
   POSTS_HREF,
   PRESENTATIONS_HREF,
@@ -35,14 +34,6 @@ const NavBar = () => {
         iconClass="fab fa-dev fa-lg"
         dataCy="posts-link"
       />
-
-      <NavButton
-        text="Contacto"
-        url={CONTACT_HREF}
-        iconClass="fas fa-at"
-        dataCy="contact-link"
-      />
-
       <ButtonToggleDarkMode />
     </nav>
   )

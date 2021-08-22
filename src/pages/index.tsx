@@ -51,13 +51,8 @@ const Home = (): JSX.Element => {
 
         <h2 className="quote">
           Apasionado de la tecnología en general, Open-source, Clean-Code,
-          trabajo en equipo, siempre en constante aprendizaje.
+          Team-Work, siempre en constante aprendizaje
         </h2>
-
-        <h3 className="quote">
-          Entre mis aficiones están el deporte, el Carnaval de Cádiz, la lectura
-          y la meditación.
-        </h3>
 
         <div className="skills-container">
           {dataDisplayed.map((skill: string, index: number) => {

@@ -5,5 +5,3 @@ export const PROJECTS_HREF = '/proyectos'
 export const PRESENTATIONS_HREF = '/ponencias'
 
 export const POSTS_HREF = '/devto-posts'
-
-export const CONTACT_HREF = '/contacto'
