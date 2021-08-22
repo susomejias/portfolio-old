@@ -6,14 +6,9 @@ import RoundedImage from '../components/RoundedImage'
 import ButtonBadge from '../components/ButtonBadge'
 import Tag from '../components/Tag'
 import skills from '../assets/data/skills'
-import usePaginationArray from '../hooks/usePaginateArray'
 import socialNetworks from '../assets/data/socialNetworks'
 
 const Home = (): JSX.Element => {
-  const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
-    skills,
-    8
-  )
   return (
     <>
       <Head>
@@ -55,27 +50,10 @@ const Home = (): JSX.Element => {
         </h2>
 
         <div className="skills-container">
-          {dataDisplayed.map((skill: string, index: number) => {
+          {skills.map((skill: string, index: number) => {
             return <Tag key={index} text={skill} />
           })}
         </div>
-
-        <a
-          aria-label="more skills"
-          className={`${currentPage < maxPage ? 'show' : 'hidden'} more-skills`}
-          onClick={(ev) => {
-            ev.preventDefault()
-            next()
-            setTimeout(() => {
-              window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-              })
-            }, 400)
-          }}
-        >
-          Mostrar más
-        </a>
       </div>
     </>
   )

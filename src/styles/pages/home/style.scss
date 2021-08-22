@@ -35,7 +35,7 @@
       max-width: 400px;
     }
 
-    font-size: .95rem;
+    font-size: 1rem;
     line-height: 1.6rem;
     max-width: 270px;
     text-align: center;
@@ -71,7 +71,7 @@
 
   .more-skills {
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: $border-radius-default;
     text-align: center;
     cursor: pointer;
@@ -79,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $color-accent;
+    color: var(--color-text);
 
     &:hover {
       @include scale-card-hover();
