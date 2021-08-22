@@ -34,18 +34,13 @@ const RoundedImage = ({
   }
 
   return (
-    <div
-      className={`container-image ${getSize().className}`}
-      style={{
-        width: `${getSize().width}px`,
-        height: `${getSize().height}px`
-      }}
-    >
+    <div className={`container-image ${getSize().className}`}>
       <Image
         alt={alt}
         className="rounded-image"
+        width={getSize().width}
+        height={getSize().height}
         src={image}
-        layout="fill"
         objectFit="cover"
         objectPosition="top left"
         priority={priority}
