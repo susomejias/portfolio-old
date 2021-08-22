@@ -1,11 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import RoundedImage from '../components/RoundedImage'
 import ButtonBadge from '../components/ButtonBadge'
 import Tag from '../components/Tag'
 import skills from '../assets/data/skills'
 import usePaginationArray from '../hooks/usePaginateArray'
+import socialNetworks from '../assets/data/socialNetworks'
 
 const Home = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
@@ -18,7 +20,7 @@ const Home = (): JSX.Element => {
         <title>Susomejias | Web developer</title>
         <meta
           name="description"
-          content="Portfolio de Susomejías, Desarrollador Web Full-Stack y técnico en sistemas informáticos"
+          content="Portfolio de Susomejías, Desarrollador FrontEnd y técnico en sistemas informáticos"
         />
       </Head>
 
@@ -35,14 +37,27 @@ const Home = (): JSX.Element => {
           />
         </div>
 
-        <p className="quote">
-          <i>
-            La mayoría de los buenos programadores programan, no porque esperan
-            que se les pague o por adulación por parte del público, sino porque
-            es divertido programar.
-          </i>
-          <i className="author">- Linus Torvalds -</i>
-        </p>
+        <div className="container_social_networks">
+          {socialNetworks.map((socialNetwork: SocialNetwork, index: number) => {
+            return (
+              <Link key={index} href={socialNetwork.url} passHref>
+                <a target="_blank" rel="noreferrer" title={socialNetwork.name}>
+                  <i className={socialNetwork.icon} />
+                </a>
+              </Link>
+            )
+          })}
+        </div>
+
+        <h2 className="quote">
+          Apasionado de la tecnología en general, Open-source, Clean-Code,
+          trabajo en equipo, siempre en constante aprendizaje.
+        </h2>
+
+        <h3 className="quote">
+          Entre mis aficiones están el deporte, el Carnaval de Cádiz, la lectura
+          y la meditación.
+        </h3>
 
         <div className="skills-container">
           {dataDisplayed.map((skill: string, index: number) => {

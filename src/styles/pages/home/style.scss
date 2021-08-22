@@ -11,6 +11,23 @@
     font-weight: 600;
   }
 
+  .container_social_networks {
+    padding: 1.5rem 1rem;
+
+    a {
+      text-decoration: none;
+      color: $color-dark-grey;
+      margin: 1rem;
+
+      i {
+        @include set-text-color-dynamic();
+
+        font-size: 1.4rem;
+        width: 1rem;
+      }
+    }
+  }
+
   .quote {
     @include set-text-color-dynamic();
 
@@ -23,26 +40,14 @@
     font-weight: 500;
 
     @include flex-position(column, center, center);
+  }
 
-    i:not(.author):before {
-      content: open-quote;
-      font-weight: 900;
-    }
-
-    i:not(.author):after {
-      content: close-quote;
-      font-weight: 900;
-    }
-
-    .author {
-      padding: 1rem 0;
-      font-weight: 700;
-      color: var(--color-text);
-    }
+  h2.quote {
+    margin-top: 0;
   }
 
   .skills-container {
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
     width: 100%;
     min-height: 195px;
     text-align: center;

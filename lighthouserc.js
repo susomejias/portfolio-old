@@ -8,8 +8,7 @@ module.exports = {
         'http://localhost:3000',
         'http://localhost:3000/proyectos',
         'http://localhost:3000/ponencias',
-        'http://localhost:3000/devto-posts',
-        'http://localhost:3000/contacto'
+        'http://localhost:3000/devto-posts'
       ],
       numberOfRuns: 2
     },

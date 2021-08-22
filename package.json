@@ -7,12 +7,12 @@
     "build": "next build",
     "start": "next start",
     "eslint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss'",
+    "stylelint": "stylelint --config .stylelintrc.json 'src/styles/**/*.scss' --fix",
     "test": "jest --config='./jest.config.js' --coverage",
     "cy:run": "cypress run",
     "lint": "npm run eslint && npm run stylelint",
     "make-badges": "istanbul-badges-readme",
-    "lighthouse-badges": "lighthouse-badges --urls https://susomejias.dev https://susomejias.dev/proyectos https://susomejias.dev/ponencias https://susomejias.dev/devto-posts https://susomejias.dev/contacto"
+    "lighthouse-badges": "lighthouse-badges --urls https://susomejias.dev https://susomejias.dev/proyectos https://susomejias.dev/ponencias https://susomejias.dev/devto-posts"
   },
   "dependencies": {
     "@jest/types": "^27.0.6",
