@@ -5,7 +5,7 @@ import { render, screen } from '@testing-library/react'
 import Card from './index'
 
 describe('<Card>', () => {
-  const authors: Author[] = [{ name: 'Suso Mejías', image: '/img/avatar' }]
+  const authors: Author[] = [{ name: 'Susomejias', image: '/img/avatar' }]
   const componentPropsPrivateCode = {
     image: '/img/promises',
     title: 'Card title',
@@ -26,7 +26,7 @@ describe('<Card>', () => {
     render(<Card {...componentPropsPrivateCode} />)
     const cardTitle = await screen.getByText('Card title')
     const cardDescription = await screen.getByText('Card description')
-    const cardAuthorName = await screen.getByText('Suso Mejías')
+    const cardAuthorName = await screen.getByText('Susomejias')
 
     expect(cardTitle).toBeInTheDocument()
     expect(cardDescription).toBeInTheDocument()
@@ -62,7 +62,7 @@ describe('<Card>', () => {
     render(<Card {...componentPropsNotPrivateCodeIsLink} />)
     const cardTitle = await screen.getByText('Card title')
     const cardDescription = await screen.getByText('Card description')
-    const cardAuthorName = await screen.getByText('Suso Mejías')
+    const cardAuthorName = await screen.getByText('Susomejias')
 
     expect(cardTitle).toBeInTheDocument()
     expect(cardDescription).toBeInTheDocument()
@@ -71,7 +71,7 @@ describe('<Card>', () => {
 
   it('should not render authors names when authors length is greater that 4', async () => {
     const authorsWithLengthGreaterThanFour: Author[] = [
-      { name: 'Suso Mejías', image: '/img/avatar' },
+      { name: 'Susomejias', image: '/img/avatar' },
       { name: 'Author1', image: '/img/avatar' },
       { name: 'Author2', image: '/img/avatar' },
       { name: 'Author3', image: '/img/avatar' },

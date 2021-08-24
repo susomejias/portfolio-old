@@ -6,7 +6,7 @@ export default [
       'Taller donde se indicaron una serie de buenas prácticas para optimizar tu sitio web y además convertirlo en una PWA y así llevarlo a otro nivel.',
     image: '/img/sysmana2020.png',
     url: 'https://github.com/susomejias/Tips-para-optimizar-tu-web-y-convertirla-en-una-PWA-Sysmana-XII-2020',
-    speakers: [{ name: 'Suso Mejías', image: '/img/avatar.jpeg' }]
+    speakers: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
 
   {
@@ -16,7 +16,7 @@ export default [
     image: '/img/symfony.png',
     url: '#',
     speakers: [
-      { name: 'Suso Mejías', image: '/img/avatar.jpeg' },
+      { name: 'Susomejias', image: '/img/avatar.jpeg' },
       {
         name: 'Miguel Gavilán',
         image: '/img/miguelGavilanMerino.png'
@@ -31,7 +31,7 @@ export default [
     image: '/img/vuejs.png',
     url: '#',
     speakers: [
-      { name: 'Suso Mejías', image: '/img/avatar.jpeg' },
+      { name: 'Susomejias', image: '/img/avatar.jpeg' },
       {
         name: 'Javier Ponferrada',
         image: '/img/javierPonferradaLopez.png'
@@ -46,7 +46,7 @@ export default [
     image: '/img/raspberry.png',
     url: '#',
     speakers: [
-      { name: 'Suso Mejías', image: '/img/avatar.jpeg' },
+      { name: 'Susomejias', image: '/img/avatar.jpeg' },
       {
         name: 'Javier Ponferrada',
         image: '/img/javierPonferradaLopez.png'

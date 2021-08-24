@@ -10,7 +10,7 @@ describe('usePaginateArray()', () => {
         'Scripts hechos en python, con los que se podrá obtener tweets en tiempo real y continuo, ideal para obtener gran cantidad de tweets, para el análisis de los mismos, mediante el uso de la API para twitter tweepy.',
       image: '/img/python',
       url: 'https://github.com/susomejias/tweepyStreamerToCsv',
-      authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
+      authors: [{ name: 'Susomejias', image: '/img/avatar' }]
     },
     {
       title: 'PromisesJSvanilla',
@@ -18,7 +18,7 @@ describe('usePaginateArray()', () => {
         'Introducción al uso de Promises en JS Vanilla. Esta funcionalidad fue incluida en la versión 6 de ECMASCRIPT, con la idea de facilitar el uso de la asincronía en JS Vanilla.',
       image: '/img/promises',
       url: 'https://github.com/susomejias/PromisesJSvanilla',
-      authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
+      authors: [{ name: 'Susomejias', image: '/img/avatar' }]
     },
     {
       title: 'tweepyStreamerToCsv',
@@ -26,7 +26,7 @@ describe('usePaginateArray()', () => {
         'Scripts hechos en python, con los que se podrá obtener tweets en tiempo real y continuo, ideal para obtener gran cantidad de tweets, para el análisis de los mismos, mediante el uso de la API para twitter tweepy.',
       image: '/img/python',
       url: 'https://github.com/susomejias/tweepyStreamerToCsv',
-      authors: [{ name: 'Suso Mejías', image: '/img/avatar' }]
+      authors: [{ name: 'Susomejias', image: '/img/avatar' }]
     },
     {
       title: 'PromisesJSvanilla',
@@ -34,7 +34,7 @@ describe('usePaginateArray()', () => {
         'Introducción al uso de Promises en JS Vanilla. Esta funcionalidad fue incluida en la versión 6 de ECMASCRIPT, con la idea de facilitar el uso de la asincronía en JS Vanilla.',
       image: '/img/promises',
       url: 'https://github.com/susomejias/PromisesJSvanilla',
-      authors: [{ name: 'Suso Mejías', image: 'img/avatar' }]
+      authors: [{ name: 'Susomejias', image: 'img/avatar' }]
     }
   ]
 
