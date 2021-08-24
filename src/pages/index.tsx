@@ -12,7 +12,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>Susomejias | Web developer</title>
+        <title>Susomejias | FrontEnd Developer</title>
         <meta
           name="description"
           content="Portfolio de Susomejías, Desarrollador FrontEnd y técnico en sistemas informáticos"
