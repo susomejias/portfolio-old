@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+  EXPERIENCE_HREF,
   HOME_HREF,
   POSTS_HREF,
   PRESENTATIONS_HREF,
@@ -15,9 +16,16 @@ const NavBar = () => {
       <NavButton text="Inicio" url={HOME_HREF} iconClass="fas fa-home" />
 
       <NavButton
+        text="Experiencia"
+        url={EXPERIENCE_HREF}
+        iconClass="fas fa-briefcase"
+        dataCy="experience-link"
+      />
+
+      <NavButton
         text="Proyectos"
         url={PROJECTS_HREF}
-        iconClass="fas fa-briefcase"
+        iconClass="fas fa-bookmark"
         dataCy="projects-link"
       />
 

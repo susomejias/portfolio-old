@@ -1,0 +1,78 @@
+.timeline {
+  width: 100%;
+  min-height: 120vh;
+  padding: 1.5rem 0;
+
+  @include tablet {
+    max-width: 90%;
+  }
+
+  @include desktop {
+    max-width: 90%;
+  }
+
+  @include large {
+    max-width: 80%;
+  }
+
+  @include extra-large {
+    max-width: 80%;
+  }
+
+  .experience {
+    @include flex-position(row, center, initial);
+
+    flex-flow: row nowrap;
+
+    .card {
+      @include flex-position(column, initial, initial);
+
+      border-radius: $border-radius-default;
+      transition: none;
+      transform: none;
+
+      @include box-shadow-default();
+
+      .container {
+        padding: 2rem 1.5rem;
+
+        .company-name {
+          color: $color-accent;
+          font-size: 1.7rem;
+          margin: 0;
+        }
+
+        .job-title {
+          color: #9399a4;
+          line-height: 1.6rem;
+          font-size: .9rem;
+          margin: 0;
+        }
+
+        .dates {
+          line-height: 1rem;
+          color: #9399a4;
+
+          span {
+            text-transform: capitalize;
+            font-size: .8rem;
+          }
+        }
+
+        .job-description {
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 2px;
+    border: none;
+    background-color: $color-accent;
+    height: 50px;
+    opacity: .4;
+    border-radius: $border-radius-default;
+  }
+}
