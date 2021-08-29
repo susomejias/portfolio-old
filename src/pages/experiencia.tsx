@@ -14,6 +14,7 @@ const Experience = (): JSX.Element => {
           name="description"
           content="Experiencia laboral, empresas dónde he crecido y mejorado mis habilidades como persona y programador"
         />
+        <link rel="canonical" href="https://susomejias.dev/ponencias" />
       </Head>
       <div className="wrapper">
         <h1 className="page-title ">Experiencia</h1>

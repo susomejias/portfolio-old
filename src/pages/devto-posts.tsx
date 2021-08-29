@@ -26,6 +26,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
           name="description"
           content="Posts publicados en la plataforma devto"
         />
+        <link rel="canonical" href="https://susomejias.dev/devto-posts" />
       </Head>
       <div className="wrapper-scroll">
         <h1 className="page-title ">Dev.to posts</h1>

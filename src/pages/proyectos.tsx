@@ -22,6 +22,7 @@ const Projects = (): JSX.Element => {
           name="description"
           content="Proyectos educativos, personales y profesionales con los que me sigo formando día a día"
         />
+        <link rel="canonical" href="https://susomejias.dev/proyectos" />
       </Head>
       <div className="wrapper-scroll">
         <h1 className="page-title ">Proyectos</h1>

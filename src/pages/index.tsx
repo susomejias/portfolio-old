@@ -17,6 +17,7 @@ const Home = (): JSX.Element => {
           name="description"
           content="Portfolio de Susomejías, Desarrollador FrontEnd y técnico en sistemas informáticos"
         />
+        <link rel="canonical" href="https://susomejias.dev" />
       </Head>
 
       <div className="wrapper home-page">

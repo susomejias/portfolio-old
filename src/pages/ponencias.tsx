@@ -22,6 +22,7 @@ const Talks = (): JSX.Element => {
           name="description"
           content="Ponencias sobre diversos temas tecnológicos, desde talleres con raspberrys hasta frameworks webs"
         />
+        <link rel="canonical" href="https://susomejias.dev/ponencias" />
       </Head>
       <div className="wrapper-scroll">
         <h1 className="page-title ">Ponencias</h1>
