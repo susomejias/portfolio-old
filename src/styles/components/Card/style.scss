@@ -9,6 +9,7 @@
   max-width: 350px;
   transition: transform 1s;
   overflow-x: hidden;
+  border: 3px solid $color-accent;
 
   @include box-shadow-default();
 
@@ -28,7 +29,10 @@
   .card-container-image {
     width: 100%;
     position: relative;
+    top: 0;
     min-height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
 
     @include flex-position(column, center, center);
   }

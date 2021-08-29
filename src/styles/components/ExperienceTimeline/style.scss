@@ -27,6 +27,7 @@
     .card {
       @include flex-position(column, initial, initial);
 
+      border: 3px solid $color-accent;
       border-radius: $border-radius-default;
       transition: none;
       transform: none;
@@ -43,19 +44,22 @@
         }
 
         .job-title {
-          color: #9399a4;
           line-height: 1.6rem;
           font-size: .9rem;
           margin: 0;
+          font-weight: 100;
+          color: var(--color-text);
         }
 
         .dates {
           line-height: 1rem;
-          color: #9399a4;
+          font-weight: 100;
+          margin-bottom: 2rem;
 
           span {
             text-transform: capitalize;
             font-size: .8rem;
+            color: var(--color-text);
           }
         }
 
@@ -68,11 +72,11 @@
   }
 
   .separator {
-    width: 2px;
+    width: 3px;
     border: none;
-    background-color: $color-accent;
-    height: 50px;
-    opacity: .4;
+    background-color: var(--color-text);
+    height: 25px;
+    opacity: .1;
     border-radius: $border-radius-default;
   }
 }
