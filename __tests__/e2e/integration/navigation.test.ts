@@ -1,4 +1,6 @@
 import {
+  EXPERIENCE_HREF,
+  HOME_HREF,
   POSTS_HREF,
   PRESENTATIONS_HREF,
   PROJECTS_HREF
@@ -7,35 +9,31 @@ import {
 describe('User want navigate between pages', () => {
   it('Should navigate to home page', () => {
     cy.visit('/')
+
+    cy.location('pathname').should('eq', HOME_HREF)
   })
 
-  describe('User want see projects', () => {
-    it('Should click on projects link', () => {
-      cy.get('[data-cy=projects-link]').click()
-    })
+  it('Should navigate to projects page', () => {
+    cy.visit(PROJECTS_HREF)
 
-    it('Location should be projects', () => {
-      cy.location('pathname').should('eq', PROJECTS_HREF)
-    })
+    cy.location('pathname').should('eq', PROJECTS_HREF)
   })
 
-  describe('User want see presentations', () => {
-    it('Should click on presentations link', () => {
-      cy.get('[data-cy=presentations-link]').click()
-    })
+  it('Should navigate to experience page', () => {
+    cy.visit(EXPERIENCE_HREF)
 
-    it('Location should be presentations', () => {
-      cy.location('pathname').should('eq', PRESENTATIONS_HREF)
-    })
+    cy.location('pathname').should('eq', EXPERIENCE_HREF)
   })
 
-  describe('User want see posts', () => {
-    it('Should click on posts link', () => {
-      cy.get('[data-cy=posts-link]').click()
-    })
+  it('Should navigate to presentations page', () => {
+    cy.visit(PRESENTATIONS_HREF)
 
-    it('Location should be posts', () => {
-      cy.location('pathname').should('eq', POSTS_HREF)
-    })
+    cy.location('pathname').should('eq', PRESENTATIONS_HREF)
+  })
+
+  it('Should navigate to posts page', () => {
+    cy.visit(POSTS_HREF)
+
+    cy.location('pathname').should('eq', POSTS_HREF)
   })
 })
