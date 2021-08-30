@@ -7,7 +7,7 @@ export default [
   {
     name: 'Linkedin',
     icon: 'fab fa-linkedin-in fa-2x',
-    url: 'https://www.linkedin.com/in/jesús-mejias-leiva'
+    url: 'https://www.linkedin.com/in/jesus-mejias-leiva'
   },
   {
     name: 'Github',
