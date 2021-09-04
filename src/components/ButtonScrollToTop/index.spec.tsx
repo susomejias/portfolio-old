@@ -9,9 +9,7 @@ describe('<ButtonScrollToTop>', () => {
     window.scrollTo = jest.fn()
 
     render(<ButtonScrollToTop />)
-    const button = await document.querySelector(
-      '.scroll-top-button.fas.fa-angle-up'
-    )
+    const button = await document.querySelector('.scroll-top-button')
 
     fireEvent.click(button)
     expect(window.scrollTo).toHaveBeenCalledTimes(1)

@@ -53,7 +53,7 @@ describe('<Card>', () => {
 
   it('should render card with a element', async () => {
     render(<Card {...componentPropsNotPrivateCodeIsLink} />)
-    const cardClickable = await document.querySelector('a.card')
+    const cardClickable = await document.querySelector('.card-link')
 
     expect(cardClickable).toBeInTheDocument()
   })
