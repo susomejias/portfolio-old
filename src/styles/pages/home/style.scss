@@ -1,13 +1,17 @@
 .home-page {
   min-height: 85vh;
 
+  .container-image {
+    margin: 0;
+  }
+
   @include tablet {
     min-height: 60vh;
   }
 
-  h1 {
+  .title {
     font-size: 1.8rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-weight: 600;
   }
 
@@ -40,14 +44,10 @@
     max-width: 270px;
     text-align: center;
     margin-bottom: 0;
-    margin-top: 32px;
+    margin-top: 0;
     font-weight: 200;
 
     @include flex-position(column, center, center);
-  }
-
-  h2.quote {
-    margin-top: 0;
   }
 
   .skills-container {

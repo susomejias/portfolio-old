@@ -28,7 +28,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
         />
         <link rel="canonical" href="https://susomejias.dev/devto-posts" />
       </Head>
-      <div className="wrapper-scroll">
+      <section className="wrapper-scroll">
         <h1 className="page-title ">Dev.to posts</h1>
         <InfiniteScroll
           dataLength={dataDisplayed.length}
@@ -73,7 +73,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
           })}
         </InfiniteScroll>
         <ButtonScrollToTop />
-      </div>
+      </section>
     </>
   )
 }

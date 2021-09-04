@@ -8,7 +8,7 @@ export default [
     description: [
       'Dentro de Product Hackers tengo como objetivo seguir mejorando tanto a nivel de performance como de UX uno de los medios digitales más grandes de España.',
       'Para ello usamos tecnologías como React, JavaScript, SCSS, NodeJS, Git, GitHub, CI, Testing etc',
-      'Destacar que gracias a las mejoras hemos introducido, el medio digital ha crecido exponencialmente en número de visitas, usuarios y ranking en comScore.'
+      'Destacar que gracias a las mejoras que hemos introducido, el medio digital ha crecido exponencialmente en número de visitas, usuarios y ranking en comScore.'
     ]
   },
   {

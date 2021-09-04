@@ -1,6 +1,7 @@
 .button-badge-gradient {
   @include flex-position(row, center, center);
 
+  border: none;
   width: 100%;
   background-image: $primary-gradient;
   color: var(--color-button-badge-text);

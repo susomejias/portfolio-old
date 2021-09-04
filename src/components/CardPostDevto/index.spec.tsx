@@ -17,7 +17,7 @@ describe('<CardPostDevto>', () => {
 
   it('should render card with a element', async () => {
     render(<CardPostDevto {...componentProps} />)
-    const cardClickable = await document.querySelector('a.card-devto-post')
+    const cardClickable = await document.querySelector('.card-devto-post')
 
     expect(cardClickable).toBeInTheDocument()
   })

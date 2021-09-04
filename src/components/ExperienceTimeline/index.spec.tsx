@@ -11,7 +11,7 @@ describe('<ExperienceTime />', () => {
         companyName: 'Product Hackers',
         companyImage: null,
         startDate: new Date('03/01/2021'),
-        endDate: null,
+        endDate: new Date('04/01/2021'),
         jobName: 'FrontEnd Developer - (Remoto)',
         description: [
           'Dentro de Product Hackers tengo como objetivo seguir mejorando tanto a nivel de performance como de UX uno de los medios digitales más grandes de España.',
@@ -60,7 +60,7 @@ describe('<ExperienceTime />', () => {
     expect(productHackersTitle.textContent).toEqual(experience[0].companyName)
     expect(productHackersJobTitle.textContent).toEqual(experience[0].jobName)
     expect(productHackersDates.textContent).toEqual(
-      'mar 2021 - Actualidad, 5 meses'
+      'mar 2021 - abr 2021, 1 meses'
     )
     expect(productHackersDescription.textContent).toEqual(
       experience[0].description.join('')
@@ -90,6 +90,51 @@ describe('<ExperienceTime />', () => {
     expect(ICCADates.textContent).toEqual('oct 2018 - abr 2020, 1 año/s')
     expect(ICCADescription.textContent).toEqual(
       experience[2].description.join('')
+    )
+  })
+
+  it('should renders elements correctly when passing null endDate', async () => {
+    const experience = [
+      {
+        companyName: 'Product Hackers',
+        companyImage: null,
+        startDate: new Date('03/01/2021'),
+        endDate: null,
+        jobName: 'FrontEnd Developer - (Remoto)',
+        description: [
+          'Dentro de Product Hackers tengo como objetivo seguir mejorando tanto a nivel de performance como de UX uno de los medios digitales más grandes de España.',
+          'Para ello usamos tecnologías como React, JavaScript, SCSS, NodeJS, Git, GitHub, CI, Testing etc',
+          'Destacar que gracias a las mejoras hemos introducido, el medio digital ha crecido exponencialmente en número de visitas, usuarios y ranking en comScore.'
+        ]
+      }
+    ]
+
+    const mockDate = new Date('2021-03-01')
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const spy = jest.spyOn(global, 'Date').mockImplementation(() => mockDate)
+
+    render(<ExperienceTimeline experience={experience} />)
+
+    spy.mockRestore()
+
+    const productHackersTitle = await document.querySelectorAll(
+      '.company-name'
+    )[0]
+    const productHackersJobTitle = await document.querySelectorAll(
+      '.job-title'
+    )[0]
+    const productHackersDates = await document.querySelectorAll('.dates')[0]
+    const productHackersDescription = await document.querySelectorAll(
+      '.job-description'
+    )[0]
+    expect(productHackersTitle.textContent).toEqual(experience[0].companyName)
+    expect(productHackersJobTitle.textContent).toEqual(experience[0].jobName)
+    expect(productHackersDates.textContent).toEqual(
+      'mar 2021 - Actualidad, 0 meses'
+    )
+    expect(productHackersDescription.textContent).toEqual(
+      experience[0].description.join('')
     )
   })
 })

@@ -24,7 +24,7 @@ const Talks = (): JSX.Element => {
         />
         <link rel="canonical" href="https://susomejias.dev/ponencias" />
       </Head>
-      <div className="wrapper-scroll">
+      <section className="wrapper-scroll">
         <h1 className="page-title ">Ponencias</h1>
         <InfiniteScroll
           dataLength={dataDisplayed.length}
@@ -67,7 +67,7 @@ const Talks = (): JSX.Element => {
           })}
         </InfiniteScroll>
         <ButtonScrollToTop />
-      </div>
+      </section>
     </>
   )
 }

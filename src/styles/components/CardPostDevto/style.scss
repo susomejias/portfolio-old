@@ -1,106 +1,110 @@
 .card-devto-post {
-  @include flex-position(column, flex-start, stretch);
-
-  flex-wrap: wrap;
-  transition: transform 1s;
   width: 100%;
-  border-radius: $border-radius-default;
-  text-decoration: none;
-  margin: 1.2rem 0;
-  max-width: 350px;
-  overflow-x: hidden;
-  border: 3px solid $color-accent;
 
-  @include box-shadow-default();
+  & a {
+    @include flex-position(column, flex-start, stretch);
 
-  @include tablet {
-    min-width: 100%;
-  }
-
-  @include desktop {
-    display: grid;
-    grid-template-columns: repeat(1, 1.5fr) repeat(1, 2fr);
-
-    &:hover {
-      @include scale-card-hover();
-    }
-  }
-
-  .card-container-image {
+    flex-wrap: wrap;
+    transition: transform 1s;
     width: 100%;
-    padding: 0;
-    position: relative;
-    min-height: 300px;
+    border-radius: $border-radius-default;
+    text-decoration: none;
+    margin: 1.2rem 0;
+    max-width: 350px;
+    overflow-x: hidden;
+    border: 3px solid $color-accent;
 
-    @include flex-position(column, center, center);
-  }
-
-  .card-container-content {
-    @include flex-position(column, center, flex-start);
-
-    padding: 1rem;
-    width: 100%;
+    @include box-shadow-default();
 
     @include tablet {
-      padding: 0 1rem 1rem;
+      min-width: 100%;
     }
 
-    .private-code-message {
-      @include flex-position(row, flex-start, center);
-      @include set-text-color-dynamic();
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(1, 1.5fr) repeat(1, 2fr);
 
-      padding: .7rem 0;
-
-      i {
-        margin-right: .6rem;
+      &:hover {
+        @include scale-card-hover();
       }
     }
 
-    .card-title {
-      font-size: 1.45rem;
+    .card-container-image {
+      width: 100%;
+      padding: 0;
+      position: relative;
+      min-height: 300px;
 
-      @include text-gradient($primary-gradient);
+      @include flex-position(column, center, center);
     }
 
-    .card-description {
-      @include set-text-color-dynamic();
+    .card-container-content {
+      @include flex-position(column, center, flex-start);
 
-      margin: .4rem 0;
-      font-size: 1.1rem;
-      line-height: 1.6rem;
-      font-weight: 500;
-    }
-
-    .card-reactions {
-      @include flex-position(row, flex-start, center);
-
-      padding: .75rem 0;
+      padding: 1rem;
       width: 100%;
 
-      .card-reaction {
-        @include flex-position(row, flex-start, center);
-        @include text-gradient($primary-gradient);
+      @include tablet {
+        padding: 0 1rem 1rem;
+      }
 
-        min-height: 1.3rem;
-        margin-right: .75rem;
+      .private-code-message {
+        @include flex-position(row, flex-start, center);
+        @include set-text-color-dynamic();
+
+        padding: .7rem 0;
 
         i {
-          margin-right: .5rem;
+          margin-right: .6rem;
         }
       }
-    }
 
-    .card-tags {
-      padding: .5rem 0;
-
-      span {
-        display: inline-block;
-        padding-bottom: .5rem;
+      .card-title {
+        font-size: 1.45rem;
 
         @include text-gradient($primary-gradient);
+      }
 
-        font-weight: 800;
-        margin-right: .8rem;
+      .card-description {
+        @include set-text-color-dynamic();
+
+        margin: .4rem 0;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+      }
+
+      .card-reactions {
+        @include flex-position(row, flex-start, center);
+
+        padding: .75rem 0;
+        width: 100%;
+
+        .card-reaction {
+          @include flex-position(row, flex-start, center);
+          @include text-gradient($primary-gradient);
+
+          min-height: 1.3rem;
+          margin-right: .75rem;
+
+          i {
+            margin-right: .5rem;
+          }
+        }
+      }
+
+      .card-tags {
+        padding: .5rem 0;
+
+        span {
+          display: inline-block;
+          padding-bottom: .5rem;
+
+          @include text-gradient($primary-gradient);
+
+          font-weight: 800;
+          margin-right: .8rem;
+        }
       }
     }
   }
