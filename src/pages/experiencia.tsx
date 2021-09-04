@@ -16,11 +16,11 @@ const Experience = (): JSX.Element => {
         />
         <link rel="canonical" href="https://susomejias.dev/ponencias" />
       </Head>
-      <div className="wrapper">
+      <section className="wrapper">
         <h1 className="page-title ">Experiencia</h1>
         <ExperienceTimeline experience={experience} />
         <ButtonScrollToTop />
-      </div>
+      </section>
     </>
   )
 }

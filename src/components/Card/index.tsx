@@ -66,16 +66,18 @@ const Card = ({
 
   const renderCardIfIsLink = () => {
     return (
-      <Link href={url} passHref>
-        <a className="card" target="_blank" rel="noreferrer">
-          {renderContentCard()}
-        </a>
-      </Link>
+      <article className="card-link">
+        <Link href={url} passHref>
+          <a className="link" target="_blank" rel="noreferrer">
+            {renderContentCard()}
+          </a>
+        </Link>
+      </article>
     )
   }
 
   const renderCardIfNotIsLink = () => {
-    return <div className="card">{renderContentCard()}</div>
+    return <article className="card">{renderContentCard()}</article>
   }
 
   return url && url !== '#' ? renderCardIfIsLink() : renderCardIfNotIsLink()

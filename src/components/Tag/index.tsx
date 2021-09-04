@@ -5,7 +5,7 @@ interface TagProps {
 }
 
 const Tag = ({ text }: TagProps) => {
-  return <div className="tag">{text}</div>
+  return <span className="tag">{text}</span>
 }
 
 export default React.memo(Tag)

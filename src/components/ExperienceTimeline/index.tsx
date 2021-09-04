@@ -21,7 +21,7 @@ const ExperienceTimeline = (props: TimelineProps): JSX.Element => {
 
         return (
           <Fragment key={index}>
-            <div className="experience">
+            <article className="experience">
               <div className="card">
                 <div className="container">
                   <h4 className="company-name">{element.companyName}</h4>
@@ -58,7 +58,7 @@ const ExperienceTimeline = (props: TimelineProps): JSX.Element => {
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
             {index < experience.length - 1 ? (
               <hr className="separator" />
             ) : null}

@@ -24,7 +24,7 @@ const Projects = (): JSX.Element => {
         />
         <link rel="canonical" href="https://susomejias.dev/proyectos" />
       </Head>
-      <div className="wrapper-scroll">
+      <section className="wrapper-scroll">
         <h1 className="page-title ">Proyectos</h1>
         <InfiniteScroll
           dataLength={dataDisplayed.length}
@@ -67,7 +67,7 @@ const Projects = (): JSX.Element => {
           })}
         </InfiniteScroll>
         <ButtonScrollToTop />
-      </div>
+      </section>
     </>
   )
 }

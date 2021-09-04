@@ -15,15 +15,16 @@ const Home = (): JSX.Element => {
         <title>Susomejias | FrontEnd Developer</title>
         <meta
           name="description"
-          content="Portfolio de Susomejías, Desarrollador FrontEnd y técnico en sistemas informáticos"
+          content="Apasionado de la tecnología, trabajador, perfeccionista, amante del
+          Open-Source y del trabajo en equipo"
         />
         <link rel="canonical" href="https://susomejias.dev" />
       </Head>
 
-      <div className="wrapper home-page">
+      <section className="wrapper home-page">
         <RoundedImage image="/img/avatar.jpeg" size="medium" priority={true} />
 
-        <h1>Susomejias</h1>
+        <span className="title">Susomejias</span>
 
         <div className="container-button-badge">
           <ButtonBadge
@@ -45,17 +46,17 @@ const Home = (): JSX.Element => {
           })}
         </div>
 
-        <h2 className="quote">
+        <h1 className="quote">
           Apasionado de la tecnología, trabajador, perfeccionista, amante del
           Open-Source y del trabajo en equipo.
-        </h2>
+        </h1>
 
         <div className="skills-container">
           {skills.map((skill: string, index: number) => {
             return <Tag key={index} text={skill} />
           })}
         </div>
-      </div>
+      </section>
     </>
   )
 }

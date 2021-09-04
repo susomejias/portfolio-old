@@ -2,12 +2,14 @@ import React from 'react'
 
 const ButtonScrollToTop = () => {
   return (
-    <i
+    <button
+      className="scroll-top-button"
       onClick={() => {
         window.scrollTo(0, 0)
       }}
-      className="scroll-top-button fas fa-angle-up"
-    />
+    >
+      <i className="fas fa-angle-up" />
+    </button>
   )
 }
 
