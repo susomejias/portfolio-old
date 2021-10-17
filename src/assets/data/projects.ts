@@ -1,5 +1,13 @@
 export default [
   {
+    title: 'nextjs-skeleton',
+    description:
+      'Repositorio esqueleto con todas las configuraciones necesarias para comenzar un proyecto con NextJS',
+    image: '/img/nextjs-skeleton.jpeg',
+    url: 'https://github.com/susomejias/nextjs-skeleton',
+    authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
+  },
+  {
     title: 'Portfolio-NextJS',
     description:
       'Portfolio construido con NextJS y TypeScript, además se están usando tecnologías como CI, SSR, PWA, SCSS, Husky, Jest, Testing Library, Codacy, Lazy-load, Conventional Commit y Lighthouse.',
@@ -7,7 +15,6 @@ export default [
     url: 'https://github.com/susomejias/portfolio-nextjs',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'SusomejiasBot',
     description:
@@ -16,7 +23,6 @@ export default [
     url: '#',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'Sistema de control de asistencia por geolocalización',
     description:
@@ -25,7 +31,6 @@ export default [
     url: '#',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'PI Sysmana',
     description:
@@ -40,7 +45,6 @@ export default [
       }
     ]
   },
-
   {
     title: 'Juego Buscaminas jQuery',
     description:
@@ -49,7 +53,6 @@ export default [
     url: 'https://github.com/susomejias/Buscaminas-JesusMejiasLeiva',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'Buscador AJAX con jQuery',
     description:
@@ -58,7 +61,6 @@ export default [
     url: 'https://susomejias-io.herokuapp.com/ejercicios/tema7/Ajax/Comunic%C3%A1ndome-con-AJAX-sugerencias-mediante-php-(jQuery)/',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'tweepyStreamerToCsv',
     description:
@@ -67,7 +69,6 @@ export default [
     url: 'https://github.com/susomejias/tweepyStreamerToCsv',
     authors: [{ name: 'Susomejias', image: '/img/avatar.jpeg' }]
   },
-
   {
     title: 'PromisesJSvanilla',
     description:
