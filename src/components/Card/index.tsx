@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import RoundedImage from '../RoundedImage'
+import { toBase64 } from '../../helpers/image.helper'
 
 interface CardProps {
   image: string
@@ -24,6 +25,7 @@ const Card = ({
   priority = false
 }: CardProps) => {
   const renderContentCard = () => {
+
     return (
       <>
         <div className="card-container-image">
@@ -35,6 +37,8 @@ const Card = ({
             objectPosition="top left"
             aria-label={title}
             priority={priority}
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(image)}`}
           />
         </div>
 

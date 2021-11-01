@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { toBase64 } from '../../helpers/image.helper'
 
 interface RoundedImageProps {
   alt?: string
@@ -44,6 +45,8 @@ const RoundedImage = ({
         objectFit="cover"
         objectPosition="top left"
         priority={priority}
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(image)}`}
       />
     </div>
   )

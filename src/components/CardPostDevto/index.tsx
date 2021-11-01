@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { toBase64 } from '../../helpers/image.helper'
 
 interface CardPostDevtoProps {
   image: string
@@ -36,6 +37,8 @@ const CardPostDevto = ({
               objectPosition="top left"
               aria-label={title}
               priority={priority}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(image)}`}
             />
           </div>
 
