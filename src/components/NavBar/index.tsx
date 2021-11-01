@@ -25,7 +25,7 @@ const NavBar = () => {
       <NavButton
         text="Proyectos"
         url={PROJECTS_HREF}
-        iconClass="fas fa-bookmark"
+        iconClass="fas fa-flask"
         dataCy="projects-link"
       />
 
