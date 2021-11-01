@@ -25,7 +25,6 @@ const Card = ({
   priority = false
 }: CardProps) => {
   const renderContentCard = () => {
-
     return (
       <>
         <div className="card-container-image">
