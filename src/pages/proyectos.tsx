@@ -6,7 +6,6 @@ import usePaginationArray from '../hooks/usePaginateArray'
 import projects from '../assets/data/projects'
 import Card from '../components/Card'
 import ButtonScrollToTop from '../components/ButtonScrollToTop'
-import { CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL } from '../constants/cards'
 
 const Projects = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
@@ -38,21 +37,6 @@ const Projects = (): JSX.Element => {
           }}
         >
           {dataDisplayed.map((project: Project, index) => {
-            if (index < CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL) {
-              return (
-                <Card
-                  key={index}
-                  image={project.image}
-                  title={project.title}
-                  description={project.description}
-                  showPrivateCodeMessage={project.url === '#'}
-                  url={project.url}
-                  authors={project.authors}
-                  priority={true}
-                />
-              )
-            }
-
             return (
               <Card
                 key={index}
@@ -62,6 +46,7 @@ const Projects = (): JSX.Element => {
                 showPrivateCodeMessage={project.url === '#'}
                 url={project.url}
                 authors={project.authors}
+                priority={true}
               />
             )
           })}

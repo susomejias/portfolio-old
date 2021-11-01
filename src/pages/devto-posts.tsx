@@ -6,7 +6,6 @@ import usePaginationArray from '../hooks/usePaginateArray'
 import DevtoService from '../services/DevtoService'
 import CardPostDevto from '../components/CardPostDevto'
 import ButtonScrollToTop from '../components/ButtonScrollToTop'
-import { CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL } from '../constants/cards'
 
 interface DevtoPostsProps {
   posts: DevtoPost[]
@@ -42,22 +41,6 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
           }}
         >
           {dataDisplayed.map((devtoPost: DevtoPost, index: number) => {
-            if (index < CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL) {
-              return (
-                <CardPostDevto
-                  key={index}
-                  image={devtoPost.cover_image}
-                  title={devtoPost.title}
-                  description={devtoPost.description}
-                  commentsCount={devtoPost.comments_count}
-                  reactions={devtoPost.positive_reactions_count}
-                  url={devtoPost.canonical_url}
-                  tags={devtoPost.tag_list}
-                  priority={true}
-                />
-              )
-            }
-
             return (
               <CardPostDevto
                 key={index}
@@ -68,6 +51,7 @@ const DevtoPosts = ({ posts }: DevtoPostsProps): JSX.Element => {
                 reactions={devtoPost.positive_reactions_count}
                 url={devtoPost.canonical_url}
                 tags={devtoPost.tag_list}
+                priority={true}
               />
             )
           })}

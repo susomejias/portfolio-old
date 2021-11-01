@@ -6,7 +6,6 @@ import usePaginationArray from '../hooks/usePaginateArray'
 import talks from '../assets/data/talks'
 import Card from '../components/Card'
 import ButtonScrollToTop from '../components/ButtonScrollToTop'
-import { CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL } from '../constants/cards'
 
 const Talks = (): JSX.Element => {
   const { dataDisplayed, next, currentPage, maxPage } = usePaginationArray(
@@ -38,21 +37,6 @@ const Talks = (): JSX.Element => {
           }}
         >
           {dataDisplayed.map((talk: Talk, index) => {
-            if (index < CARDS_WITH_PRIORITY_INTO_INFINITE_SCROLL) {
-              return (
-                <Card
-                  key={index}
-                  image={talk.image}
-                  title={talk.title}
-                  description={talk.description}
-                  showPrivateCodeMessage={talk.url === '#'}
-                  url={talk.url}
-                  authors={talk.speakers}
-                  priority={true}
-                />
-              )
-            }
-
             return (
               <Card
                 key={index}
@@ -62,6 +46,7 @@ const Talks = (): JSX.Element => {
                 showPrivateCodeMessage={talk.url === '#'}
                 url={talk.url}
                 authors={talk.speakers}
+                priority={true}
               />
             )
           })}
